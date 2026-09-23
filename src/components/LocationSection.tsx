@@ -76,7 +76,7 @@ export default function LocationSection() {
         <div className="relative h-[600px] w-full overflow-hidden">
           <Image
             src="/images/bstar-salon-interior.jpg"
-            alt="B★Star Unisex Saloon Floor at Stylo Plaza, Battarahalli"
+            alt="B★Star Unisex Salon Floor at Stylo Plaza, Battarahalli"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"

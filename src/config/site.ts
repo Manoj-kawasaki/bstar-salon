@@ -23,17 +23,17 @@ export interface ServiceCategory {
 }
 
 export const siteConfig = {
-  name: "B★STAR UNISEX SALOON",
-  shortName: "B★Star Unisex Saloon",
+  name: "B★STAR UNISEX SALON",
+  shortName: "B★Star Unisex Salon",
   tagline: "Bengaluru’s Premier Luxury Unisex Beauty & Hair Destination",
   description:
-    "Experience bespoke hair artistry, advanced skin therapies, luxury bridal couture, and precision grooming at B★Star Unisex Saloon, Battarahalli, Bengaluru.",
+    "Experience bespoke hair artistry, advanced skin therapies, luxury bridal couture, and precision grooming at B★Star Unisex Salon, Battarahalli, Bengaluru.",
   url: "https://b-star-saloon.com",
   bookingUrl: "https://book.zuyyu.com/b-star-unisex-saloon",
   phone: "+91 99029 49549",
   phoneRaw: "+919902949549",
   whatsappUrl:
-    "https://wa.me/919902949549?text=Hello%20B-Star%20Unisex%20Saloon%2C%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment.",
+    "https://wa.me/919902949549?text=Hello%20B-Star%20Unisex%20Salon%2C%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment.",
   googleReviewStats: {
     rating: 4.3,
     reviewCount: 339,
@@ -41,7 +41,7 @@ export const siteConfig = {
     googleReviewUrl: "https://www.google.com/search?q=B-Star+Unisex+Saloon+Battarahalli+Bengaluru+reviews",
   },
   location: {
-    name: "B★Star Unisex Saloon",
+    name: "B★Star Unisex Salon",
     building: "No. 140, Stylo Plaza Building",
     landmark: "Bus Stop, above Krishna Sagar Hotel, next to Kanti Sweets",
     street: "TC Palya Main Rd",
@@ -512,7 +512,7 @@ export const siteConfig = {
     {
       question: "What are the salon hours?",
       answer:
-        "B★Star Unisex Saloon is open every day from 9:00 AM–9:00 PM, Monday–Sunday.",
+        "B★Star Unisex Salon is open every day from 9:00 AM–9:00 PM, Monday–Sunday.",
     },
     {
       question: "Where is B★Star located?",

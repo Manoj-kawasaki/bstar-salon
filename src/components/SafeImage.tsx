@@ -23,7 +23,7 @@ const FALLBACK_SVG = `data:image/svg+xml,${encodeURIComponent(`
   <rect width="800" height="600" fill="url(#g)"/>
   <rect width="800" height="600" fill="url(#p)"/>
   <text x="400" y="295" font-family="Georgia,serif" font-size="13" fill="#C5A059" fill-opacity="0.5" text-anchor="middle" letter-spacing="4">B · S T A R</text>
-  <text x="400" y="315" font-family="Georgia,serif" font-size="9" fill="#C5A05960" text-anchor="middle" letter-spacing="6">UNISEX SALOON</text>
+  <text x="400" y="315" font-family="Georgia,serif" font-size="9" fill="#C5A05960" text-anchor="middle" letter-spacing="6">UNISEX SALON</text>
 </svg>
 `)}`;
 

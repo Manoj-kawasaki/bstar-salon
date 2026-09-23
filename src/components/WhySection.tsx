@@ -47,7 +47,7 @@ export default function WhySection() {
           <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden bg-[#241710] shadow-2xl border border-[#F5EDD6]/10">
             <Image
               src="/images/bstar-salon-interior.jpg"
-              alt="B★Star Unisex Saloon Styling Atelier Floor at Stylo Plaza"
+              alt="B★Star Unisex Salon Styling Atelier Floor at Stylo Plaza"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center brightness-[0.92] contrast-[1.05] hover:scale-102 transition-transform duration-700"

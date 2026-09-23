@@ -37,7 +37,7 @@ export default function Header() {
                 B<span className="text-[#C5A059] mx-0.5 text-xl sm:text-2xl font-normal">★</span>STAR
               </span>
               <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-1.5 block">
-                UNISEX SALOON · BENGALURU
+                UNISEX SALON · BENGALURU
               </span>
             </div>
           </Link>
@@ -114,7 +114,7 @@ export default function Header() {
                 B<span className="text-[#C5A059] mx-0.5 text-xl font-normal">★</span>STAR
               </span>
               <span className="font-sans text-[8.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-0.5 block">
-                UNISEX SALOON · BENGALURU
+                UNISEX SALON · BENGALURU
               </span>
             </div>
             <button

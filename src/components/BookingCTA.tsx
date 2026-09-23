@@ -10,7 +10,7 @@ export default function BookingCTA() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/bstar-craft-floor.jpg"
-          alt="B★Star Unisex Saloon Bespoke Haircut Artistry in Session"
+          alt="B★Star Unisex Salon Bespoke Haircut Artistry in Session"
           fill
           priority
           className="object-cover object-center brightness-[0.68] contrast-[1.12] saturate-[1.15]"
@@ -29,7 +29,7 @@ export default function BookingCTA() {
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 bg-[#1C110C]/85 backdrop-blur-md border border-[#C5A059]/40 mb-6 shadow-xl animate-in fade-in duration-700">
           <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
           <span className="font-display tracking-[0.3em] uppercase text-[#C5A059] text-[11px] font-semibold">
-            B★STAR UNISEX SALOON · THE ART OF TRANSFORMATION
+            B★STAR UNISEX SALON · THE ART OF TRANSFORMATION
           </span>
         </div>
 

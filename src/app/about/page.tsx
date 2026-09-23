@@ -26,7 +26,7 @@ export default function AboutPage() {
           <div className="relative aspect-[3/4] w-full overflow-hidden">
             <Image
               src="/images/bstar-salon-interior.jpg"
-              alt="B★Star Unisex Saloon Interior at Stylo Plaza"
+              alt="B★Star Unisex Salon Interior at Stylo Plaza"
               fill
               className="object-cover hover:scale-102 transition-all duration-700"
               sizes="(max-width: 768px) 100vw, 50vw"

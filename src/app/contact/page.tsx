@@ -98,7 +98,7 @@ export default function ContactPage() {
           <div className="relative aspect-[3/4] w-full overflow-hidden hidden lg:block grayscale hover:grayscale-0 transition-all duration-700">
             <Image
               src="/images/bstar-hero-crop1.jpg"
-              alt="B★Star Unisex Saloon Reception & Styling Atelier"
+              alt="B★Star Unisex Salon Reception & Styling Atelier"
               fill
               className="object-cover"
               sizes="50vw"

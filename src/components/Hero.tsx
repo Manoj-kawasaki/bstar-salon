@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/bstar-hero-crop1.jpg"
-          alt="B★STAR Unisex Saloon Bengaluru Haute Coiffure"
+          alt="B★STAR Unisex Salon Bengaluru Haute Coiffure"
           fill
           priority
           sizes="100vw"
@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-3 sm:gap-5 px-4 py-1">
           <span className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent via-[#C5A059] to-[#C5A059]" />
           <span className="font-display font-bold tracking-[0.34em] sm:tracking-[0.44em] uppercase text-[#C5A059] text-[10.5px] sm:text-[13px] drop-shadow-md whitespace-nowrap">
-            B<span className="text-[#FAF3E3] font-normal mx-0.5">★</span>STAR UNISEX SALOON · BENGALURU
+            B<span className="text-[#FAF3E3] font-normal mx-0.5">★</span>STAR UNISEX SALON · BENGALURU
           </span>
           <span className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent via-[#C5A059] to-[#C5A059]" />
         </div>

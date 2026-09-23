@@ -13,7 +13,7 @@ export default function Footer() {
               B<span className="text-[#C5A059] mx-0.5 text-2xl sm:text-3xl font-normal">★</span>STAR
             </span>
             <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] text-[#C5A059] uppercase mt-1.5 font-semibold block">
-              UNISEX SALOON · BENGALURU
+              UNISEX SALON · BENGALURU
             </span>
           </Link>
           <div className="font-sans text-sm tracking-wide leading-relaxed opacity-80">

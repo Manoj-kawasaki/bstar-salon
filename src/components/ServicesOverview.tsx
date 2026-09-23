@@ -15,7 +15,7 @@ export default function ServicesOverview() {
         <div className="text-center mb-16 md:mb-24 max-w-2xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="font-display tracking-[0.25em] text-xs uppercase text-[#C5A059] font-medium">
-              B★STAR UNISEX SALOON DISCIPLINES
+              B★STAR UNISEX SALON DISCIPLINES
             </span>
           </div>
           <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F5EDD6] leading-[1.08] font-normal tracking-tight">
