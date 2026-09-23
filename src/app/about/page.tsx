@@ -34,7 +34,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-col gap-8">
             <p className="font-serif text-2xl md:text-3xl leading-relaxed">
-              Located in the heart of {siteConfig.location.area}, {siteConfig.name} is a sanctuary for those who appreciate the finer aspects of grooming and styling.
+              Located in the heart of {siteConfig.location.area}, B<span className="brand-star text-[#C5A059]">★</span>Star Unisex Salon is a sanctuary for those who appreciate the finer aspects of grooming and styling.
             </p>
             <p className="text-[#F5EDD6]/80 text-lg md:text-xl font-light leading-relaxed">
               We believe that every appointment is more than just a service; it's a personalized experience. With a commitment to excellence, our expert stylists and therapists craft bespoke looks that reflect your unique personality.

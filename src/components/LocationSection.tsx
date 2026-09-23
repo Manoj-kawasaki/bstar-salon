@@ -14,7 +14,7 @@ export default function LocationSection() {
               Visit Us
             </span>
             <h2 className="font-display text-4xl md:text-5xl mt-4 mb-6">
-              {location.name}
+              B<span className="brand-star text-[#C5A059]">★</span>Star Unisex Salon
             </h2>
             <p className="font-sans text-lg leading-relaxed text-[#F5EDD6]/80 max-w-md">
               {location.fullAddress}
