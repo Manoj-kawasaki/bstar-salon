@@ -15,7 +15,7 @@ export default function ServicesOverview() {
         <div className="text-center mb-16 md:mb-24 max-w-2xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="font-display tracking-[0.25em] text-xs uppercase text-[#C5A059] font-medium">
-              B★STAR UNISEX SALON DISCIPLINES
+              B<span className="brand-star">★</span>STAR UNISEX SALON DISCIPLINES
             </span>
           </div>
           <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl text-[#F5EDD6] leading-[1.08] font-normal tracking-tight">
@@ -96,13 +96,13 @@ export default function ServicesOverview() {
           {/* Right Column: Matched to user mockup (media_1790114118450.png) - Comb on left, Square Swatch top-right, Editorial card bottom-right */}
           <div className="lg:col-span-4 relative min-h-[480px] lg:h-[640px] w-full overflow-hidden bg-[#1C110C] shadow-2xl border border-[#F5EDD6]/10 flex flex-row">
             
-            {/* Left: Full-Height Model with Comb (Uncompressed) */}
+            {/* Left: Full-Height Model with Curly Brunette Artistry (Uncompressed) */}
             <div className="relative w-[54%] h-full overflow-hidden border-r border-[#C5A059]/25 group">
               <Image
-                src="/images/bstar-silk-comb.jpg"
-                alt="Mirror Silk Combing Artistry at B★Star"
+                src="/images/bstar-curly-brunette.jpg"
+                alt="Mirror Silk Lustre Artistry with Curly Brunette Volume at B★Star"
                 fill
-                className="object-cover object-[center_left] brightness-[1.02] contrast-[1.04] group-hover:scale-105 transition-transform duration-700"
+                className="object-cover object-center brightness-[1.02] contrast-[1.04] group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 1024px) 55vw, 18vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/60 via-transparent to-transparent pointer-events-none" />

@@ -11,7 +11,7 @@ export default function WhySection() {
         {/* Editorial Heading */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <p className="font-display tracking-[0.25em] text-[11px] sm:text-xs uppercase text-[#C5A059] mb-3 font-medium">
-            The B★Star Standard
+            The B<span className="brand-star">★</span>Star Standard
           </p>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5EDD6] leading-[1.1] font-light">
             Crafted with Care,{" "}

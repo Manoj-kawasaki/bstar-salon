@@ -33,7 +33,7 @@ export default function IntroSection() {
 
           <div className="md:col-span-9 max-w-3xl">
             <p className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-[#F5EDD6]/90 font-light">
-              We believe that bespoke styling and beauty rituals should be an empowering experience. At B★Star, we combine dermatologist-tested formulations and master techniques to create looks that are as healthy as they are head-turning — ensuring your transformation is as effortless as it is stunning.
+              We believe that bespoke styling and beauty rituals should be an empowering experience. At B<span className="brand-star">★</span>Star, we combine dermatologist-tested formulations and master techniques to create looks that are as healthy as they are head-turning — ensuring your transformation is as effortless as it is stunning.
             </p>
           </div>
         </div>

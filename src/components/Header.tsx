@@ -34,7 +34,7 @@ export default function Header() {
           <Link href="/" className="flex items-center group">
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-2xl sm:text-3xl lg:text-[34px] tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
-                B<span className="text-[#C5A059] mx-0.5 text-xl sm:text-2xl font-normal">★</span>STAR
+                B<span className="brand-star text-[#C5A059]">★</span>STAR
               </span>
               <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-1.5 block">
                 UNISEX SALON · BENGALURU
@@ -111,7 +111,7 @@ export default function Header() {
           <div className="flex justify-between items-center border-b border-[#F5EDD6]/10 pb-5 pt-4">
             <div className="flex flex-col">
               <span className="font-display font-extrabold text-2xl tracking-[0.14em] text-[#F5EDD6]">
-                B<span className="text-[#C5A059] mx-0.5 text-xl font-normal">★</span>STAR
+                B<span className="brand-star text-[#C5A059]">★</span>STAR
               </span>
               <span className="font-sans text-[8.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-0.5 block">
                 UNISEX SALON · BENGALURU

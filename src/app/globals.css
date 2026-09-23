@@ -74,6 +74,14 @@
     text-transform: uppercase;
   }
 
+  .brand-star {
+    display: inline-block;
+    font-size: 0.55em;
+    vertical-align: 0.16em;
+    margin: 0 0.12em;
+    line-height: 1;
+  }
+
   .editorial-italic {
     font-style: italic;
     font-family: var(--font-serif), Georgia, serif;

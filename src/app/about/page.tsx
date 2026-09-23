@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         <section className="mb-24 md:mb-32">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl italic mb-6 leading-tight tracking-tight">
-            About B★Star
+            About B<span className="brand-star text-[#C5A059]">★</span>Star
           </h1>
           <p className="text-xl md:text-2xl font-serif text-[#C5A059] max-w-2xl">
             {siteConfig.tagline || 'Elevating beauty through precision and artistry.'}

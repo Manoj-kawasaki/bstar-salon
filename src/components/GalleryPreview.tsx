@@ -134,7 +134,7 @@ export default function GalleryPreview() {
                 "Real client transformations using internationally certified keratin, nanoplastia, and botoplexx rituals."
               </p>
               <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#C5A059] block mt-2 font-medium">
-                B★Star Styling Atelier
+                B<span className="brand-star">★</span>Star Styling Atelier
               </span>
             </div>
           </div>

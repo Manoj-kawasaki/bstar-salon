@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="max-w-xs">
           <Link href="/" className="inline-flex flex-col mb-6 group">
             <span className="font-display font-extrabold text-3xl sm:text-4xl tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
-              B<span className="text-[#C5A059] mx-0.5 text-2xl sm:text-3xl font-normal">★</span>STAR
+              B<span className="brand-star text-[#C5A059]">★</span>STAR
             </span>
             <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] text-[#C5A059] uppercase mt-1.5 font-semibold block">
               UNISEX SALON · BENGALURU
