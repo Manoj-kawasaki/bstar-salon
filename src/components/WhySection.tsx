@@ -53,9 +53,9 @@ export default function WhySection() {
               className="object-cover object-center brightness-[0.92] contrast-[1.05] hover:scale-102 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/70 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-4 left-4 right-4 z-10">
-              <span className="font-display text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#C5A059] bg-[#1C110C]/85 backdrop-blur-md px-3 py-1.5 border border-[#C5A059]/30">
-                Stylo Plaza Atelier · Battarahalli
+            <div className="absolute bottom-4 left-4 z-10">
+              <span className="inline-block font-display text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C5A059] bg-[#1C110C]/90 backdrop-blur-md px-3.5 py-1.5 border border-[#C5A059]/30 shadow-lg whitespace-nowrap">
+                Salon Atelier · Battarahalli
               </span>
             </div>
           </div>

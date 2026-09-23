@@ -22,8 +22,8 @@ export default function TrustSection() {
               />
             ))}
           </div>
-          <p className="font-sans text-sm tracking-widest uppercase mb-6">
-            339 Google Reviews
+          <p className="font-sans text-sm tracking-widest uppercase mb-6 text-[#1C110C]/80 font-medium">
+            339+ Google Reviews
           </p>
           <Link
             href={siteConfig.googleReviewStats.googleReviewUrl}
@@ -33,17 +33,6 @@ export default function TrustSection() {
           >
             View on Google &rarr;
           </Link>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 w-full border-t border-[#1C110C]/10 pt-16">
-          {siteConfig.whyChooseUs?.map((pillar, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center">
-              <h3 className="font-serif text-2xl mb-4">{pillar.title}</h3>
-              <p className="font-sans text-sm leading-relaxed text-[#1C110C]/80">
-                {pillar.description}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

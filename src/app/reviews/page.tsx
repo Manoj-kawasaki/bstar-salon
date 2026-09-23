@@ -36,7 +36,7 @@ export default function ReviewsPage() {
               ))}
             </div>
             <p className="font-display uppercase tracking-[0.2em] text-sm mt-4 text-[#1C110C]/60">
-              Based on {reviewCount} Google Reviews
+              Based on 339+ Google Reviews
             </p>
             
             {googleReviewUrl && (

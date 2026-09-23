@@ -12,7 +12,7 @@ export default function IntroSection() {
             Philosophy & Purpose
           </span>
           <h2 className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[1.04] font-normal text-[#F5EDD6]">
-            Ethical Formulations, <br className="hidden sm:inline" />
+            Ethically Sourced Formulations, <br className="hidden sm:inline" />
             <span className="italic font-normal">Exceptional Care</span>
           </h2>
         </div>

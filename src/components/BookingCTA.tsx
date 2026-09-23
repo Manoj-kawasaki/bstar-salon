@@ -53,7 +53,7 @@ export default function BookingCTA() {
         <div className="mb-10 inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#1C110C]/75 backdrop-blur-md border border-[#C5A059]/30 text-xs font-sans text-[#F5EDD6]/90 shadow-lg">
           <span className="text-[#C5A059] font-bold">★ 4.3</span>
           <span className="text-[#C5A059]">•</span>
-          <span>339+ Verified Google Reviews</span>
+          <span>339+ Google Reviews</span>
           <span className="text-[#C5A059]">•</span>
           <span className="text-[#C5A059] font-medium">Battarahalli</span>
         </div>
@@ -84,7 +84,7 @@ export default function BookingCTA() {
         <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[#F5EDD6]/70 font-sans tracking-wide">
           <span>Stylo Plaza Building, TC Palya Main Rd, Battarahalli</span>
           <span>•</span>
-          <span>Monday – Sunday, 9:00 AM – 9:00 PM</span>
+          <span>Monday–Sunday, 9:00 AM–9:00 PM</span>
         </div>
 
       </div>

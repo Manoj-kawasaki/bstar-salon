@@ -41,7 +41,7 @@ export const siteConfig = {
     googleReviewUrl: "https://www.google.com/search?q=B-Star+Unisex+Saloon+Battarahalli+Bengaluru+reviews",
   },
   location: {
-    name: "B-Star Unisex Saloon",
+    name: "B★Star Unisex Saloon",
     building: "No. 140, Stylo Plaza Building",
     landmark: "Bus Stop, above Krishna Sagar Hotel, next to Kanti Sweets",
     street: "TC Palya Main Rd",
@@ -51,8 +51,8 @@ export const siteConfig = {
     pincode: "560036",
     fullAddress:
       "No. 140, Stylo Plaza Building, Bus Stop, TC Palya Main Rd, above Krishna Sagar Hotel, next to Kanti Sweets, Anandapura, Battarahalli, Bengaluru, Karnataka 560036",
-    hours: "9:00 AM – 9:00 PM daily",
-    days: "Monday – Sunday",
+    hours: "9:00 AM–9:00 PM daily",
+    days: "Monday–Sunday",
     mapsUrl:
       "https://maps.google.com/?q=B-Star+Unisex+Saloon+Stylo+Plaza+Building+TC+Palya+Main+Rd+Battarahalli+Bengaluru",
   },
@@ -121,12 +121,12 @@ export const siteConfig = {
         {
           question: "How do I choose the best haircut or color for my face and hair type?",
           answer:
-            "Every hair appointment at B-Star begins with a personalized consultation where our master stylists inspect your hair texture, lifestyle, and facial structure to recommend the most flattering silhouette and shade.",
+            "Every hair appointment at B★Star begins with a personalized consultation where our master stylists inspect your hair texture, lifestyle, and facial structure to recommend the most flattering silhouette and shade.",
         },
         {
           question: "How can I get exact pricing for hair treatments?",
           answer:
-            "Pricing depends on hair length, density, and customized product formulations. Please contact B-Star directly via Call or WhatsApp, or visit our Stylo Plaza branch for a complimentary hair consultation.",
+            "Pricing depends on hair length, density, and customized product formulations. Please contact B★Star directly via Call or WhatsApp, or visit our Stylo Plaza branch for a complimentary hair consultation.",
         },
       ],
     },
@@ -174,7 +174,7 @@ export const siteConfig = {
       ],
       faqs: [
         {
-          question: "How often should I get a facial at B-Star?",
+          question: "How often should I get a facial at B★Star?",
           answer:
             "For optimal cellular renewal and lasting radiance, we recommend scheduling professional skin treatments every 3 to 4 weeks.",
         },
@@ -505,17 +505,17 @@ export const siteConfig = {
   ],
   generalFaqs: [
     {
-      question: "How do I book an appointment at B-Star?",
+      question: "How do I book an appointment at B★Star?",
       answer:
         "You can book directly 24/7 through our official online booking partner at book.zuyyu.com/b-star-unisex-saloon, call us at +91 99029 49549, or drop us a message on WhatsApp.",
     },
     {
       question: "What are the salon hours?",
       answer:
-        "B-Star Unisex Saloon is open every day from 9:00 AM to 9:00 PM, Monday through Sunday.",
+        "B★Star Unisex Saloon is open every day from 9:00 AM–9:00 PM, Monday–Sunday.",
     },
     {
-      question: "Where is B-Star located?",
+      question: "Where is B★Star located?",
       answer:
         "We are conveniently located at No. 140, Stylo Plaza Building, TC Palya Main Rd (above Krishna Sagar Hotel and next to Kanti Sweets), Anandapura, Battarahalli, Bengaluru, Karnataka 560036.",
     },
@@ -525,14 +525,14 @@ export const siteConfig = {
         "Yes, walk-in clients are always welcome based on staff availability. However, to guarantee your preferred timing and avoid wait times, booking in advance is recommended.",
     },
     {
-      question: "How can I find out the pricing for specific services?",
+      question: "How can I find the prices for specific services?",
       answer:
         "Because our hair, skin, and bridal treatments are tailored to individual hair length, texture, and requirements, we provide customized pricing during consultation. Please contact us via phone or WhatsApp for instant pricing details.",
     },
     {
       question: "What safety and hygiene standards do you follow?",
       answer:
-        "At B-Star, hygiene is paramount. We use medically sterilized tools, single-use disposable capes/towels where applicable, premium international product lines, and maintain sanitized styling stations.",
+        "At B★Star, hygiene is paramount. We use sanitized tools, single-use disposable essentials where applicable, premium international product lines, and maintain pristine styling stations.",
     },
   ],
   whyChooseUs: [
@@ -555,9 +555,9 @@ export const siteConfig = {
       icon: "Coffee",
     },
     {
-      title: "Verified 4.3★ Excellence",
+      title: "4.3★ Google-Rated Excellence",
       description:
-        "Trusted by 330+ happy customers on Google with a proven reputation for consistency, attentiveness, and quality results.",
+        "Rated 4.3★ on Google, with 339+ customer reviews praising our attentive styling, relaxing ambiance, and flawless results.",
       icon: "Star",
     },
   ],

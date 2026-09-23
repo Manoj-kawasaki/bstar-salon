@@ -24,7 +24,7 @@ export default function HomePage() {
       {/* 4. Why / Experience */}
       <WhySection />
 
-      {/* 5. Trust (Verified 4.3★ / 339 Reviews) */}
+      {/* 5. Trust (4.3★ Google-Rated / 339+ Reviews) */}
       <TrustSection />
 
       {/* 6. Gallery Preview */}

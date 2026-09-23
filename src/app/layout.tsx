@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     "hair salon Bengaluru",
     "beauty salon Battarahalli",
     "bridal makeup",
-    "B-Star",
+    "B★Star",
     "men grooming",
     "facial treatment",
   ],

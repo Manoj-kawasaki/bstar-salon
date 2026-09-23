@@ -74,11 +74,11 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-5 text-[11px] sm:text-xs text-[#F5EDD6]/65 font-sans tracking-wider">
           <span className="text-[#C5A059] font-semibold">★ 4.3 Google Rating</span>
           <span>·</span>
-          <span>339+ Verified Reviews</span>
+          <span>339+ Google Reviews</span>
           <span className="hidden sm:inline">·</span>
           <span className="hidden sm:inline">Stylo Plaza, Battarahalli</span>
           <span>·</span>
-          <span>Daily 9 AM – 9 PM</span>
+          <span>Daily 9:00 AM–9:00 PM</span>
         </div>
       </div>
 

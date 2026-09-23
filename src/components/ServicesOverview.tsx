@@ -24,41 +24,41 @@ export default function ServicesOverview() {
           </h2>
         </div>
 
-        {/* 3-Column Asymmetric Overlapping Layout (matching reference screenshot) */}
-        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-0 items-center">
+        {/* 3-Column Balanced Editorial Layout (12 cols: 4 + 4 + 4) */}
+        <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-stretch">
           
           {/* Left Column: Atelier 01 with Split Ash/Copper Transformation Photo */}
-          <div className="lg:col-span-4 relative h-[450px] lg:h-[620px] w-full overflow-hidden bg-[#241710] shadow-2xl">
+          <div className="lg:col-span-4 relative min-h-[480px] lg:h-[640px] w-full overflow-hidden bg-[#241710] shadow-2xl">
             <Image
               src="/images/atelier-split-hair.jpg"
               alt="B★Star Atelier 01 Bespoke Color & Half-Split Transformation"
               fill
               className="object-cover object-center brightness-100 hover:scale-105 transition-transform duration-700"
-              sizes="(max-width: 1024px) 100vw, 35vw"
+              sizes="(max-width: 1024px) 100vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/70 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/85 via-[#1C110C]/35 to-transparent pointer-events-none" />
             <div className="absolute top-4 left-4 z-10">
-              <span className="font-display text-[11px] uppercase tracking-[0.25em] text-[#F5EDD6] bg-[#1C110C]/80 backdrop-blur-md px-3.5 py-1.5 border border-[#C5A059]/30">
+              <span className="inline-block font-display text-[10px] uppercase tracking-[0.2em] text-[#F5EDD6] bg-[#1C110C]/90 backdrop-blur-md px-3 py-1 border border-[#C5A059]/30 whitespace-nowrap shadow-md">
                 Atelier 01
               </span>
             </div>
             <div className="absolute bottom-4 left-4 right-4 z-10">
-              <span className="font-serif italic text-base text-[#F5EDD6] block drop-shadow-md">
-                Bespoke Dual-Tone Color Transformation
+              <span className="font-serif italic text-base sm:text-lg text-[#F5EDD6] block drop-shadow-md">
+                Bespoke Dual-Tone Color
               </span>
-              <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#C5A059]">
+              <span className="font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-[#C5A059] block mt-0.5">
                 Silver Ash & Honey Copper Foilayage
               </span>
             </div>
           </div>
 
           {/* Center Column: Elevated Cream Editorial Card */}
-          <div className="lg:col-span-5 relative z-20 bg-[#F2E8D0] text-[#1C110C] p-8 sm:p-12 lg:p-14 shadow-2xl lg:-mx-4 border border-[#1C110C]/10">
-            <div className="text-center mb-10 pb-6 border-b border-[#1C110C]/15">
-              <span className="font-serif italic text-base sm:text-lg text-[#1C110C]/70 block mb-2">
+          <div className="lg:col-span-4 relative z-20 bg-[#F2E8D0] text-[#1C110C] p-7 sm:p-10 lg:p-10 shadow-2xl border border-[#1C110C]/10 flex flex-col justify-between">
+            <div className="text-center mb-8 pb-5 border-b border-[#1C110C]/15">
+              <span className="font-serif italic text-base text-[#1C110C]/70 block mb-1.5">
                 Featured Disciplines
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#1C110C] font-normal tracking-tight">
+              <h3 className="font-serif text-2xl sm:text-3xl text-[#1C110C] font-normal tracking-tight">
                 Crafted for Elegance
               </h3>
             </div>
@@ -69,12 +69,12 @@ export default function ServicesOverview() {
                 <Link
                   key={cat.id}
                   href={`/services/${cat.slug}`}
-                  className="group py-5 block text-center transition-all duration-300 hover:opacity-85"
+                  className="group py-4 block text-center transition-all duration-300 hover:opacity-85"
                 >
-                  <h4 className="font-serif italic text-xl sm:text-2xl text-[#1C110C] group-hover:text-[#A8833E] transition-colors">
+                  <h4 className="font-serif italic text-xl text-[#1C110C] group-hover:text-[#A8833E] transition-colors">
                     {cat.title}
                   </h4>
-                  <p className="font-sans text-xs sm:text-sm text-[#1C110C]/70 mt-1.5 font-light leading-relaxed max-w-sm mx-auto">
+                  <p className="font-sans text-xs text-[#1C110C]/70 mt-1 font-light leading-relaxed max-w-xs mx-auto">
                     {cat.shortDesc}
                   </p>
                 </Link>
@@ -82,39 +82,39 @@ export default function ServicesOverview() {
             </div>
 
             {/* View Full Menu CTA */}
-            <div className="mt-8 pt-6 border-t border-[#1C110C]/15 text-center">
+            <div className="mt-6 pt-5 border-t border-[#1C110C]/15 text-center">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 font-serif italic text-base text-[#1C110C] hover:text-[#A8833E] border-b border-[#1C110C]/40 hover:border-[#A8833E] pb-1 transition-colors"
+                className="inline-flex items-center gap-2 font-serif italic text-sm sm:text-base text-[#1C110C] hover:text-[#A8833E] border-b border-[#1C110C]/40 hover:border-[#A8833E] pb-0.5 transition-colors"
               >
                 <span>Explore Complete 6 Disciplines</span>
-                <ArrowUpRight size={16} />
+                <ArrowUpRight size={15} />
               </Link>
             </div>
           </div>
 
           {/* Right Column: Matched to user mockup (media_1790114118450.png) - Comb on left, Square Swatch top-right, Editorial card bottom-right */}
-          <div className="lg:col-span-4 relative h-[480px] lg:h-[620px] w-full overflow-hidden bg-[#1C110C] shadow-2xl border border-[#F5EDD6]/10 flex flex-row">
+          <div className="lg:col-span-4 relative min-h-[480px] lg:h-[640px] w-full overflow-hidden bg-[#1C110C] shadow-2xl border border-[#F5EDD6]/10 flex flex-row">
             
             {/* Left: Full-Height Model with Comb (Uncompressed) */}
-            <div className="relative w-[58%] h-full overflow-hidden border-r border-[#C5A059]/25 group">
+            <div className="relative w-[54%] h-full overflow-hidden border-r border-[#C5A059]/25 group">
               <Image
                 src="/images/bstar-silk-comb.jpg"
                 alt="Mirror Silk Combing Artistry at B★Star"
                 fill
                 className="object-cover object-[center_left] brightness-[1.02] contrast-[1.04] group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 1024px) 60vw, 22vw"
+                sizes="(max-width: 1024px) 55vw, 18vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute top-3 left-3 z-10">
-                <span className="font-display text-[9.5px] uppercase tracking-[0.2em] text-[#F5EDD6] bg-[#1C110C]/85 backdrop-blur-md px-2.5 py-1 border border-[#C5A059]/30">
+                <span className="inline-block font-display text-[9px] uppercase tracking-[0.18em] text-[#F5EDD6] bg-[#1C110C]/90 backdrop-blur-md px-2.5 py-1 border border-[#C5A059]/30 whitespace-nowrap shadow-md">
                   Lustre 02
                 </span>
               </div>
             </div>
 
             {/* Right: Square Swatch Top + Editorial Details Bottom */}
-            <div className="w-[42%] h-full flex flex-col justify-between bg-[#1C110C] overflow-hidden">
+            <div className="w-[46%] h-full flex flex-col justify-between bg-[#1C110C] overflow-hidden">
               
               {/* Top: Square Hair Texture Swatch (Aspect Square, zero compression) */}
               <div className="relative w-full aspect-square overflow-hidden border-b border-[#C5A059]/25 group">
@@ -123,26 +123,26 @@ export default function ServicesOverview() {
                   alt="Chestnut Fluid Silk Swatch at B★Star"
                   fill
                   className="object-cover object-center brightness-105 contrast-[1.05] group-hover:scale-110 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 40vw, 15vw"
+                  sizes="(max-width: 1024px) 45vw, 15vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/40 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute top-2 right-2 z-10">
-                  <span className="font-display text-[8.5px] uppercase tracking-[0.18em] text-[#C5A059] bg-[#1C110C]/90 backdrop-blur-md px-2 py-0.5 border border-[#C5A059]/30">
+                <div className="absolute top-2.5 right-2.5 z-10">
+                  <span className="inline-block font-display text-[8.5px] uppercase tracking-[0.16em] text-[#C5A059] bg-[#1C110C]/90 backdrop-blur-md px-2 py-0.5 border border-[#C5A059]/30 whitespace-nowrap shadow-sm">
                     Texture
                   </span>
                 </div>
               </div>
 
               {/* Bottom: Editorial Details */}
-              <div className="p-3.5 sm:p-5 flex flex-col justify-center flex-1 bg-gradient-to-b from-[#1C110C] to-[#241710]">
-                <span className="font-display text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium block mb-1">
+              <div className="p-3.5 sm:p-4 flex flex-col justify-center flex-1 bg-gradient-to-b from-[#1C110C] to-[#241710]">
+                <span className="font-display text-[9px] sm:text-[10px] uppercase tracking-[0.22em] text-[#C5A059] font-medium block mb-1">
                   Lustre Finish
                 </span>
-                <h4 className="font-serif italic text-base sm:text-lg text-[#F5EDD6] leading-tight mb-2">
+                <h4 className="font-serif italic text-sm sm:text-base text-[#F5EDD6] leading-tight mb-2">
                   Mirror Silk Gloss Therapy
                 </h4>
-                <p className="font-sans text-[10px] sm:text-[11.5px] text-[#F5EDD6]/70 font-light leading-relaxed mb-3 line-clamp-3">
-                  Our Kerafusion and Botoplexx protein infusion seals in mirror-silk shine and long-lasting humidity defense.
+                <p className="font-sans text-[10px] sm:text-[11px] text-[#F5EDD6]/75 font-light leading-relaxed mb-3">
+                  Our Kerafusion and Botoplexx protein infusion seals in mirror-like silk shine with long-lasting humidity protection.
                 </p>
                 <Link
                   href="/services/hair"
