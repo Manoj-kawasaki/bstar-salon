@@ -41,7 +41,7 @@ export default function BookingCTA() {
         {/* Grand Headline */}
         <h2 className="font-serif text-5xl sm:text-7xl lg:text-8xl text-[#F5EDD6] mb-6 tracking-tight leading-[1.05] drop-shadow-2xl">
           Every Masterpiece <br />
-          <span className="text-[#FAF3E3] italic font-serif">Starts In The Chair</span>
+          <span className="text-[#FAF3E3] italic font-serif">Starts in the Chair</span>
         </h2>
 
         {/* Editorial Subtitle */}

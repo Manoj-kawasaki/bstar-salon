@@ -59,7 +59,7 @@ export default function ServicesOverview() {
                 Featured Disciplines
               </span>
               <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#1C110C] font-normal tracking-tight">
-                Crafted For Elegance
+                Crafted for Elegance
               </h3>
             </div>
 
@@ -142,7 +142,7 @@ export default function ServicesOverview() {
                   Mirror Silk Gloss Therapy
                 </h4>
                 <p className="font-sans text-[10px] sm:text-[11.5px] text-[#F5EDD6]/70 font-light leading-relaxed mb-3 line-clamp-3">
-                  Kerafusion & Botoplexx pure protein infusion sealing mirror silk shine and humidity defense.
+                  Our Kerafusion and Botoplexx protein infusion seals in mirror-silk shine and long-lasting humidity defense.
                 </p>
                 <Link
                   href="/services/hair"

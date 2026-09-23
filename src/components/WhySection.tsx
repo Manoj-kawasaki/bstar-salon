@@ -14,8 +14,8 @@ export default function WhySection() {
             The B★Star Standard
           </p>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5EDD6] leading-[1.1] font-light">
-            Crafted with care,{" "}
-            <span className="italic font-normal text-[#C5A059]">delivered with precision</span>
+            Crafted with Care,{" "}
+            <span className="italic font-normal text-[#C5A059]">Delivered with Precision</span>
           </h2>
         </div>
 

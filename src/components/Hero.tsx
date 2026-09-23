@@ -47,7 +47,7 @@ export default function Hero() {
 
         {/* Concise Luxury Description */}
         <p className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/85 font-light leading-relaxed max-w-xl mx-auto mt-3 sm:mt-4 drop-shadow-md">
-          Bengaluru&apos;s premier atelier for couture balayage, botanical skin revitalisation, royal bridal artistry, and master precision grooming.
+          Bengaluru&apos;s premier atelier for couture balayage, botanical skin revitalisation, royal bridal artistry, and precision grooming.
         </p>
 
         {/* High-Cachet CTAs */}

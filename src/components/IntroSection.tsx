@@ -12,25 +12,28 @@ export default function IntroSection() {
             Philosophy & Purpose
           </span>
           <h2 className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[1.04] font-normal text-[#F5EDD6]">
-            Ethically Sourced <br className="hidden sm:inline" />
-            <span className="italic font-normal">Quality & Care</span>
+            Ethical Formulations, <br className="hidden sm:inline" />
+            <span className="italic font-normal">Exceptional Care</span>
           </h2>
         </div>
 
         {/* Two Column Editorial Layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 pt-10 border-t border-[#F5EDD6]/15">
           <div className="md:col-span-3">
-            <span className="font-serif italic text-xl sm:text-2xl text-[#C5A059] tracking-wide block">
-              About us
-            </span>
-            <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#F5EDD6]/50 mt-1 block">
+            <div className="flex items-center gap-2.5 mb-1.5">
+              <span className="font-serif italic text-xl sm:text-2xl text-[#C5A059] tracking-wide">
+                About Us
+              </span>
+              <span className="text-[#C5A059]/40 text-sm">·</span>
+            </div>
+            <span className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#F5EDD6]/50 block">
               Battarahalli, Bengaluru
             </span>
           </div>
 
           <div className="md:col-span-9 max-w-3xl">
             <p className="font-serif text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-[#F5EDD6]/90 font-light">
-              We believe that bespoke styling and beauty rituals should be an empowering luxury. At B-Star, we combine dermatologist-tested formulations and master techniques to create looks that are as healthy as they are head-turning — ensuring your transformation is as effortless as it is stunning.
+              We believe that bespoke styling and beauty rituals should be an empowering experience. At B★Star, we combine dermatologist-tested formulations and master techniques to create looks that are as healthy as they are head-turning — ensuring your transformation is as effortless as it is stunning.
             </p>
           </div>
         </div>
