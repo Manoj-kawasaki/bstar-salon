@@ -38,14 +38,19 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: `${siteConfig.name} — ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.description,
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
+    url: siteConfig.url,
     type: "website",
     images: [
       {

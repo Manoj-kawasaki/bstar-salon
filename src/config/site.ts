@@ -28,7 +28,7 @@ export const siteConfig = {
   tagline: "Bengaluru’s Premier Luxury Unisex Beauty & Hair Destination",
   description:
     "Experience bespoke hair artistry, advanced skin therapies, luxury bridal couture, and precision grooming at B★Star Unisex Salon, Battarahalli, Bengaluru.",
-  url: "https://b-star-saloon.com",
+  url: "https://bstarsalon.com",
   bookingUrl: "https://book.zuyyu.com/b-star-unisex-saloon",
   phone: "+91 99029 49549",
   phoneRaw: "+919902949549",
