@@ -40,7 +40,7 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "B★Star Unisex Salon | Best Hair & Beauty Salon in Battarahalli, Bengaluru",
+    default: "B★Star Unisex Salon | Hair & Beauty Salon in Battarahalli, Bengaluru",
     template: `%s | B★Star Unisex Salon Bengaluru`,
   },
   description: siteConfig.description,
@@ -141,22 +141,6 @@ export default function RootLayout({
       { "@type": "AdministrativeArea", name: "KR Puram" },
       { "@type": "AdministrativeArea", name: "Bengaluru" },
     ],
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: siteConfig.bookingUrl,
-        inLanguage: "en-US",
-        actionPlatform: [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform",
-        ],
-      },
-      result: {
-        "@type": "Reservation",
-        name: "Salon Appointment",
-      },
-    },
   };
 
   return (
