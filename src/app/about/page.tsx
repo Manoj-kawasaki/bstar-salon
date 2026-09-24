@@ -5,9 +5,12 @@ import LocationSection from '@/components/LocationSection'
 import BookingCTA from '@/components/BookingCTA'
 
 export const metadata: Metadata = {
-  title: `About | ${siteConfig.name}`,
-  description: `Learn more about ${siteConfig.name}, a luxury salon in ${siteConfig.location.area}, ${siteConfig.location.city}.`,
-}
+  title: "About Our Salon Atelier | B★Star Unisex Salon Battarahalli",
+  description: "Learn more about B★Star Unisex Salon, a premier luxury unisex salon in Battarahalli, Bengaluru dedicated to haute hair artistry and high-performance aesthetics.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

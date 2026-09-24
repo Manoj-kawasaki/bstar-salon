@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -8,13 +9,24 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
         {/* Brand & Address */}
         <div className="max-w-xs">
-          <Link href="/" className="inline-flex flex-col mb-6 group">
-            <span className="font-display font-extrabold text-3xl sm:text-4xl tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
-              B<span className="brand-star text-[#C5A059]">★</span>STAR
-            </span>
-            <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] text-[#C5A059] uppercase mt-1.5 font-semibold block">
-              UNISEX SALON · BENGALURU
-            </span>
+          <Link href="/" className="inline-flex items-center gap-3.5 mb-6 group">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 drop-shadow-md">
+              <Image
+                src="/images/bstar-logo-transparent.png"
+                alt="B★Star Unisex Salon Logo"
+                fill
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 640px) 44px, 48px"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-3xl sm:text-4xl tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
+                B<span className="brand-star text-[#C5A059]">★</span>STAR
+              </span>
+              <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.32em] text-[#C5A059] uppercase mt-1.5 font-semibold block">
+                UNISEX SALON · BENGALURU
+              </span>
+            </div>
           </Link>
           <div className="font-sans text-sm tracking-wide leading-relaxed opacity-80">
             <p>{siteConfig.location.fullAddress}</p>

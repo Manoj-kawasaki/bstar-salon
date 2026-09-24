@@ -40,26 +40,24 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
-    template: `%s | ${siteConfig.shortName}`,
+    default: "B★Star Unisex Salon | Best Hair & Beauty Salon in Battarahalli, Bengaluru",
+    template: `%s | B★Star Unisex Salon Bengaluru`,
   },
   description: siteConfig.description,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
   alternates: {
     canonical: "./",
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    "max-video-preview": -1,
+    "max-image-preview": "large",
+    "max-snippet": -1,
   },
   openGraph: {
-    title: `${siteConfig.name} — Luxury Unisex Salon in Battarahalli, Bengaluru`,
+    title: "B★Star Unisex Salon — Luxury Hair & Beauty Salon in Battarahalli, Bengaluru",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.shortName,
@@ -80,29 +78,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/bstar-hero-crop1.jpg`],
   },
-  keywords: [
-    "BStar Salon",
-    "B-Star Unisex Salon",
-    "B★Star Unisex Salon",
-    "salon in Battarahalli",
-    "best hair salon in Battarahalli Bengaluru",
-    "unisex salon TC Palya Main Road",
-    "luxury beauty salon KR Puram",
-    "hair botox Bangalore",
-    "kerafusion hair treatment Bengaluru",
-    "nanoplastia salon Bangalore",
-    "couture balayage hair color Bengaluru",
-    "hydrafacial clinic Battarahalli",
-    "bridal makeup artist Bengaluru",
-    "men precision grooming salon TC Palya",
-    "Stylo Plaza salon Bengaluru",
-  ],
-  other: {
-    "geo.region": "IN-KA",
-    "geo.placename": "Battarahalli, Bengaluru",
-    "geo.position": "13.0189;77.7028",
-    "ICBM": "13.0189, 77.7028",
-  },
 };
 
 export default function RootLayout({
@@ -119,7 +94,7 @@ export default function RootLayout({
     alternateName: ["B-Star Unisex Salon", "BStar Salon Battarahalli"],
     description: siteConfig.description,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/bstar-hero-crop1.jpg`,
+    logo: `${siteConfig.url}/images/bstar-logo.png`,
     image: [
       `${siteConfig.url}/images/bstar-hero-crop1.jpg`,
       `${siteConfig.url}/images/bstar-salon-interior.jpg`,
@@ -159,24 +134,29 @@ export default function RootLayout({
         closes: "21:00",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.googleReviewStats.rating,
-      reviewCount: siteConfig.googleReviewStats.reviewCount,
-      bestRating: siteConfig.googleReviewStats.ratingMax,
-      worstRating: 1,
-    },
     hasMap: "https://maps.google.com/?q=B-Star+Unisex+Saloon+Stylo+Plaza+Building+TC+Palya+Main+Rd+Battarahalli+Bengaluru",
-    sameAs: [
-      siteConfig.googleReviewStats.googleReviewUrl,
-      siteConfig.bookingUrl,
-    ],
     areaServed: [
       { "@type": "AdministrativeArea", name: "Battarahalli" },
       { "@type": "AdministrativeArea", name: "TC Palya" },
       { "@type": "AdministrativeArea", name: "KR Puram" },
       { "@type": "AdministrativeArea", name: "Bengaluru" },
     ],
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: siteConfig.bookingUrl,
+        inLanguage: "en-US",
+        actionPlatform: [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform",
+        ],
+      },
+      result: {
+        "@type": "Reservation",
+        name: "Salon Appointment",
+      },
+    },
   };
 
   return (

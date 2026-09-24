@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ArrowUpRight } from "lucide-react";
@@ -31,12 +32,22 @@ export default function Header() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between">
           
           {/* Brand Logo & Name */}
-          <Link href="/" className="flex items-center group">
+          <Link href="/" className="flex items-center gap-3 sm:gap-3.5 group">
+            <div className="relative w-9 h-9 sm:w-11 sm:h-11 shrink-0 drop-shadow-md">
+              <Image
+                src="/images/bstar-logo-transparent.png"
+                alt="B★Star Unisex Salon Logo"
+                fill
+                priority
+                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 640px) 36px, 44px"
+              />
+            </div>
             <div className="flex flex-col">
-              <span className="font-display font-extrabold text-2xl sm:text-3xl lg:text-[34px] tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
+              <span className="font-display font-extrabold text-2xl sm:text-3xl lg:text-[32px] tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
                 B<span className="brand-star text-[#C5A059]">★</span>STAR
               </span>
-              <span className="font-sans text-[8.5px] sm:text-[9.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-1.5 block">
+              <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.32em] uppercase text-[#C5A059] font-semibold mt-1.5 block">
                 UNISEX SALON · BENGALURU
               </span>
             </div>
@@ -109,13 +120,24 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[60] bg-[#1C110C] h-[100dvh] flex flex-col justify-between px-7 sm:px-8 pt-safe pb-safe animate-in fade-in duration-300">
           <div className="flex justify-between items-center border-b border-[#F5EDD6]/10 pb-5 pt-4">
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-2xl tracking-[0.14em] text-[#F5EDD6]">
-                B<span className="brand-star text-[#C5A059]">★</span>STAR
-              </span>
-              <span className="font-sans text-[8.5px] tracking-[0.34em] uppercase text-[#C5A059] font-semibold mt-0.5 block">
-                UNISEX SALON · BENGALURU
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="relative w-9 h-9 shrink-0 drop-shadow-md">
+                <Image
+                  src="/images/bstar-logo-transparent.png"
+                  alt="B★Star Unisex Salon Logo"
+                  fill
+                  className="object-contain"
+                  sizes="36px"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display font-extrabold text-2xl tracking-[0.14em] text-[#F5EDD6]">
+                  B<span className="brand-star text-[#C5A059]">★</span>STAR
+                </span>
+                <span className="font-sans text-[8px] tracking-[0.32em] uppercase text-[#C5A059] font-semibold mt-0.5 block">
+                  UNISEX SALON · BENGALURU
+                </span>
+              </div>
             </div>
             <button
               className="text-[#F5EDD6] hover:text-[#C5A059] transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center -mr-2"

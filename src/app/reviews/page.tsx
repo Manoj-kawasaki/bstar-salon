@@ -5,9 +5,12 @@ import BookingCTA from '@/components/BookingCTA'
 import { Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: `Reviews | ${siteConfig.name}`,
-  description: `Read what our clients have to say about their experience at ${siteConfig.name}.`,
-}
+  title: "Customer Reviews & Google Ratings | B★Star Unisex Salon Bengaluru",
+  description: "Read verified customer reviews for B★Star Unisex Salon in Battarahalli, Bengaluru. Rated 4.3★ by 339+ happy customers on Google.",
+  alternates: {
+    canonical: "/reviews",
+  },
+};
 
 export default function ReviewsPage() {
   const { rating, reviewCount, googleReviewUrl } = siteConfig.googleReviewStats

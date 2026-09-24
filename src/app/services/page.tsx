@@ -6,8 +6,11 @@ import BookingCTA from "@/components/BookingCTA";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | " + siteConfig.name,
-  description: "Discover our signature luxury salon treatments.",
+  title: "Salon Services Menu & Pricing | B★Star Unisex Salon Battarahalli",
+  description: "Explore bespoke hair styling, balayage, kerafusion, skin facials, bridal couture, and precision grooming services at B★Star Unisex Salon, Bengaluru.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {

@@ -7,9 +7,12 @@ import BookingCTA from '@/components/BookingCTA'
 import { ArrowUpRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: `Contact | ${siteConfig.name}`,
-  description: `Contact ${siteConfig.name} to book an appointment or inquire about our services in ${siteConfig.location.area}.`,
-}
+  title: "Contact & Location | B★Star Unisex Salon Battarahalli, Bengaluru",
+  description: "Get directions, contact details, or book an appointment at B★Star Unisex Salon, located at Stylo Plaza, TC Palya Main Road, Battarahalli, Bengaluru.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   const { location, phone, whatsappUrl, bookingUrl } = siteConfig

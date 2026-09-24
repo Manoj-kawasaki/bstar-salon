@@ -21,8 +21,11 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   }
 
   return {
-    title: `${category.title} | ${siteConfig.name}`,
-    description: category.shortDesc,
+    title: `${category.title} Services | B★Star Unisex Salon Battarahalli`,
+    description: `${category.longDesc || category.shortDesc} Book your appointment at B★Star Unisex Salon, Battarahalli, Bengaluru.`,
+    alternates: {
+      canonical: `/services/${category.slug}`,
+    },
   };
 }
 
