@@ -9,21 +9,21 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
         {/* Brand & Address */}
         <div className="max-w-xs">
-          <Link href="/" className="inline-flex items-center gap-3.5 mb-6 group">
-            <div className="relative w-11 h-11 sm:w-12 sm:h-12 shrink-0 drop-shadow-md">
+          <Link href="/" className="inline-flex flex-col items-center mb-6 group">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-md">
               <Image
                 src="/images/bstar-logo-transparent.png"
                 alt="B★Star Unisex Salon Logo"
                 fill
                 className="object-contain group-hover:scale-105 transition-transform duration-300"
-                sizes="(max-width: 640px) 44px, 48px"
+                sizes="(max-width: 640px) 48px, 56px"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-3xl sm:text-4xl tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none">
+            <div className="mt-2 flex flex-col items-center text-center">
+              <span className="font-display font-extrabold text-[14px] sm:text-[18px] tracking-[0.14em] text-[#F5EDD6] group-hover:text-[#C5A059] transition-colors leading-none uppercase">
                 B<span className="brand-star text-[#C5A059]">★</span>STAR
               </span>
-              <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.32em] text-[#C5A059] uppercase mt-1.5 font-semibold block">
+              <span className="font-sans text-[7px] sm:text-[8px] tracking-[0.12em] text-[#C5A059] uppercase mt-1.5 font-semibold block text-center">
                 UNISEX SALON · BENGALURU
               </span>
             </div>

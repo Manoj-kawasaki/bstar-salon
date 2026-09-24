@@ -58,7 +58,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-[0_12px_30px_rgba(197,160,89,0.25)] hover:shadow-[0_16px_36px_rgba(197,160,89,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
           >
-            <span>Reserve Your Experience</span>
+            <span>Book an Appointment</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#1C110C]" />
           </a>
 
