@@ -6,14 +6,14 @@ import Image from "next/image";
 export default function BookingCTA() {
   return (
     <section className="relative bg-[#1C110C] text-[#F5EDD6] py-32 sm:py-44 px-6 overflow-hidden flex items-center justify-center min-h-[75vh]">
-      {/* Background Image: Authentic Salon Floor Artistry (Fresh Haircut in Session) */}
+      {/* Background Image: Authentic Salon Chair Transformation in Session */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/bstar-craft-floor.jpg"
-          alt="B★Star Unisex Salon Bespoke Haircut Artistry in Session"
+          src="/images/bstar-chair-styling.jpg"
+          alt="B★Star Unisex Salon Master Hair Artistry — Client Transformation in Session"
           fill
           priority
-          className="object-cover object-center brightness-[0.68] contrast-[1.12] saturate-[1.15]"
+          className="object-cover object-[center_32%] brightness-[0.60] contrast-[1.10] saturate-[1.15]"
           sizes="100vw"
         />
         {/* Editorial gradient vignettes for maximum text legibility & rich mood */}
@@ -35,7 +35,7 @@ export default function BookingCTA() {
 
         {/* Artisanal Craft Statement */}
         <span className="font-serif italic text-lg sm:text-2xl text-[#E2C785] mb-4 block drop-shadow-md">
-          “Hair on the floor. Confidence in every step.”
+          “Every transformation begins in the chair. Confidence in every step.”
         </span>
 
         {/* Grand Headline */}

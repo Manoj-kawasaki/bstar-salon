@@ -379,9 +379,9 @@ export const siteConfig = {
     },
     {
       id: "gal-3",
-      title: "Cascading Ruby Balayage & Silk Waves",
+      title: "Signature B★Star Chair Transformation & Couture Waves",
       category: "Hair Artistry",
-      image: "/images/ylg-sample-1.jpg",
+      image: "/images/bstar-chair-styling.jpg",
       aspect: "tall",
     },
     {
