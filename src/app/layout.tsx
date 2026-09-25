@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   alternates: {
-    canonical: "./",
+    canonical: "https://bstarsalon.com/",
   },
   robots: {
     index: true,
@@ -103,7 +103,7 @@ export default function RootLayout({
     alternateName: ["B-Star Unisex Salon", "BStar Salon Battarahalli"],
     description: siteConfig.description,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/bstar-logo.png`,
+    logo: `${siteConfig.url}/images/bstar-logo-transparent.png`,
     image: [
       `${siteConfig.url}/images/bstar-hero-crop1.jpg`,
       `${siteConfig.url}/images/bstar-salon-interior.jpg`,
