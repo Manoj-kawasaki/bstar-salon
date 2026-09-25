@@ -1,5 +1,6 @@
 import { Playfair_Display, Montserrat, Cinzel } from "next/font/google";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -39,6 +40,9 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: "/favicon.png",
+  },
   title: {
     default: "B★Star Unisex Salon | Hair & Beauty Salon in Battarahalli, Bengaluru",
     template: `%s | B★Star Unisex Salon Bengaluru`,
@@ -150,6 +154,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FMWYGMPVWB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FMWYGMPVWB');
+          `}
+        </Script>
       </head>
       <body
         className={`${playfair.variable} ${montserrat.variable} ${cinzel.variable} min-h-screen bg-[#1C110C] text-[#F5EDD6] font-sans antialiased flex flex-col`}

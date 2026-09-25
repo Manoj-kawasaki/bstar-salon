@@ -14,12 +14,12 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[50%_20%] sm:object-center brightness-[0.92] contrast-[1.04]"
+          className="object-cover object-[50%_20%] sm:object-center brightness-[1.08] contrast-[1.02]"
         />
         {/* Soft editorial vignette overlays */}
-        <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-[#1C110C]/85 via-[#1C110C]/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-[68%] sm:h-[56%] bg-gradient-to-t from-[#1C110C] via-[#1C110C]/80 to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-radial-[circle_at_center,_transparent_40%,_rgba(28,17,12,0.45)_100%] pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-[#1C110C]/70 via-[#1C110C]/25 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-[68%] sm:h-[56%] bg-gradient-to-t from-[#1C110C]/90 via-[#1C110C]/60 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-radial-[circle_at_center,_transparent_40%,_rgba(28,17,12,0.28)_100%] pointer-events-none" />
       </div>
 
       {/* Top Brand Kicker with Editorial Gold Hairlines */}
