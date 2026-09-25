@@ -41,7 +41,12 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      {
+        url: "/favicon.png",
+        type: "image/png",
+      },
+    ],
   },
   title: {
     default: "B★Star Unisex Salon | Hair & Beauty Salon in Battarahalli, Bengaluru",
