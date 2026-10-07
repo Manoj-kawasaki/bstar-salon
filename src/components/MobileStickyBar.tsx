@@ -19,10 +19,8 @@ export default function MobileStickyBar() {
 
         {/* Primary Booking Action */}
         <a 
-          href={siteConfig.bookingUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="flex-1 flex items-center justify-center gap-2 h-12 bg-[#C5A059] active:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] shadow-lg transition-transform active:scale-[0.98]"
+          href="#book"
+          className="flex-1 flex items-center justify-center gap-2 h-12 bg-[#C5A059] active:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] shadow-lg transition-transform active:scale-[0.98] trigger-booking-modal cursor-pointer"
         >
           <Calendar size={15} strokeWidth={2} />
           <span>Book Appointment</span>

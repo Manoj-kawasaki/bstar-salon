@@ -86,10 +86,8 @@ export default function Header() {
             </a>
 
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] hover:bg-[#C5A059] px-5 py-2.5 transition-all duration-300 flex items-center gap-1.5 shadow-md hover:shadow-lg active:scale-98"
+              href="#book"
+              className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] hover:bg-[#C5A059] px-5 py-2.5 transition-all duration-300 flex items-center gap-1.5 shadow-md hover:shadow-lg active:scale-98 trigger-booking-modal cursor-pointer"
             >
               <span>Book Online</span>
               <ArrowUpRight size={14} />
@@ -99,10 +97,8 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="font-sans text-[10px] uppercase tracking-widest text-[#1C110C] bg-[#C5A059] px-3 py-1.5 font-bold"
+              href="#book"
+              className="font-sans text-[10px] uppercase tracking-widest text-[#1C110C] bg-[#C5A059] px-3 py-1.5 font-bold trigger-booking-modal cursor-pointer"
             >
               Book
             </a>
@@ -178,10 +174,8 @@ export default function Header() {
             </div>
 
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full text-center font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] py-3.5 hover:bg-[#C5A059] transition-colors"
+              href="#book"
+              className="w-full text-center font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] py-3.5 hover:bg-[#C5A059] transition-colors trigger-booking-modal cursor-pointer"
             >
               Book Appointment Online ↗
             </a>

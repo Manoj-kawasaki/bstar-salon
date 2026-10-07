@@ -57,10 +57,8 @@ export default function Footer() {
         {/* Links */}
         <div className="flex flex-col items-start gap-5">
           <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="font-serif italic text-xl hover:text-[#C5A059] transition-colors underline underline-offset-[6px] decoration-1 decoration-[#F5EDD6]/30 hover:decoration-[#C5A059]"
+            href="#book"
+            className="font-serif italic text-xl hover:text-[#C5A059] transition-colors underline underline-offset-[6px] decoration-1 decoration-[#F5EDD6]/30 hover:decoration-[#C5A059] trigger-booking-modal cursor-pointer"
           >
             Book Appointment
           </a>

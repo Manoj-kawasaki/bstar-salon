@@ -63,10 +63,8 @@ export default function LocationSection() {
               Directions
             </a>
             <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-serif italic text-lg border-b border-[#F5EDD6]/30 hover:border-[#F5EDD6] transition-colors pb-1 text-[#C5A059]"
+              href="#book"
+              className="font-serif italic text-lg border-b border-[#F5EDD6]/30 hover:border-[#F5EDD6] transition-colors pb-1 text-[#C5A059] trigger-booking-modal cursor-pointer"
             >
               Book Appointment
             </a>

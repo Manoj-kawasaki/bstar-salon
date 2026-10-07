@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileStickyBar from "@/components/MobileStickyBar";
+import BookingProvider from "@/components/BookingProvider";
 import { siteConfig } from "@/config/site";
 
 export const viewport: Viewport = {
@@ -176,10 +177,12 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${montserrat.variable} ${cinzel.variable} min-h-screen bg-[#1C110C] text-[#F5EDD6] font-sans antialiased flex flex-col`}
       >
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <MobileStickyBar />
+        <BookingProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <MobileStickyBar />
+        </BookingProvider>
       </body>
     </html>
   );

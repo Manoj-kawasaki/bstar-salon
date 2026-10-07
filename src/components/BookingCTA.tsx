@@ -61,10 +61,8 @@ export default function BookingCTA() {
         {/* High-Cachet Actions */}
         <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mb-10">
           <a
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.25em] px-9 py-4 shadow-2xl transition-all duration-300 hover:scale-105 active:scale-98"
+            href="#book"
+            className="group inline-flex items-center gap-3 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.25em] px-9 py-4 shadow-2xl transition-all duration-300 hover:scale-105 active:scale-98 trigger-booking-modal cursor-pointer"
           >
             <Calendar className="w-4 h-4 text-[#1C110C]" />
             <span>Book a Consultation</span>
