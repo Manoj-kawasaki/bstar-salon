@@ -1,240 +1,237 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 import {
   Sparkles,
-  RefreshCw,
   Star,
   Check,
   ExternalLink,
+  Copy,
+  ArrowRight,
+  Send,
 } from "lucide-react";
 
 const GOOGLE_DIRECT_REVIEW_URL =
   siteConfig.googleReviewStats.googleWriteReviewUrl ||
   "https://search.google.com/local/writereview?placeid=ChIJQwX9_hQRrjsRPGH6avSZBOc";
 
-interface ServiceCategoryCard {
+interface ServiceCard {
   id: string;
   icon: string;
   title: string;
-  reviews: string[];
+  hint: string;
+  fallbackReview: string;
 }
 
-const SERVICE_CATEGORIES_DATA: ServiceCategoryCard[] = [
+const SERVICE_CARDS: ServiceCard[] = [
   {
     id: "mens",
     icon: "💈",
     title: "Men's Grooming",
-    reviews: [
-      "got my fade haircut and beard trimming done here today.. super neat work and very reasonable pricing on tc palya road",
-      "came in for a quick haircut and shave before heading to office. no waiting time and the guy did a clean job",
-      "best salon around battarahalli for men's styling. tools are clean and the head massage after hair wash was awesome",
-      "had a haircut and grey coverage coloring done. looks very natural and pocket friendly compared to other places",
-      "regular customer here for hair cut and beard setting. polite staff and always consistent with the styling",
-      "loved the precision fade and beard alignment. the stylist took time to understand exactly the cut I wanted",
-    ],
+    hint: "Haircut, Fade, Beard Shaping",
+    fallbackReview:
+      "Got my fade haircut and beard trimming done at B★STAR Unisex Salon. Super neat styling, clean tools, and very reasonable pricing in Battarahalli.",
   },
   {
     id: "womens",
     icon: "💇‍♀️",
     title: "Women's Haircut",
-    reviews: [
-      "got a stylish layer cut and blow dry done today. my hair has so much bounce now and feels amazing",
-      "went for a hair trim and wash. the stylist actually listened to my length preference instead of cutting too short",
-      "did keratin treatment and split-end trim here. all my frizz is completely gone and hair is super smooth",
-      "brought my daughter for a kid's haircut and got a face-framing layer for myself. very patient staff",
-      "had hair smoothening and setting done. really clean finish and the team took great care throughout",
-      "great experience with the layered haircut and styling. my hair looks voluminous and healthy",
-    ],
+    hint: "Layers, Styling, Blow Dry",
+    fallbackReview:
+      "Had a wonderful layered haircut and blow dry at B★STAR Unisex Salon. The stylist listened carefully to my length preference and my hair feels bouncy and smooth.",
   },
   {
     id: "facial",
     icon: "🧖‍♀️",
     title: "Facial & Cleanup",
-    reviews: [
-      "took the o3+ facial today and it was so relaxing. my skin got an instant natural glow right after",
-      "went in for a fruit cleanup. the face massage was incredible and there was zero pushy upselling",
-      "got the hydra facial done before a family function. everyone complimented how fresh my face looked",
-      "did a red wine facial and eye rejuvenation. very calm atmosphere, clean towels, and gentle hands",
-      "had a classic cleanup done after a tiring week. blackheads were extracted gently without any redness",
-      "skin feels deeply cleansed and hydrated after the facial. very soothing technique by the aesthetician",
-    ],
+    hint: "O3+, Fruit, Hydra Glow",
+    fallbackReview:
+      "Took the facial and cleanup treatment today at B★STAR Salon. The face massage was deeply relaxing and gave my skin an instant, fresh glow without irritation.",
   },
   {
     id: "detan",
     icon: "☀️",
     title: "Detan & Bleach",
-    reviews: [
-      "got face and neck o3 detan done. cleared up my harsh two-wheeler sun tan in a single sitting",
-      "went for full arms and face bleach. very neat application and you can clearly see the tan is gone",
-      "did oxy bleach here. didn't burn or itch my skin at all, used very good quality products",
-      "took the body brightening detan pack. staff is polite and the results are honestly worth the money",
-      "quick and effective detan service. perfect if you ride daily in the bangalore sun",
-      "immediate brightening effect from the de-tan treatment. gentle on sensitive skin with no irritation",
-    ],
+    hint: "Face, Arms, Skin Brightening",
+    fallbackReview:
+      "Got the de-tan treatment done at B★STAR Unisex Salon. It cleared my sun tan noticeably in a single session with gentle, high-quality products.",
   },
   {
     id: "waxing",
     icon: "🍯",
     title: "Waxing Service",
-    reviews: [
-      "got full arms and legs waxing done. the lady was super quick and made it as painless as possible",
-      "went for flavour waxing today. hygiene is well maintained with clean strips and no sticky residue",
-      "very comfortable experience for intimate waxing. the room is private and staff makes you feel at ease",
-      "did honey waxing for hands and underarms. temperature was checked properly and zero skin irritation",
-      "tried their full body waxing. super fast, hygienic, and very professional staff all around",
-      "clean private room and thorough waxing. handled very gently with soothing lotion applied after",
-    ],
+    hint: "Rica, Honey, Full Body",
+    fallbackReview:
+      "Very comfortable and hygienic waxing experience at B★STAR Salon. The room was private, staff was gentle, and there was zero sticky residue.",
   },
   {
     id: "threading",
     icon: "🪡",
     title: "Threading",
-    reviews: [
-      "got my eyebrows and upper lip threading done. she has a very light hand and kept my natural arch intact",
-      "finally found someone around battarahalli who does eyebrow threading without making them pencil thin",
-      "quick forehead and eyebrow shaping. barely felt any pain and applied soothing rose water after",
-      "came in for full face threading. very gentle work, clean thread, and sanitized setup",
-      "neat eyebrow shaping for just 50 rupees. didn't get a single cut, extremely happy with the finish",
-      "perfect symmetry on my brows. quick, gentle, and very well done",
-    ],
+    hint: "Eyebrows, Upper Lip, Forehead",
+    fallbackReview:
+      "Got my eyebrow threading and shaping done here. She has a very light hand, kept my natural arch intact, and applied soothing lotion after.",
   },
   {
     id: "manipedi",
     icon: "💅",
     title: "Mani & Pedicure",
-    reviews: [
-      "took the spa pedicure and manicure combo. the foot massage and warm water soak were so relaxing",
-      "tried their chocolate pedicure today. my heels feel super soft and clean, totally worth trying",
-      "got a crystal spa pedicure and nail polish done. the staff took their time scrubbing properly",
-      "went for paraffin pedi-mani combo and foot massage. best way to unwind on a weekend evening",
-      "very hygienic pedicure tub setup. dead skin was cleared out thoroughly and hand massage was great",
-      "foot massage was so therapeutic and my feet feel brand new. clean instruments and warm service",
-    ],
+    hint: "Spa Soak, Scrub, Nail Care",
+    fallbackReview:
+      "Tried their spa pedicure and foot massage at B★STAR Unisex Salon. Clean instruments, thorough heel care, and an extremely relaxing experience.",
   },
   {
     id: "hairspa",
     icon: "🌿",
     title: "Hair Spa & Massage",
-    reviews: [
-      "took the keratin hair spa and head massage. my dry hair feels glossy now and the massage cured my headache",
-      "went for the dandruff scalp treatment and classic hair spa. very relaxing steam and oil application",
-      "did a moisture hair spa and deep conditioning. hair feels light, bouncy, and smells amazing",
-      "had a 20-minute head massage and hair wash. pressure was spot on, walked out feeling refreshed",
-      "trying their hair fall treatment spa. good products used and the stylist gave genuine hair care tips",
-      "the head massage was pure relaxation. my dry hair texture feels noticeably smoother and nourished",
-    ],
+    hint: "Keratin, Moisture, Deep Steam",
+    fallbackReview:
+      "The hair spa and head massage at B★STAR Unisex Salon relieved all my stress. My dry hair feels completely nourished, soft, and glossy.",
   },
   {
     id: "makeup",
     icon: "💄",
     title: "Bridal & Makeup",
-    reviews: [
-      "booked party makeup and saree draping here. the base matched my skin tone naturally and wasn't cakey",
-      "took their bridal pre-grooming package. everything from facial to waxing was handled smoothly without rush",
-      "got light makeup and hair styling done for an event. stayed fresh the whole evening with zero touch-ups",
-      "very happy with the bridal makeup team. they arrived right on time and draped the heavy saree neatly",
-      "great place for party makeup and soft curls. natural finish and very reasonable compared to big city chains",
-      "loved the elegant makeup look. they listened to my style preference and kept it understated and chic",
-    ],
+    hint: "Party Glam, Saree Draping",
+    fallbackReview:
+      "Booked party makeup and saree draping at B★STAR Salon. The base matched my skin tone naturally without looking cakey, and stayed fresh all evening.",
   },
   {
     id: "colour",
     icon: "🎨",
     title: "Global Colour & Roots",
-    reviews: [
-      "got ammonia-free root touch up done. covered all my greys evenly without any chemical smell",
-      "did global hair colour and crown highlights here. the shade looks super rich in sunlight and hair is soft",
-      "came in for a root touch up and blow dry. color matched my existing hair roots seamlessly",
-      "tried fashion streaks and global highlights. the stylist helped me pick a tone that suits my face",
-      "good place for ammonia-free global hair color. neat application, no forehead stains, and fair pricing",
-      "subtle and sophisticated hair highlights. condition of my hair remained silky even after coloring",
-    ],
+    hint: "Root Touch-up, Highlights",
+    fallbackReview:
+      "Got ammonia-free root touch up and hair colour done. Perfectly covered my greys with zero scalp irritation, and my hair looks rich and shiny.",
   },
 ];
 
 export default function ReviewAssistant() {
-  const [activeReviews, setActiveReviews] = useState<Record<string, string>>({});
+  const [userText, setUserText] = useState<string>("");
+  const [generatingFor, setGeneratingFor] = useState<string | null>(null);
+  const [isGeneratingCustom, setIsGeneratingCustom] = useState<boolean>(false);
+  const [generatedDraft, setGeneratedDraft] = useState<string>("");
+  const [copied, setCopied] = useState<boolean>(false);
   const [overlayActive, setOverlayActive] = useState<boolean>(false);
   const [overlayText, setOverlayText] = useState<string>("");
-  const [overlayTitle, setOverlayTitle] = useState<string>("Review Copied!");
-  const [overlayStepText, setOverlayStepText] = useState<string>(
-    "1. Tap 5th Star ★  →  2. Paste & Post!"
-  );
 
-  // Initialize random AI review for each card
-  const shuffleReviews = () => {
-    const map: Record<string, string> = {};
-    SERVICE_CATEGORIES_DATA.forEach((cat) => {
-      const idx = Math.floor(Math.random() * cat.reviews.length);
-      map[cat.id] = cat.reviews[idx];
-    });
-    setActiveReviews(map);
-  };
-
-  useEffect(() => {
-    shuffleReviews();
-  }, []);
-
-  // Copy helper with fallbacks for all mobile environments
-  const copyToClipboard = (text: string) => {
+  // Universal clipboard helper
+  const copyToClipboard = async (text: string): Promise<boolean> => {
     try {
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text);
+        await navigator.clipboard.writeText(text);
+        return true;
       } else {
         const textarea = document.createElement("textarea");
         textarea.value = text;
         textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
         textarea.style.left = "-9999px";
         document.body.appendChild(textarea);
         textarea.focus();
         textarea.select();
-        document.execCommand("copy");
+        const success = document.execCommand("copy");
         document.body.removeChild(textarea);
+        return success;
       }
-    } catch (e) {
-      console.warn("Clipboard copy fallback error:", e);
+    } catch {
+      return false;
     }
   };
 
-  // Direct tap handler: Copy AI review context & go directly to Google Review
-  const handleSelectService = (catId: string) => {
-    const textToCopy = activeReviews[catId] || SERVICE_CATEGORIES_DATA.find((c) => c.id === catId)?.reviews[0] || "";
-    copyToClipboard(textToCopy);
-
-    setOverlayTitle("Review Copied!");
-    setOverlayText(textToCopy);
-    setOverlayStepText("1. Tap 5th Star ★  →  2. Paste & Post!");
+  // Launch Google Review directly with copied review
+  const launchGoogleReview = (reviewText: string) => {
+    copyToClipboard(reviewText);
+    setOverlayText(reviewText);
     setOverlayActive(true);
 
-    // Redirect directly to Google Review
     setTimeout(() => {
       window.location.href = GOOGLE_DIRECT_REVIEW_URL;
-    }, 450);
+    }, 600);
   };
 
-  // Top 5-Star Only Direct Link
-  const handleDirectFiveStar = () => {
-    setOverlayTitle("Opening Google Review...");
-    setOverlayText("");
-    setOverlayStepText("1. Tap 5th Star ★  →  2. Tap Post!");
-    setOverlayActive(true);
+  // Generate review from customer's custom rough thoughts in 1 second
+  const handleGenerateCustomText = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    const raw = userText.trim();
+    if (!raw) return;
 
+    setIsGeneratingCustom(true);
+
+    try {
+      const res = await fetch("/api/reviews/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ user_text: raw }),
+      });
+
+      const data = await res.json();
+      if (data?.success && data?.draft) {
+        setGeneratedDraft(data.draft);
+        launchGoogleReview(data.draft);
+      } else {
+        // Fallback: polish basic words if network/quota
+        const fallback = `I visited B★STAR Unisex Salon in Battarahalli. ${raw}. Great service and highly recommended.`;
+        setGeneratedDraft(fallback);
+        launchGoogleReview(fallback);
+      }
+    } catch {
+      const fallback = `I visited B★STAR Unisex Salon in Battarahalli. ${raw}. Great service and highly recommended.`;
+      setGeneratedDraft(fallback);
+      launchGoogleReview(fallback);
+    } finally {
+      setIsGeneratingCustom(false);
+    }
+  };
+
+  // Generate review for category tap in 1 second
+  const handleTapServiceCard = async (card: ServiceCard) => {
+    setGeneratingFor(card.id);
+
+    try {
+      const res = await fetch("/api/reviews/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service: card.title,
+          feedback: {
+            service_received: card.hint,
+            customer_observation: "clean salon, attentive styling, pleasant visit",
+          },
+        }),
+      });
+
+      const data = await res.json();
+      const finalReview =
+        data?.success && data?.draft ? data.draft : card.fallbackReview;
+
+      setGeneratedDraft(finalReview);
+      launchGoogleReview(finalReview);
+    } catch {
+      setGeneratedDraft(card.fallbackReview);
+      launchGoogleReview(card.fallbackReview);
+    } finally {
+      setGeneratingFor(null);
+    }
+  };
+
+  // Direct 5★ Only handler
+  const handleDirectFiveStar = () => {
+    setOverlayText("");
+    setOverlayActive(true);
     setTimeout(() => {
       window.location.href = GOOGLE_DIRECT_REVIEW_URL;
-    }, 350);
+    }, 400);
   };
 
   return (
     <div className="w-full max-w-md mx-auto px-3 py-4 sm:py-6 font-sans select-none">
-      {/* Google-branded Top Bar */}
       <div className="bg-[#241711] border border-[#C5A059]/30 rounded-3xl overflow-hidden shadow-2xl">
+        {/* Google Bar */}
         <div className="h-1.5 w-full bg-gradient-to-r from-[#4285F4] via-[#EA4335] via-[#FBBC05] to-[#34A853]" />
 
-        {/* Top bar info */}
+        {/* Top Nav (Clean Google Branding - NO AI BADGE) */}
         <div className="flex items-center justify-between px-4 py-2.5 border-b border-[#F5EDD6]/10 text-xs">
           <div className="flex items-center gap-1.5 text-[#F5EDD6]/80 font-medium">
             <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
@@ -255,12 +252,17 @@ export default function ReviewAssistant() {
                 d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"
               />
             </svg>
-            <span>Google Review</span>
+            <span className="font-semibold text-xs text-[#FAF3E3]">Google Review</span>
           </div>
-          <span className="bg-emerald-950/80 text-emerald-300 border border-emerald-500/40 font-bold text-[10px] px-2.5 py-0.5 rounded-full flex items-center gap-1">
-            <Sparkles className="w-2.5 h-2.5 text-emerald-400" />
-            AI-Crafted Text
-          </span>
+
+          <a
+            href={GOOGLE_DIRECT_REVIEW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] text-[#C5A059] hover:underline flex items-center gap-1 font-medium"
+          >
+            Direct Review <ExternalLink className="w-3 h-3" />
+          </a>
         </div>
 
         {/* Profile Header */}
@@ -285,75 +287,101 @@ export default function ReviewAssistant() {
           </div>
         </div>
 
-        {/* Option A: Fast 2-Second 5-Star Only Bar */}
+        {/* SECTION 1: Type Your Rough Thoughts (Instant 1-Second AI Polish) */}
+        <div className="px-4 pb-3">
+          <form
+            onSubmit={handleGenerateCustomText}
+            className="bg-[#1C110C] border border-[#C5A059]/40 rounded-2xl p-3 shadow-md"
+          >
+            <label className="block text-[11px] uppercase tracking-wider text-[#C5A059] font-bold mb-1.5">
+              Type your thoughts (AI writes it in 1 second):
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={userText}
+                onChange={(e) => setUserText(e.target.value)}
+                placeholder="e.g. fantastic salon good haircut clean place"
+                className="flex-1 bg-[#241711] border border-[#F5EDD6]/20 rounded-xl px-3 py-2 text-xs text-[#FAF3E3] placeholder-[#F5EDD6]/40 focus:outline-none focus:border-[#C5A059]"
+              />
+              <button
+                type="submit"
+                disabled={isGeneratingCustom || !userText.trim()}
+                className="bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-bold px-3.5 py-2 rounded-xl text-xs flex items-center gap-1.5 shrink-0 transition-all disabled:opacity-50"
+              >
+                {isGeneratingCustom ? (
+                  <div className="w-3.5 h-3.5 border-2 border-[#1C110C] border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <>
+                    <span>Write</span>
+                    <Sparkles className="w-3.5 h-3.5" />
+                  </>
+                )}
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Fast 2-Second 5-Star Direct Link */}
         <div className="px-4 pb-3">
           <button
             type="button"
             onClick={handleDirectFiveStar}
-            className="w-full bg-gradient-to-r from-[#1C110C] to-[#2D1B12] hover:from-[#2D1B12] hover:to-[#3D2518] active:scale-[0.98] border border-[#C5A059]/40 rounded-2xl p-3 flex items-center justify-between text-left transition-all shadow-md group"
+            className="w-full bg-gradient-to-r from-[#1C110C] to-[#2D1B12] hover:from-[#2D1B12] hover:to-[#3D2518] active:scale-[0.98] border border-[#F5EDD6]/15 hover:border-[#C5A059]/40 rounded-2xl p-2.5 flex items-center justify-between text-left transition-all group"
           >
             <div>
-              <div className="flex items-center gap-1 text-[#FBBC05] text-lg leading-none">
-                <Star className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
-                <Star className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
-                <Star className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
-                <Star className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
-                <Star className="w-4 h-4 fill-[#FBBC05] text-[#FBBC05]" />
+              <div className="flex items-center gap-0.5 text-[#FBBC05] text-sm leading-none">
+                <Star className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
+                <Star className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
+                <Star className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
+                <Star className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
+                <Star className="w-3.5 h-3.5 fill-[#FBBC05] text-[#FBBC05]" />
               </div>
-              <div className="text-[11px] font-medium text-[#FAF3E3]/90 mt-1">
-                In a rush? Tap for direct rating (no text)
+              <div className="text-[11px] text-[#FAF3E3]/80 mt-0.5">
+                In a rush? Just open Google directly
               </div>
             </div>
-            <span className="bg-[#C5A059] group-hover:bg-[#D4B97A] text-[#1C110C] font-bold text-xs px-3 py-2 rounded-xl whitespace-nowrap shadow flex items-center gap-1">
-              <span>Direct 5★</span>
-              <span>→</span>
+            <span className="text-[11px] font-bold text-[#C5A059] bg-[#C5A059]/10 px-2.5 py-1 rounded-lg">
+              5★ Directly →
             </span>
           </button>
         </div>
 
-        {/* Section Header: Tap Service with Shuffle */}
-        <div className="px-4 pt-2 pb-2.5 flex items-center justify-between">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-[#C5A059]">
-            Tap your service (auto-copies &amp; opens):
+        {/* SECTION 2: 10 Instant Service Cards (Auto AI Generation on Tap) */}
+        <div className="px-4 pt-1 pb-2">
+          <h2 className="text-[11px] font-bold uppercase tracking-wider text-[#C5A059]">
+            Or tap your service (writes &amp; opens in 1 second):
           </h2>
-          <button
-            type="button"
-            onClick={shuffleReviews}
-            className="inline-flex items-center gap-1 text-[11px] text-[#F5EDD6]/75 hover:text-[#C5A059] bg-[#1C110C] border border-[#F5EDD6]/15 hover:border-[#C5A059]/40 px-2.5 py-1 rounded-full transition-all"
-          >
-            <RefreshCw className="w-3 h-3" />
-            <span>Change text</span>
-          </button>
         </div>
 
-        {/* 10 Service Cards Grid: 2 Columns for Thumb Tapping */}
         <div className="px-4 pb-4 grid grid-cols-2 gap-2.5">
-          {SERVICE_CATEGORIES_DATA.map((cat) => {
-            const currentQuote = activeReviews[cat.id] || cat.reviews[0];
+          {SERVICE_CARDS.map((card) => {
+            const isLoadingThis = generatingFor === card.id;
             return (
               <button
-                key={cat.id}
+                key={card.id}
                 type="button"
-                onClick={() => handleSelectService(cat.id)}
-                className="group relative bg-[#1C110C] hover:bg-[#2A1A12] active:scale-[0.97] border border-[#F5EDD6]/15 hover:border-[#C5A059]/60 rounded-2xl p-3 flex flex-col justify-between text-left transition-all duration-150 shadow-sm min-h-[140px]"
+                disabled={isLoadingThis}
+                onClick={() => handleTapServiceCard(card)}
+                className="group relative bg-[#1C110C] hover:bg-[#2A1A12] active:scale-[0.97] border border-[#F5EDD6]/15 hover:border-[#C5A059]/60 rounded-2xl p-3 flex flex-col justify-between text-left transition-all duration-150 shadow-sm min-h-[92px]"
               >
                 <div>
-                  <div className="flex items-center gap-2 mb-1.5">
+                  <div className="flex items-center gap-2 mb-1">
                     <span className="w-7 h-7 rounded-lg bg-[#241711] border border-[#C5A059]/30 flex items-center justify-center text-sm shrink-0">
-                      {cat.icon}
+                      {card.icon}
                     </span>
                     <span className="font-serif text-xs font-bold text-[#FAF3E3] group-hover:text-[#C5A059] leading-tight line-clamp-1">
-                      {cat.title}
+                      {card.title}
                     </span>
                   </div>
-                  <p className="text-[11px] text-[#F5EDD6]/75 line-clamp-3 leading-relaxed italic mb-2">
-                    &ldquo;{currentQuote}&rdquo;
+                  <p className="text-[10.5px] text-[#F5EDD6]/65 line-clamp-1 leading-snug">
+                    {card.hint}
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-[#F5EDD6]/10 flex items-center justify-between text-[10px] font-semibold text-[#C5A059]">
-                  <span>Tap to Copy &amp; Open</span>
-                  <span>5★ →</span>
+                <div className="pt-1.5 mt-1 border-t border-[#F5EDD6]/10 flex items-center justify-between text-[10px] font-semibold text-[#C5A059]">
+                  <span>{isLoadingThis ? "Writing..." : "Tap to Open"}</span>
+                  <span>{isLoadingThis ? "⏳" : "5★ →"}</span>
                 </div>
               </button>
             );
@@ -362,27 +390,27 @@ export default function ReviewAssistant() {
 
         {/* Bottom Tip Banner */}
         <div className="mx-4 mb-4 p-3 bg-[#1C110C] border border-[#C5A059]/25 rounded-2xl text-[11px] text-[#F5EDD6]/80 leading-relaxed">
-          <strong className="text-[#C5A059]">💡 2-Second Step:</strong> Tap your service above → on Google, tap your rating (★★★★★), <strong className="text-[#FAF3E3]">Paste</strong>, and tap <strong className="text-[#FAF3E3]">Post</strong>!
+          <strong className="text-[#C5A059]">💡 2-Second Step:</strong> Tap your service above → on Google, tap your rating (★★★★★), <strong className="text-[#FAF3E3]">Paste</strong>, and hit <strong className="text-[#FAF3E3]">Post</strong>!
         </div>
       </div>
 
       {/* Instant Launch Overlay */}
       {overlayActive && (
-        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center animate-in fade-in duration-150">
-          <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mb-4 shadow-xl">
+        <div className="fixed inset-0 z-[100] bg-black/92 backdrop-blur-md flex flex-col items-center justify-center p-6 text-center animate-in fade-in duration-150">
+          <div className="w-16 h-16 rounded-full bg-emerald-500 text-white flex items-center justify-center mb-3 shadow-xl">
             <Check className="w-9 h-9 stroke-[3]" />
           </div>
 
-          <div className="flex items-center gap-1 text-[#FBBC05] text-3xl mb-2">
-            <Star className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
-            <Star className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
-            <Star className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
-            <Star className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
-            <Star className="w-6 h-6 fill-[#FBBC05] text-[#FBBC05]" />
+          <div className="flex items-center gap-1 text-[#FBBC05] text-2xl mb-2">
+            <Star className="w-5 h-5 fill-[#FBBC05] text-[#FBBC05]" />
+            <Star className="w-5 h-5 fill-[#FBBC05] text-[#FBBC05]" />
+            <Star className="w-5 h-5 fill-[#FBBC05] text-[#FBBC05]" />
+            <Star className="w-5 h-5 fill-[#FBBC05] text-[#FBBC05]" />
+            <Star className="w-5 h-5 fill-[#FBBC05] text-[#FBBC05]" />
           </div>
 
-          <h2 className="font-serif text-2xl text-[#FAF3E3] font-normal mb-2">
-            {overlayTitle}
+          <h2 className="font-serif text-xl sm:text-2xl text-[#FAF3E3] font-normal mb-2">
+            Review Copied!
           </h2>
 
           {overlayText && (
@@ -392,12 +420,12 @@ export default function ReviewAssistant() {
           )}
 
           <div className="bg-[#C5A059] text-[#1C110C] font-bold text-xs sm:text-sm px-5 py-3 rounded-2xl shadow-xl uppercase tracking-wider flex items-center gap-2">
-            <span>{overlayStepText}</span>
+            <span>1. Tap 5th Star ★ → 2. Paste &amp; Post!</span>
             <ExternalLink className="w-4 h-4" />
           </div>
 
           <p className="text-[11px] text-[#F5EDD6]/60 mt-4">
-            Opening Google Review in a moment...
+            Opening Google Review now...
           </p>
         </div>
       )}

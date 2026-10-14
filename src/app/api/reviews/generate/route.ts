@@ -86,57 +86,34 @@ export async function POST(req: Request) {
       );
     }
 
-    const { service, feedback } = body || {};
+    const { service, feedback, user_text } = body || {};
 
-    if (!service || typeof service !== "string" || !isValidCategory(service)) {
+    const rawUserText = typeof user_text === "string" ? user_text.slice(0, 300).trim() : "";
+
+    if (!rawUserText && (!service || typeof service !== "string" || !isValidCategory(service))) {
       return Response.json(
         {
           success: false,
-          error: "Please select a valid salon service category.",
-        },
-        { status: 400 }
-      );
-    }
-
-    if (!feedback || typeof feedback !== "object") {
-      return Response.json(
-        {
-          success: false,
-          error: "Please share details about your salon visit to draft your review.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Extract fields with length bounds
-    const serviceReceived = String(feedback.service_received || "").slice(0, 150).trim();
-    const customerObservation = String(feedback.customer_observation || "").slice(0, 250).trim();
-    const additionalComments = String(feedback.additional_comments || "").slice(0, 300).trim();
-    const overallFeeling = String(feedback.overall_feeling || "").slice(0, 50).trim();
-
-    // Check if customer provided sufficient input
-    if (!serviceReceived && !customerObservation && !additionalComments) {
-      return Response.json(
-        {
-          success: false,
-          error:
-            "Please select the service you received or share a brief comment about your visit.",
+          error: "Please enter your thoughts or select a valid service category.",
         },
         { status: 400 }
       );
     }
 
     // 4. Construct Prompt
-    const userPromptLines: string[] = [
-      `Service Category: ${service}`,
-      serviceReceived ? `Service Received: ${serviceReceived}` : null,
-      customerObservation ? `Customer Observation: ${customerObservation}` : null,
-      overallFeeling ? `Overall Impression: ${overallFeeling}` : null,
-      additionalComments ? `Customer's Own Words / Notes: ${additionalComments}` : null,
-      `Instructions: Compose a natural, authentic, 2-3 sentence Google review reflecting this visit. Return JSON: {"draft": "..."}`,
-    ].filter(Boolean) as string[];
-
-    const userPrompt = userPromptLines.join("\n");
+    let userPrompt = "";
+    if (rawUserText) {
+      userPrompt = `Customer's raw feedback: "${rawUserText}".
+Service: ${service || "Salon Treatment"}
+Task: Rewrite the customer's raw thoughts into a natural, polished, grammatically correct 2-sentence Google review in the first person for B★STAR Unisex Salon in Battarahalli, Bengaluru. Return JSON: {"draft": "..."}`;
+    } else {
+      const serviceReceived = String(feedback?.service_received || service).slice(0, 150).trim();
+      const customerObservation = String(feedback?.customer_observation || "").slice(0, 250).trim();
+      userPrompt = `Service Category: ${service}
+Service: ${serviceReceived}
+Observation: ${customerObservation || "attentive styling and clean salon"}
+Task: Compose a natural, authentic, 2-sentence customer Google review for B★STAR Unisex Salon in Battarahalli, Bengaluru. Return JSON: {"draft": "..."}`;
+    }
 
     // 5. Call OpenRouter API with Timeout
     const controller = new AbortController();
@@ -158,8 +135,11 @@ export async function POST(req: Request) {
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: userPrompt },
           ],
-          temperature: 0.6,
-          max_tokens: 150,
+          temperature: 0.7,
+          max_tokens: 200,
+          reasoning: {
+            effort: "none",
+          },
           response_format: { type: "json_object" },
         }),
         signal: controller.signal,
