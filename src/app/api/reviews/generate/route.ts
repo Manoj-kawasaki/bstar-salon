@@ -5,17 +5,12 @@ import {
   getDailyUsageStats,
 } from "@/lib/rate-limit";
 
-const SYSTEM_PROMPT = `You are a helpful review assistant for authentic customers of B★STAR Unisex Salon, located at Stylo Plaza, TC Palya Main Rd, Battarahalli, Bengaluru.
-Your sole task is to turn the customer's provided visit feedback into a natural, genuine, personal Google review in concise conversational English (2 to 3 sentences, 35 to 65 words).
-
-STRICT RULES:
-1. Base the draft EXCLUSIVELY on the customer's provided service and specific observations.
-2. NEVER invent treatments, products, staff names, prices, or claims of painlessness unless stated by the customer.
-3. NEVER assume a 5-star experience or force promotional praise. If the customer had a neutral, mixed, or constructive experience, reflect that faithfully.
-4. NEVER use promotional marketing clichés (e.g., "Look no further", "hidden gem", "best in town", "pampered to perfection", "world-class").
-5. Write in the first person from the customer's perspective ("I got...", "The stylist...", "My haircut was...").
-6. Sound like an everyday person who visited the salon in Battarahalli / Bengaluru and wrote an honest review on their phone.
-7. Return ONLY valid JSON in this exact structure: {"draft": "review text here"}`;
+const SYSTEM_PROMPT = `You are an everyday customer who just visited B★STAR Unisex Salon in Battarahalli, Bengaluru.
+Write an authentic, natural, humanized 2-sentence Google review in the first person ("I came in for...", "Got my...", "My stylist was...").
+Include realistic positive observations like polite staff, clean salon, or great styling.
+NEVER invent treatments or prices. NEVER assume a 5-star experience or force promotional claims. NEVER use promotional marketing clichés.
+Write in casual, friendly, authentic conversational English. Do not use hashtags or quotes.
+Return ONLY valid JSON in this exact structure: {"draft": "review text here"}`;
 
 export async function POST(req: Request) {
   try {
