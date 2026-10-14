@@ -3,6 +3,7 @@ import { siteConfig } from '@/config/site'
 import LocationSection from '@/components/LocationSection'
 import BookingCTA from '@/components/BookingCTA'
 import { Star } from 'lucide-react'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Customer Reviews & Google Ratings | B★Star Unisex Salon Bengaluru",
@@ -42,16 +43,25 @@ export default function ReviewsPage() {
               Based on 339+ Google Reviews
             </p>
             
-            {googleReviewUrl && (
-              <a 
-                href={googleReviewUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center gap-2 font-serif italic text-xl border-b border-[#1C110C] pb-1 hover:text-[#C5A059] hover:border-[#C5A059] transition-colors"
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/review"
+                className="px-6 py-3.5 bg-[#1C110C] text-[#FAF3E3] hover:bg-[#C5A059] hover:text-[#1C110C] font-sans text-xs uppercase tracking-widest font-bold transition-all rounded-full shadow-lg inline-flex items-center gap-2"
               >
-                Leave a Review <span>→</span>
-              </a>
-            )}
+                <span>Write with AI Assistant</span>
+                <span>✨</span>
+              </Link>
+              {googleReviewUrl && (
+                <a 
+                  href={siteConfig.googleReviewStats.googleWriteReviewUrl || googleReviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif italic text-base border-b border-[#1C110C] pb-0.5 hover:text-[#C5A059] hover:border-[#C5A059] transition-colors"
+                >
+                  Direct Google Review <span>→</span>
+                </a>
+              )}
+            </div>
           </div>
         </header>
 

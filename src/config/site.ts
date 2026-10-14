@@ -40,6 +40,8 @@ export const siteConfig = {
     reviewCount: 339,
     ratingMax: 5.0,
     googleReviewUrl: "https://www.google.com/search?q=B-Star+Unisex+Saloon+Battarahalli+Bengaluru+reviews",
+    googleWriteReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJQwX9_hQRrjsRPGH6avSZBOc",
+    reviewAssistantUrl: "/review",
   },
   location: {
     name: "B★Star Unisex Salon",

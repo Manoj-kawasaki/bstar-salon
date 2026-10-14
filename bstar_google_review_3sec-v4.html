@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>B★Star Unisex Salon — Quick Google Review</title>
+  <link rel="preconnect" href="https://search.google.com" crossorigin />
+  <link rel="dns-prefetch" href="https://search.google.com" />
+  <style>
+    :root {
+      --g-blue: #1a73e8;
+      --g-blue-dark: #1557b0;
+      --g-yellow: #fbbc04;
+      --g-green: #34a853;
+      --g-red: #ea4335;
+      --g-text: #202124;
+      --g-sub: #5f6368;
+      --g-border: #dadce0;
+      --g-bg: #f1f3f4;
+      --bstar-gold: #d4af37;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    body {
+      font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--g-bg);
+      color: var(--g-text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 10px 24px;
+    }
+    .sheet {
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 28px rgba(32,33,36,0.12);
+      overflow: hidden;
+      border: 1px solid var(--g-border);
+    }
+    .google-bar {
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(90deg, #4285f4 0% 25%, #ea4335 25% 50%, #fbbc04 50% 75%, #34a853 75% 100%);
+    }
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-bottom: 1px solid #f1f3f4;
+    }
+    .g-brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--g-sub);
+    }
+    .g-logo { width: 17px; height: 17px; }
+    .fast-badge {
+      background: #e6f4ea;
+      color: #137333;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 99px;
+    }
+    /* Header Profile */
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px 10px;
+    }
+    .bstar-logo-img {
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      border: 2px solid var(--bstar-gold);
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+    }
+    .profile-text h1 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--g-text);
+      line-height: 1.2;
+    }
+    .profile-text p {
+      font-size: 12px;
+      color: var(--g-sub);
+      margin-top: 2px;
+    }
+    /* Top 2-Second 5-Star Only Bar */
+    .quick-star-bar {
+      margin: 2px 14px 12px;
+      padding: 11px 14px;
+      background: linear-gradient(135deg, #e8f0fe 0%, #f8f9fa 100%);
+      border: 1.5px solid #aecbfa;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+    .quick-star-bar:active { transform: scale(0.98); }
+    .qs-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .qs-stars {
+      color: var(--g-yellow);
+      font-size: 22px;
+      letter-spacing: 2px;
+      line-height: 1;
+      filter: drop-shadow(0 1px 2px rgba(251,188,4,0.3));
+    }
+    .qs-sub {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--g-blue-dark);
+    }
+    .qs-btn {
+      background: var(--g-blue);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 9px;
+      white-space: nowrap;
+      box-shadow: 0 2px 6px rgba(26,115,232,0.28);
+    }
+    /* Section Header */
+    .section-head {
+      padding: 0 14px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .section-head h2 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--g-text);
+    }
+    .controls {
+      display: flex;
+      gap: 5px;
+    }
+    .shuffle-btn {
+      background: #f1f3f4;
+      border: 1px solid var(--g-border);
+      color: var(--g-sub);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 99px;
+      cursor: pointer;
+    }
+    .shuffle-btn:active { background: #e8f0fe; color: var(--g-blue); }
+    /* 10 Service Icon Grid (2 Columns for Easy Thumb Tapping) */
+    .service-grid {
+      padding: 0 14px 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+    .svc-card {
+      background: #ffffff;
+      border: 1.5px solid var(--g-border);
+      border-radius: 14px;
+      padding: 11px 11px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.12s ease;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .svc-card:active {
+      background: #e8f0fe;
+      border-color: var(--g-blue);
+      transform: scale(0.975);
+    }
+    .svc-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .svc-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .svc-title {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--g-text);
+      line-height: 1.2;
+    }
+    .svc-quote {
+      font-size: 11.2px;
+      color: var(--g-sub);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 7px;
+      font-style: normal;
+    }
+    .svc-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--g-blue);
+      border-top: 1px dashed #eceff1;
+      padding-top: 5px;
+    }
+    /* Bottom Tip Banner */
+    .skip-tip {
+      margin: 0 14px 14px;
+      padding: 10px 12px;
+      background: #fef7e0;
+      border: 1px solid #fde293;
+      border-radius: 11px;
+      font-size: 11.5px;
+      color: #3c4043;
+      line-height: 1.4;
+    }
+    .skip-tip strong { color: #b06000; }
+    /* Instant Launch Overlay */
+    #launchOverlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.98);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      z-index: 999;
+    }
+    .check-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--g-green);
+      color: #fff;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    .big-stars {
+      font-size: 34px;
+      color: var(--g-yellow);
+      margin-bottom: 6px;
+      letter-spacing: 3px;
+    }
+    #launchOverlay h2 {
+      font-size: 19px;
+      color: var(--g-text);
+      margin-bottom: 6px;
+    }
+    #copiedPreview {
+      font-size: 12.5px;
+      color: var(--g-sub);
+      background: #f8f9fa;
+      border: 1px solid var(--g-border);
+      padding: 8px 12px;
+      border-radius: 10px;
+      max-width: 310px;
+      margin-bottom: 10px;
+    }
+    .step-box {
+      background: #e8f0fe;
+      color: var(--g-blue-dark);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 11px 16px;
+      border-radius: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="google-bar"></div>
+    <div class="top-nav">
+      <div class="g-brand">
+        <svg class="g-logo" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+          <path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+        </svg>
+        Google Review
+      </div>
+      <span class="fast-badge">⚡ 100% Unique Human Text</span>
+    </div>
+    <!-- Real Uploaded B*Star Logo -->
+    <div class="profile">
+      <img class="bstar-logo-img" src="/images/bstar-logo.png" alt="B*Star Unisex Salon Logo" />
+      <div class="profile-text">
+        <h1>B★Star Unisex Salon</h1>
+        <p>TC Palya Main Road, Battarahalli</p>
+      </div>
+    </div>
+    <!-- Option A: 2-Second Star-Only Bar -->
+    <div class="quick-star-bar" onclick="openStarOnly()">
+      <div class="qs-left">
+        <div class="qs-stars">★★★★★</div>
+        <span class="qs-sub">In a rush? Tap for 5★ only (no text)</span>
+      </div>
+      <span class="qs-btn">Just 5★ →</span>
+    </div>
+    <!-- Option B: 10 Service Icon Cards (Distinct Non-Repeating Human Context) -->
+    <div class="section-head">
+      <h2>Tap your service (auto-copies &amp; opens):</h2>
+      <div class="controls">
+        <button type="button" class="shuffle-btn" onclick="shuffleAllCards()">↻ Change text</button>
+      </div>
+    </div>
+    <div class="service-grid" id="serviceGrid"></div>
+    <div class="skip-tip">
+      <strong>💡 2-Second Tip:</strong> Tap your service icon above → on Google, just tap <strong>5 Stars (★★★★★)</strong>, <strong>Paste</strong>, and hit <strong>Post</strong>!
+    </div>
+  </div>
+  <!-- Instant Launch Overlay -->
+  <div id="launchOverlay">
+    <div class="check-badge">✓</div>
+    <div class="big-stars">★★★★★</div>
+    <h2 id="overlayTitle">Copied!</h2>
+    <div id="copiedPreview"></div>
+    <div class="step-box" id="overlaySteps">1. Tap 5th Star ★ &nbsp;→&nbsp; 2. Paste &amp; Post!</div>
+  </div>
+  <script>
+    const GOOGLE_DIRECT_REVIEW_URL = "https://search.google.com/local/writereview?placeid=ChIJQwX9_hQRrjsRPGH6avSZBOc";
+    // 10 Distinct Service Categories with completely unique, non-overlapping human mobile-typed context:
+    const SERVICE_CATEGORIES = [
+      {
+        id: "mens",
+        icon: "💈",
+        bg: "#e8f0fe",
+        title: "Men's Grooming",
+        reviews: [
+          "got my fade haircut and beard trimming done here today.. super neat work and very reasonable pricing on tc palya road",
+          "came in for a quick haircut and shave before heading to office. no waiting time and the guy did a clean job",
+          "best salon around battarahalli for men's styling. tools are clean and the head massage after hair wash was awesome",
+          "had a haircut and grey coverage coloring done. looks very natural and pocket friendly compared to other places",
+          "regular customer here for hair cut and beard setting. polite staff and always consistent with the styling"
+        ]
+      },
+      {
+        id: "womens",
+        icon: "💇‍♀️",
+        bg: "#fce8e6",
+        title: "Women's Haircut",
+        reviews: [
+          "got a stylish layer cut and blow dry done today. my hair has so much bounce now and feels amazing",
+          "went for a hair trim and wash. the stylist actually listened to my length preference instead of cutting too short",
+          "did keratin treatment and split-end trim here. all my frizz is completely gone and hair is super smooth",
+          "brought my daughter for a kid's haircut and got a face-framing layer for myself. very patient staff",
+          "had hair smoothening and setting done. really clean finish and the team took great care throughout"
+        ]
+      },
+      {
+        id: "facial",
+        icon: "🧖‍♀️",
+        bg: "#e6f4ea",
+        title: "Facial & Cleanup",
+        reviews: [
+          "took the o3+ facial today and it was so relaxing. my skin got an instant natural glow right after",
+          "went in for a fruit cleanup. the face massage was incredible and there was zero pushy upselling",
+          "got the hydra facial done before a family function. everyone complimented how fresh my face looked",
+          "did a red wine facial and eye rejuvenation. very calm atmosphere, clean towels, and gentle hands",
+          "had a classic cleanup done after a tiring week. blackheads were extracted gently without any redness"
+        ]
+      },
+      {
+        id: "detan",
+        icon: "☀️",
+        bg: "#fef7e0",
+        title: "Detan & Bleach",
+        reviews: [
+          "got face and neck o3 detan done. cleared up my harsh two-wheeler sun tan in a single sitting",
+          "went for full arms and face bleach. very neat application and you can clearly see the tan is gone",
+          "did oxy bleach here. didn't burn or itch my skin at all, used very good quality products",
+          "took the body brightening detan pack. staff is polite and the results are honestly worth the money",
+          "quick and effective detan service. perfect if you ride daily in the bangalore sun"
+        ]
+      },
+      {
+        id: "waxing",
+        icon: "🍯",
+        bg: "#fff0e5",
+        title: "Waxing Service",
+        reviews: [
+          "got full arms and legs waxing done. the lady was super quick and made it as painless as possible",
+          "went for flavour waxing today. hygiene is well maintained with clean strips and no sticky residue",
+          "very comfortable experience for intimate waxing. the room is private and staff makes you feel at ease",
+          "did honey waxing for hands and underarms. temperature was checked properly and zero skin irritation",
+          "tried their full body waxing. super fast, hygienic, and very professional staff all around"
+        ]
+      },
+      {
+        id: "threading",
+        icon: "🪡",
+        bg: "#f3e8fd",
+        title: "Threading",
+        reviews: [
+          "got my eyebrows and upper lip threading done. she has a very light hand and kept my natural arch intact",
+          "finally found someone around battarahalli who does eyebrow threading without making them pencil thin",
+          "quick forehead and eyebrow shaping. barely felt any pain and applied soothing rose water after",
+          "came in for full face threading. very gentle work and clean setup",
+          "neat eyebrow shaping for just 50 rupees. didn't get a single cut, extremely happy"
+        ]
+      },
+      {
+        id: "manipedi",
+        icon: "💅",
+        bg: "#fde7f3",
+        title: "Mani & Pedicure",
+        reviews: [
+          "took the spa pedicure and manicure combo. the foot massage and warm water soak were so relaxing",
+          "tried their chocolate pedicure today. my heels feel super soft and clean, totally worth trying",
+          "got a crystal spa pedicure and nail polish done. the staff took their time scrubbing properly",
+          "went for paraffin pedi-mani combo and foot massage. best way to unwind on a weekend evening",
+          "very hygienic pedicure tub setup. dead skin was cleared out thoroughly and hand massage was great"
+        ]
+      },
+      {
+        id: "hairspa",
+        icon: "🌿",
+        bg: "#e0f7fa",
+        title: "Hair Spa & Massage",
+        reviews: [
+          "took the keratin hair spa and head massage. my dry hair feels glossy now and the massage cured my headache",
+          "went for the dandruff scalp treatment and classic hair spa. very relaxing steam and oil application",
+          "did a moisture hair spa and deep conditioning. hair feels light, bouncy, and smells amazing",
+          "had a 20-minute head massage and hair wash. pressure was spot on, walked out feeling refreshed",
+          "trying their hair fall treatment spa. good products used and the stylist gave genuine hair care tips"
+        ]
+      },
+      {
+        id: "makeup",
+        icon: "💄",
+        bg: "#fff3e0",
+        title: "Bridal & Makeup",
+        reviews: [
+          "booked party makeup and saree draping here. the base matched my skin tone naturally and wasn't cakey",
+          "took their bridal pre-grooming package. everything from facial to waxing was handled smoothly without rush",
+          "got light makeup and hair styling done for an event. stayed fresh the whole evening with zero touch-ups",
+          "very happy with the bridal makeup team. they arrived right on time and draped the heavy saree neatly",
+          "great place for party makeup and soft curls. natural finish and very reasonable compared to big city chains"
+        ]
+      },
+      {
+        id: "colour",
+        icon: "🎨",
+        bg: "#ede7f6",
+        title: "Global Colour & Roots",
+        reviews: [
+          "got ammonia-free root touch up done. covered all my greys evenly without any chemical smell",
+          "did global hair colour and crown highlights here. the shade looks super rich in sunlight and hair is soft",
+          "came in for a root touch up and blow dry. color matched my existing hair roots seamlessly",
+          "tried fashion streaks and global highlights. the stylist helped me pick a tone that suits my face",
+          "good place for ammonia-free global hair color. neat application, no forehead stains, and fair pricing"
+        ]
+      }
+    ];
+    const activeReviewMap = {};
+    function renderCards() {
+      const grid = document.getElementById("serviceGrid");
+      grid.innerHTML = "";
+      SERVICE_CATEGORIES.forEach(cat => {
+        const randIdx = Math.floor(Math.random() * cat.reviews.length);
+        activeReviewMap[cat.id] = cat.reviews[randIdx];
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "svc-card";
+        btn.onclick = function() {
+          copyAndOpenGoogle(activeReviewMap[cat.id]);
+        };
+        btn.innerHTML = `
+          <div>
+            <div class="svc-top">
+              <div class="svc-icon" style="background:${cat.bg}">${cat.icon}</div>
+              <div class="svc-title">${cat.title}</div>
+            </div>
+            <p class="svc-quote">"${activeReviewMap[cat.id]}"</p>
+          </div>
+          <div class="svc-foot">
+            <span>Tap to Copy &amp; Post</span>
+            <span>5★ →</span>
+          </div>
+        `;
+        grid.appendChild(btn);
+      });
+    }
+    function shuffleAllCards() {
+      renderCards();
+    }
+    function copyTextToClipboard(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text);
+        } else {
+          const t = document.createElement("textarea");
+          t.value = text;
+          t.style.position = "fixed";
+          t.style.opacity = "0";
+          document.body.appendChild(t);
+          t.focus();
+          t.select();
+          document.execCommand("copy");
+          document.body.removeChild(t);
+        }
+      } catch (e) {}
+    }
+    function copyAndOpenGoogle(reviewText) {
+      copyTextToClipboard(reviewText);
+      document.getElementById("overlayTitle").innerText = "Review Copied!";
+      document.getElementById("copiedPreview").style.display = "block";
+      document.getElementById("copiedPreview").innerText = '"' + reviewText + '"';
+      document.getElementById("overlaySteps").innerHTML = "1. Tap 5th Star ★ &nbsp;→&nbsp; 2. Paste &amp; Post!";
+      document.getElementById("launchOverlay").style.display = "flex";
+      setTimeout(function() {
+        window.location.replace(GOOGLE_DIRECT_REVIEW_URL);
+      }, 250);
+    }
+    function openStarOnly() {
+      document.getElementById("overlayTitle").innerText = "Opening Google 5★...";
+      document.getElementById("copiedPreview").style.display = "none";
+      document.getElementById("overlaySteps").innerHTML = "1. Tap 5th Star ★ &nbsp;→&nbsp; 2. Tap POST!";
+      document.getElementById("launchOverlay").style.display = "flex";
+      setTimeout(function() {
+        window.location.replace(GOOGLE_DIRECT_REVIEW_URL);
+      }, 200);
+    }
+    renderCards();
+  </script>
+</body>
+</html>
