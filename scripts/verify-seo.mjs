@@ -61,21 +61,49 @@ schemas.forEach((s, idx) => {
   }
 });
 
-console.log('\n--- Services Page FAQ Check ---');
-const servicesHtml = fs.readFileSync('.next/server/app/services.html', 'utf8');
-const servSchemas = Array.from(servicesHtml.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi));
-console.log(`Found ${servSchemas.length} JSON-LD blocks on Services:`);
-servSchemas.forEach((s, idx) => {
-  try {
-    const parsed = JSON.parse(s[1]);
-    console.log(`Block #${idx + 1} Type: ${JSON.stringify(parsed['@type'])}`);
-    if (parsed.mainEntity) {
-      console.log(`  Service FAQ Questions (${parsed.mainEntity.length}):`);
-      parsed.mainEntity.forEach(q => console.log(`   - ${q.name}`));
-    }
-  } catch (e) {
-    console.error(`  Error parsing block #${idx + 1}:`, e.message);
-  }
-});
+console.log('\n--- Live Production URL Verification ---');
+import https from 'https';
+
+function fetchUrl(url) {
+  return new Promise((resolve) => {
+    https.get(url, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        console.log(`Redirecting from ${url} -> ${res.headers.location}`);
+        return resolve(fetchUrl(res.headers.location));
+      }
+      let data = '';
+      res.on('data', (c) => (data += c));
+      res.on('end', () => {
+        const title = data.match(/<title>([^<]*)<\/title>/);
+        const desc = data.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/);
+        const h1 = data.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+        console.log(`\nURL: ${url} (Status: ${res.statusCode})`);
+        console.log(`  TITLE: ${title ? title[1] : 'NONE'}`);
+        console.log(`  DESC:  ${desc ? desc[1] : 'NONE'}`);
+        if (h1) {
+          const cleanH1 = h1[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+          console.log(`  H1:    ${cleanH1}`);
+        }
+        resolve();
+      });
+    }).on('error', (err) => {
+      console.log(`Error fetching ${url}:`, err.message);
+      resolve();
+    });
+  });
+}
+
+
+const liveUrls = [
+  'https://bstarsalon.com',
+  'https://bstarsalon.com/services',
+  'https://bstarsalon.com/services/hair',
+];
+
+for (const u of liveUrls) {
+  await fetchUrl(u);
+}
+
+
 
 
