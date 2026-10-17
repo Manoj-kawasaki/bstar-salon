@@ -9,24 +9,52 @@ interface BookingModalProps {
 }
 
 const SERVICES = [
-  { name: "Couture Balayage & Gloss", category: "Hair", price: "₹4,500" },
-  { name: "Precision Scissor Cut & Styling", category: "Hair", price: "₹1,200" },
-  { name: "Executive Haircut & Beard Sculpt", category: "Grooming", price: "₹1,500" },
-  { name: "Hydra-Dew Botanical Facial", category: "Skin", price: "₹2,800" },
-  { name: "O3+ Bridal Glow Luxury Facial", category: "Skin", price: "₹2,500" },
-  { name: "L'Oreal Professional Hair Spa", category: "Hair", price: "₹1,800" },
-  { name: "Keratin Protein Infusion Treatment", category: "Hair", price: "₹4,000" },
-  { name: "Gel Extensions & Custom Nail Art", category: "Nails", price: "₹2,000" },
-  { name: "Royal Bridal Pampering Couture", category: "Bridal", price: "₹15,000" },
-  { name: "Detox Scalp & Hair Therapy", category: "Hair", price: "₹2,200" },
-  { name: "HD Airbrush Party Makeup", category: "Makeup", price: "₹4,500" },
-  { name: "Luxury Pedicure & Manicure Duo", category: "Nails", price: "₹1,600" },
+  // Hair - Women & Men
+  { name: "Designer Haircut & Styling (Women)", category: "Hair", price: "₹550" },
+  { name: "Precision Haircut & Styling (Men)", category: "Hair", price: "₹200" },
+  { name: "Layer Trim & Blow-Dry", category: "Hair", price: "₹600" },
+  { name: "Change of Style Haircut", category: "Hair", price: "₹800" },
+  { name: "Root Touch-Up (L'Oréal / Matrix)", category: "Hair", price: "₹1,000" },
+  { name: "Root Touch-Up Ammonia-Free (Inoa)", category: "Hair", price: "₹1,200" },
+  { name: "Global Hair Color (Classic)", category: "Hair", price: "₹2,600" },
+  { name: "Global Hair Color (Ammonia-Free)", category: "Hair", price: "₹3,000" },
+  { name: "Fashion Streaks / Global Highlights", category: "Hair", price: "₹1,600" },
+  { name: "Keratin Protein Smoothening", category: "Hair", price: "₹5,000" },
+  { name: "Smooth Straight / Permanent Straightening", category: "Hair", price: "₹6,000" },
+  { name: "Rebonding Hair Treatment", category: "Hair", price: "₹7,000" },
+  { name: "L'Oréal Deep Nourishing Hair Spa", category: "Hair", price: "₹750" },
+  { name: "SP / Moroccanoil Luxe Hair Spa", category: "Hair", price: "₹1,500" },
+  // Skin & Facials
+  { name: "HydraFacial 7-Step Medical Grade", category: "Skin", price: "₹4,000" },
+  { name: "O3+ Bridal Glow Luxury Facial", category: "Skin", price: "₹4,000" },
+  { name: "O3+ Whitening / Brightening Facial", category: "Skin", price: "₹3,000" },
+  { name: "Gold Radiant Glow Facial", category: "Skin", price: "₹1,800" },
+  { name: "Detan Radiance Facial", category: "Skin", price: "₹1,400" },
+  { name: "Fruit Nourishing Cleanup", category: "Skin", price: "₹550" },
+  { name: "Detan Tan-Removal Cleanup", category: "Skin", price: "₹900" },
+  { name: "O3+ Deep Pore Cleanup", category: "Skin", price: "₹1,000" },
+  // Grooming - Men
+  { name: "Executive Beard Designing & Sculpting", category: "Grooming", price: "₹150" },
+  { name: "Classic Shave & Hot Towel", category: "Grooming", price: "₹100" },
+  { name: "Relaxing Head Massage (Oil/Cream)", category: "Grooming", price: "₹400" },
+  // Nails, Hands & Feet
+  { name: "Classic Manicure & Pedicure Combo", category: "Nails", price: "₹850" },
+  { name: "Spa Pedicure & Manicure Combo", category: "Nails", price: "₹1,050" },
+  { name: "Crystal Spa Pedicure & Manicure Combo", category: "Nails", price: "₹1,350" },
+  // Waxing & Body Brightening
+  { name: "Full Body Honey Waxing", category: "Waxing", price: "₹1,800" },
+  { name: "Full Body Flavour / Rica Waxing", category: "Waxing", price: "₹2,500" },
+  // Bridal & Makeup
+  { name: "Complete Pre-Bridal Glow Ritual (7 Services)", category: "Bridal", price: "₹6,000" },
+  { name: "Royal Bridal Makeup & Saree Draping", category: "Bridal", price: "₹8,000" },
+  { name: "HD Party & Occasion Makeup", category: "Makeup", price: "₹2,500" },
+  { name: "Light Occasion / Day Makeup", category: "Makeup", price: "₹1,500" },
 ];
 
 const STYLISTS = [
-  "Karan Patel (Master Stylist)",
-  "Deepa Menon (Senior Stylist)",
-  "Meera Nair (Skin & Beauty)",
+  "Senior Hair Master Stylist",
+  "Skin & Aesthetic Specialist",
+  "Bridal & Makeup Artist",
   "Any Available Master Stylist",
 ];
 
