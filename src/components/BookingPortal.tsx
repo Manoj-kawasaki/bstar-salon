@@ -16,8 +16,6 @@ import {
   ShieldCheck,
   CreditCard,
   Gift,
-  Eye,
-  X,
   Scissors,
   Sparkle,
   HeartHandshake,
@@ -113,19 +111,6 @@ const TIME_SLOTS = [
   "07:30 PM",
 ];
 
-const RATE_CARD_IMAGES = [
-  { file: "/images/menu/ratecard-women-hair.jpg", title: "Women's Hair Artistry" },
-  { file: "/images/menu/ratecard-hair-advance.jpg", title: "Keratin, Botox & Straightening" },
-  { file: "/images/menu/ratecard-men-hair.jpg", title: "Men's Hair & Styling" },
-  { file: "/images/menu/ratecard-women-facial.jpg", title: "Facials & Skin Rituals" },
-  { file: "/images/menu/ratecard-men-facial.jpg", title: "Men's Skin & Grooming" },
-  { file: "/images/menu/ratecard-pedi-mani.jpg", title: "Pedicure & Manicure Spas" },
-  { file: "/images/menu/ratecard-waxing.jpg", title: "Waxing & Threading" },
-  { file: "/images/menu/ratecard-body-brightening.jpg", title: "Body Detan & Bleach" },
-  { file: "/images/menu/ratecard-bridal.jpg", title: "Bridal Packages & Makeup" },
-  { file: "/images/menu/ratecard-membership.jpg", title: "Prepaid Membership Cards" },
-];
-
 export default function BookingPortal() {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedService, setSelectedService] = useState<ServiceItem>(VERIFIED_SERVICES[2]); // Designer Haircut default
@@ -143,9 +128,6 @@ export default function BookingPortal() {
   const [error, setError] = useState<string | null>(null);
   const [confirmed, setConfirmed] = useState(false);
   const [confirmedData, setConfirmedData] = useState<any>(null);
-
-  // Rate card modal preview
-  const [activeRatecard, setActiveRatecard] = useState<string | null>(null);
 
   const filteredServices =
     selectedCategory === "all"
@@ -335,46 +317,6 @@ export default function BookingPortal() {
                 </div>
               );
             })}
-          </div>
-
-          {/* Rate Card Booklet Preview Bar */}
-          <div className="bg-[#2A1A12] border border-[#C5A059]/30 p-5 space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Eye className="w-4 h-4 text-[#C5A059]" />
-                <h3 className="font-serif text-base text-[#FAF3E3]">
-                  View Authentic Printed Rate Card
-                </h3>
-              </div>
-              <span className="text-[11px] font-sans text-[#C5A059] uppercase tracking-wider">
-                100% Transparent
-              </span>
-            </div>
-            <p className="font-sans text-xs text-[#F5EDD6]/70">
-              Browse the official laminated booklet pages as printed at our Battarahalli salon reception:
-            </p>
-
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-1">
-              {RATE_CARD_IMAGES.map((img, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setActiveRatecard(img.file)}
-                  className="group relative h-20 bg-[#1C110C] border border-[#F5EDD6]/15 hover:border-[#C5A059] overflow-hidden text-left p-1.5 flex flex-col justify-end transition-all"
-                >
-                  <Image
-                    src={img.file}
-                    alt={img.title}
-                    fill
-                    className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-                  <span className="relative z-10 text-[9px] font-sans text-[#FAF3E3] font-medium leading-tight">
-                    {img.title}
-                  </span>
-                </button>
-              ))}
-            </div>
           </div>
         </div>
 
@@ -692,42 +634,6 @@ export default function BookingPortal() {
           </div>
         </div>
       </div>
-
-      {/* Lightbox Modal for Rate Card Viewer */}
-      {activeRatecard && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-200"
-          onClick={() => setActiveRatecard(null)}
-        >
-          <div
-            className="relative max-w-2xl w-full max-h-[90vh] bg-[#1C110C] border border-[#C5A059] p-2 flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-2 px-2">
-              <span className="font-serif italic text-sm text-[#C5A059]">
-                Official Rate Card Booklet
-              </span>
-              <button
-                type="button"
-                onClick={() => setActiveRatecard(null)}
-                className="text-[#FAF3E3] hover:text-[#C5A059] p-1"
-                aria-label="Close rate card viewer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="relative flex-1 min-h-[60vh] w-full overflow-hidden">
-              <Image
-                src={activeRatecard}
-                alt="B★Star Unisex Salon Official Rate Card"
-                fill
-                className="object-contain"
-                sizes="(max-width: 768px) 100vw, 800px"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
