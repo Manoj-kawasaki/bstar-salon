@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1C110C] text-[#F5EDD6] py-16 md:py-24">
+    <footer className="bg-[#1C110C] text-[#F5EDD6] py-16 md:py-24 border-t border-[#F5EDD6]/10">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start gap-12 md:gap-8">
         {/* Brand & Address */}
         <div className="max-w-xs">
@@ -76,13 +76,35 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="container mx-auto px-6 md:px-12 mt-20 pt-8 border-t border-[#F5EDD6]/10">
+      {/* Hyper-Local Neighborhoods: Areas We Serve */}
+      <div className="container mx-auto px-6 md:px-12 mt-16 pt-10 border-t border-[#F5EDD6]/10">
+        <div className="max-w-4xl">
+          <span className="font-serif italic text-xs tracking-wider text-[#C5A059] uppercase block mb-3">
+            Areas We Serve Near TC Palya Main Road
+          </span>
+          <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed mb-4">
+            Conveniently situated at Stylo Plaza, TC Palya Main Road, B★Star Unisex Salon welcomes clients seeking precision haircuts, keratin smoothening, hair botox, balayage, HydraFacials, and bridal styling from across:
+          </p>
+          <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-[11px] font-sans tracking-wide text-[#F5EDD6]/60">
+            {siteConfig.areasServed.map((area, index) => (
+              <React.Fragment key={area}>
+                <span>{area}</span>
+                {index < siteConfig.areasServed.length - 1 && (
+                  <span className="text-[#C5A059]/40 select-none">·</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright Bar */}
+      <div className="container mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-[#F5EDD6]/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 font-sans text-[10px] uppercase tracking-[0.2em] opacity-40">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights
-            reserved.
+            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Battarahalli, Bengaluru</p>
+          <p>Battarahalli · TC Palya · Bengaluru</p>
         </div>
       </div>
     </footer>

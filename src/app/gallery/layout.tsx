@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Couture Hair & Bridal Gallery | B★Star Unisex Salon Battarahalli",
-  description: "Browse 20+ authentic client hair transformations, balayage, keratin treatments, bridal couture, and salon floor artistry at B★Star Unisex Salon, Bengaluru.",
+  title: "Hair, Balayage & Bridal Transformation Gallery | B★Star Battarahalli",
+  description:
+    "Explore authentic client transformations at B★Star Battarahalli. Real hair color, balayage, keratin, hair botox, hydrafacials, and royal bridal couture.",
   alternates: {
     canonical: "/gallery",
   },

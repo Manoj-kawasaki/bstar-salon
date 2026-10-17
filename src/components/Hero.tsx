@@ -35,14 +35,17 @@ export default function Hero() {
 
       {/* Lower Editorial Stage: Sits gracefully below models' eye levels */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 sm:pb-16 flex flex-col items-center text-center mt-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
-        {/* Poetic Lead-in */}
-        <p className="font-serif italic text-base sm:text-xl md:text-2xl text-[#C5A059] mb-2 sm:mb-3 tracking-wide drop-shadow-md">
-          Couture Hair Artistry & High-Performance Aesthetics
-        </p>
-
-        {/* Editorial Headline */}
-        <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[70px] text-[#FAF3E3] font-light leading-[1.08] tracking-tight drop-shadow-2xl max-w-3xl">
-          The Art of <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Bespoke Luxury</span>
+        {/* Semantic H1 with High-Intent Local Keywords & Editorial Sub-lines */}
+        <h1 className="flex flex-col items-center text-center">
+          <span className="font-display font-medium text-[10.5px] sm:text-xs uppercase tracking-[0.26em] sm:tracking-[0.32em] text-[#C5A059] mb-2 sm:mb-3 drop-shadow-sm">
+            Best Unisex Hair, Skin &amp; Bridal Salon in Battarahalli, TC Palya
+          </span>
+          <span className="font-serif italic text-base sm:text-xl md:text-2xl text-[#C5A059] mb-2 sm:mb-3 tracking-wide drop-shadow-md block">
+            Couture Hair Artistry &amp; High-Performance Aesthetics
+          </span>
+          <span className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[70px] text-[#FAF3E3] font-light leading-[1.08] tracking-tight drop-shadow-2xl max-w-3xl block">
+            The Art of <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Bespoke Luxury</span>
+          </span>
         </h1>
 
         {/* Concise Luxury Description */}
