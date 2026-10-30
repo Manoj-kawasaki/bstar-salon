@@ -76,7 +76,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Action: Phone + Book Online CTA */}
+          {/* Right Action: Phone + WhatsApp CTA */}
           <div className="hidden md:flex items-center gap-6">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
@@ -87,10 +87,12 @@ export default function Header() {
             </a>
 
             <a
-              href="#book"
-              className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] hover:bg-[#C5A059] px-5 py-2.5 transition-all duration-300 flex items-center gap-1.5 shadow-md hover:shadow-lg active:scale-98 trigger-booking-modal cursor-pointer"
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-[11px] uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#C5A059] hover:bg-[#D4B97A] px-5 py-2.5 transition-all duration-300 flex items-center gap-1.5 shadow-md hover:shadow-lg active:scale-98 cursor-pointer"
             >
-              <span>Book Online</span>
+              <span>WhatsApp Us</span>
               <ArrowUpRight size={14} />
             </a>
           </div>
@@ -98,10 +100,10 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href="#book"
-              className="font-sans text-[10px] uppercase tracking-widest text-[#1C110C] bg-[#C5A059] px-3 py-1.5 font-bold trigger-booking-modal cursor-pointer"
+              href={`tel:${siteConfig.phoneRaw}`}
+              className="font-sans text-[10px] uppercase tracking-widest text-[#1C110C] bg-[#C5A059] px-3 py-1.5 font-bold cursor-pointer"
             >
-              Book
+              Call
             </a>
             <button
               className="text-[#F5EDD6] hover:text-[#C5A059] transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center -mr-2"
@@ -176,10 +178,13 @@ export default function Header() {
             </div>
 
             <a
-              href="#book"
-              className="w-full text-center font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#F5EDD6] py-3.5 hover:bg-[#C5A059] transition-colors trigger-booking-modal cursor-pointer"
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-center font-sans text-xs uppercase tracking-[0.2em] font-semibold text-[#1C110C] bg-[#C5A059] py-3.5 hover:bg-[#D4B97A] transition-colors cursor-pointer"
             >
-              Book Appointment Online ↗
+              WhatsApp Us (099029 49549) ↗
             </a>
           </div>
         </div>

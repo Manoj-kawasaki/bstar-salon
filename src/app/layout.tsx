@@ -153,6 +153,11 @@ export default function RootLayout({
           latitude: 13.0189,
           longitude: 77.7028,
         },
+        hasMap:
+          "https://www.google.com/maps/search/?api=1&query=B-Star+Unisex+Saloon+TC+Palya+Main+Road+Bengaluru",
+        sameAs: [
+          "https://book.zuyyu.com/b-star-unisex-saloon"
+        ],
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
@@ -169,24 +174,6 @@ export default function RootLayout({
             closes: "21:00",
           },
         ],
-        potentialAction: {
-          "@type": "ReserveAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: "https://book.zuyyu.com/b-star-unisex-saloon",
-            inLanguage: "en-IN",
-            actionPlatform: [
-              "http://schema.org/DesktopWebPlatform",
-              "http://schema.org/MobileWebPlatform",
-              "http://schema.org/IOSPlatform",
-              "http://schema.org/AndroidPlatform",
-            ],
-          },
-          result: {
-            "@type": "Reservation",
-            name: "Book Salon Appointment",
-          },
-        },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "B★Star Unisex Salon Signature Services & Price Menu",
@@ -336,8 +323,6 @@ export default function RootLayout({
             },
           ],
         },
-        hasMap:
-          "https://maps.google.com/?cid=16611593444458525044",
         areaServed: [
           { "@type": "AdministrativeArea", name: "TC Palya", postalCode: "560036" },
           { "@type": "AdministrativeArea", name: "Battarahalli", postalCode: "560036" },
@@ -352,6 +337,14 @@ export default function RootLayout({
         "@type": "FAQPage",
         "@id": "https://bstarsalon.com/#faq",
         mainEntity: [
+          {
+            "@type": "Question",
+            name: "Which is the best unisex salon near me in TC Palya Main Road and Anandapura?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "B★Star Unisex Salon (B-Star Unisex Saloon) at Stylo Plaza Building, next to Kanti Sweets and Above Krishna Sagar Hotel at Anandapura Bus Stop, is rated the best salon in TC Palya Main Road (4.3★ by 339+ clients) for haircuts, balayage, keratin, O3+ facials, and bridal makeup.",
+            },
+          },
           {
             "@type": "Question",
             name: "Which is the best salon in TC Palya for haircuts, balayage, and facials?",
@@ -386,10 +379,10 @@ export default function RootLayout({
           },
           {
             "@type": "Question",
-            name: "What are the timings and booking options for B★Star Unisex Salon?",
+            name: "What are the timings and contact options for B★Star Unisex Salon?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. You can book an appointment online via https://book.zuyyu.com/b-star-unisex-saloon, call +91 99029 49549, or message us on WhatsApp for immediate confirmation.",
+              text: "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. Walk-ins are always welcomed, or you can call +91 99029 49549 or message us directly on WhatsApp for immediate inquiries.",
             },
           },
         ],

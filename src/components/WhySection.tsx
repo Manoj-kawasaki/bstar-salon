@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Sparkles, ShieldCheck, Tag, MapPin, ArrowUpRight } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export default function WhySection() {
   const proofPillars = [
@@ -30,7 +31,7 @@ export default function WhySection() {
       number: "04",
       title: "Prime Landmark Location & Daily 9 AM – 9 PM Hours",
       description:
-        "Conveniently located at Stylo Plaza Building, above Krishna Sagar Hotel and next to Kanti Sweets at Anandapura Bus Stop, TC Palya Main Road, with free Wi-Fi and instant online booking.",
+        "Conveniently located at Stylo Plaza Building, above Krishna Sagar Hotel and next to Kanti Sweets at Anandapura Bus Stop, TC Palya Main Road, with free Wi-Fi, air conditioning, and convenient WhatsApp & Call assistance.",
     },
   ];
 
@@ -99,12 +100,12 @@ export default function WhySection() {
               </p>
             </div>
             <a
-              href="https://book.zuyyu.com/b-star-unisex-saloon"
+              href={siteConfig.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-6 py-3 shadow-lg transition-all duration-300 self-start sm:self-auto"
             >
-              <span>Book Appointment</span>
+              <span>WhatsApp Us</span>
               <ArrowUpRight className="w-4 h-4 text-[#1C110C]" />
             </a>
           </div>

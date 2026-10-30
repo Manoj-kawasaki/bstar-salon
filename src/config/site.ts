@@ -87,7 +87,6 @@ export const siteConfig = {
   navigation: [
     { title: "Home", href: "/" },
     { title: "Services", href: "/services" },
-    { title: "Book", href: "/book" },
     { title: "About", href: "/about" },
     { title: "Gallery", href: "/gallery" },
     { title: "Reviews", href: "/reviews" },
@@ -584,6 +583,11 @@ export const siteConfig = {
   ],
   generalFaqs: [
     {
+      question: "Which is the best unisex salon near me in TC Palya Main Road and Anandapura?",
+      answer:
+        "B★Star Unisex Salon (B-Star Unisex Saloon) at Stylo Plaza Building, next to Kanti Sweets and Above Krishna Sagar Hotel at Anandapura Bus Stop, is rated the best salon in TC Palya Main Road (4.3★ by 339+ clients) for haircuts, balayage, keratin, O3+ facials, and bridal makeup.",
+    },
+    {
       question: "Which is the best salon in TC Palya for haircuts, balayage, and facials?",
       answer:
         "B★Star Unisex Salon (rated 4.3★ by 339+ clients) is recognized as the best salon in TC Palya Main Road, Battarahalli. Established in 2007, our master stylists specialize in precision haircuts, French balayage, keratin treatments, hair botox, clinical HydraFacials, and luxury O3+ facials.",
@@ -604,9 +608,9 @@ export const siteConfig = {
         "Yes, we provide luxury HD & Airbrush bridal makeup, pre-bridal packages, saree draping, and wedding event preparation, including mobile home salon services across TC Palya, Battarahalli, KR Puram, NRI Layout, and Ramamurthy Nagar.",
     },
     {
-      question: "What are the timings and booking options for B★Star Unisex Salon?",
+      question: "What are the timings and contact options for B★Star Unisex Salon?",
       answer:
-        "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. You can book an appointment online via https://book.zuyyu.com/b-star-unisex-saloon, call +91 99029 49549, or message us on WhatsApp for immediate confirmation.",
+        "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. Walk-ins are always welcomed, or you can call +91 99029 49549 or message us directly on WhatsApp for immediate inquiries.",
     },
   ],
   serviceFaqs: [

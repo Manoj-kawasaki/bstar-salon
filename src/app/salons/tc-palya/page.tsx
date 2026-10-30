@@ -92,46 +92,10 @@ export default function TCPalyaSalonPage() {
           latitude: 13.0189,
           longitude: 77.7028,
         },
-        hasMap: "https://maps.google.com/?cid=16611593444458525044",
-        openingHoursSpecification: [
-          {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday",
-            ],
-            opens: "09:00",
-            closes: "21:00",
-          },
+        hasMap: "https://www.google.com/maps/search/?api=1&query=B-Star+Unisex+Saloon+TC+Palya+Main+Road+Bengaluru",
+        sameAs: [
+          "https://book.zuyyu.com/b-star-unisex-saloon"
         ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.3",
-          reviewCount: "339",
-          bestRating: "5",
-          worstRating: "1",
-        },
-        potentialAction: {
-          "@type": "ReserveAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: "https://book.zuyyu.com/b-star-unisex-saloon",
-            inLanguage: "en-IN",
-            actionPlatform: [
-              "http://schema.org/DesktopWebPlatform",
-              "http://schema.org/MobileWebPlatform",
-            ],
-          },
-          result: {
-            "@type": "Reservation",
-            name: "Book Appointment at TC Palya Main Road Branch",
-          },
-        },
         areaServed: [
           { "@type": "AdministrativeArea", name: "TC Palya", postalCode: "560036" },
           { "@type": "AdministrativeArea", name: "Battarahalli", postalCode: "560036" },
@@ -377,13 +341,13 @@ export default function TCPalyaSalonPage() {
             {/* Direct Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
-                href="https://book.zuyyu.com/b-star-unisex-saloon"
+                href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-7 py-4 shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Book Appointment Online</span>
+                <MessageCircle className="w-4 h-4" />
+                <span>WhatsApp: 099029 49549</span>
               </a>
 
               <a
@@ -568,12 +532,12 @@ export default function TCPalyaSalonPage() {
                       </span>
                     </div>
                     <a
-                      href="https://book.zuyyu.com/b-star-unisex-saloon"
+                      href={siteConfig.whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-sans text-[11px] uppercase tracking-wider text-[#FAF3E3] hover:text-[#C5A059] font-medium"
                     >
-                      Book ↗
+                      Inquire ↗
                     </a>
                   </div>
                 </div>
@@ -729,12 +693,12 @@ export default function TCPalyaSalonPage() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
-                href="https://book.zuyyu.com/b-star-unisex-saloon"
+                href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 transition-all duration-300 hover:scale-105"
               >
-                Book Appointment Online
+                WhatsApp: 099029 49549
               </a>
               <a
                 href="tel:09902949549"

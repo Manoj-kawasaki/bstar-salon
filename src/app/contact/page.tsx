@@ -73,20 +73,9 @@ export default function ContactPage() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-serif italic text-2xl md:text-3xl hover:text-[#C5A059] transition-colors w-fit border-b border-transparent hover:border-[#C5A059]"
+                    className="inline-flex items-center gap-2 font-serif italic text-2xl md:text-3xl hover:text-[#C5A059] transition-colors w-fit border-b border-[#F5EDD6]/30 pb-1 hover:border-[#C5A059]"
                   >
                     Message on WhatsApp <ArrowUpRight size={24} strokeWidth={1} />
-                  </a>
-                )}
-                
-                {bookingUrl && (
-                  <a 
-                    href={bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-serif italic text-2xl md:text-3xl hover:text-[#C5A059] transition-colors w-fit mt-4 border-b border-[#F5EDD6]/30 pb-1 hover:border-[#C5A059]"
-                  >
-                    Book an Appointment <ArrowUpRight size={24} strokeWidth={1} />
                   </a>
                 )}
               </div>

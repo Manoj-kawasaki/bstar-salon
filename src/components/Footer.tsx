@@ -56,15 +56,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Links & Prominent Booking CTA */}
+        {/* Links & WhatsApp CTA */}
         <div className="flex flex-col items-start gap-5">
           <a
-            href="https://book.zuyyu.com/b-star-unisex-saloon"
+            href={siteConfig.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-6 py-3.5 shadow-lg transition-all duration-300 hover:scale-105 active:scale-98"
           >
-            <span>Book Appointment</span>
+            <span>WhatsApp Us</span>
             <span className="text-sm">↗</span>
           </a>
           <div className="flex flex-col gap-3 mt-4">
@@ -106,6 +106,37 @@ export default function Footer() {
                 )}
               </React.Fragment>
             ))}
+          </div>
+
+          {/* Crawlable "Near Me" & Pin-Code Silo Anchors (Loophole 1) */}
+          <div className="mt-6 pt-5 border-t border-[#F5EDD6]/10 flex flex-wrap gap-x-4 gap-y-2 text-[11px] font-sans">
+            <a
+              href="/#best-salon-in-tc-palya"
+              className="text-[#C5A059] hover:text-[#FAF3E3] underline underline-offset-4 transition-colors"
+            >
+              Best Salon in TC Palya Main Road - 560036
+            </a>
+            <span className="text-[#F5EDD6]/20 select-none">·</span>
+            <a
+              href="/#best-salon-in-battarahalli"
+              className="text-[#C5A059] hover:text-[#FAF3E3] underline underline-offset-4 transition-colors"
+            >
+              Best Unisex Salon in Battarahalli - 560036
+            </a>
+            <span className="text-[#F5EDD6]/20 select-none">·</span>
+            <a
+              href="/#best-salon-near-kr-puram"
+              className="text-[#C5A059] hover:text-[#FAF3E3] underline underline-offset-4 transition-colors"
+            >
+              Luxury Hair &amp; Bridal Salon near KR Puram / Krishnarajapura
+            </a>
+            <span className="text-[#F5EDD6]/20 select-none">·</span>
+            <a
+              href="/#best-salon-near-ramamurthy-nagar"
+              className="text-[#C5A059] hover:text-[#FAF3E3] underline underline-offset-4 transition-colors"
+            >
+              Top Beauty Parlour near Ramamurthy Nagar &amp; NRI Layout - 560016
+            </a>
           </div>
         </div>
       </div>

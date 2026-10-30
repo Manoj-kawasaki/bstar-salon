@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 export default function MobileStickyBar() {
@@ -17,13 +17,15 @@ export default function MobileStickyBar() {
           <Phone size={19} strokeWidth={1.5} />
         </a>
 
-        {/* Primary Booking Action */}
+        {/* Primary WhatsApp Action */}
         <a 
-          href="#book"
-          className="flex-1 flex items-center justify-center gap-2 h-12 bg-[#C5A059] active:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] shadow-lg transition-transform active:scale-[0.98] trigger-booking-modal cursor-pointer"
+          href={siteConfig.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 flex items-center justify-center gap-2 h-12 bg-[#C5A059] active:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] shadow-lg transition-transform active:scale-[0.98] cursor-pointer"
         >
-          <Calendar size={15} strokeWidth={2} />
-          <span>Book Appointment</span>
+          <MessageCircle size={17} />
+          <span>WhatsApp Us (099029 49549)</span>
         </a>
       </div>
     </div>

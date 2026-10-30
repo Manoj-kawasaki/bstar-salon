@@ -203,12 +203,12 @@ export default function ServicesPage() {
                         {svc.price}
                       </span>
                       <a
-                        href="https://book.zuyyu.com/b-star-unisex-saloon"
+                        href={siteConfig.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-sans text-[11px] uppercase tracking-wider text-[#FAF3E3] hover:text-[#C5A059] font-medium"
                       >
-                        Book ↗
+                        Inquire ↗
                       </a>
                     </div>
                   </div>
