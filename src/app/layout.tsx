@@ -51,11 +51,11 @@ export const metadata: Metadata = {
     ],
   },
   title: {
-    default: "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+    default: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
     template: "%s",
   },
   description:
-    "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+    "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   alternates: {
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     "max-snippet": -1,
   },
   openGraph: {
-    title: "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
     description:
-      "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     url: siteConfig.url,
     siteName: siteConfig.shortName,
     locale: "en_IN",
@@ -81,15 +81,15 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/images/bstar-logo-transparent.png`,
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} Unisex Salon Battarahalli Bengaluru`,
+        alt: "Best Salon in TC Palya - B★Star Unisex Salon Bengaluru",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
     description:
-      "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     images: [`${siteConfig.url}/images/bstar-logo-transparent.png`],
   },
 };
@@ -101,198 +101,299 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["BeautySalon", "HairSalon"],
-    "@id": "https://bstarsalon.com/#salon",
-    name: "B★Star Unisex Salon",
-    legalName: "B★STAR UNISEX SALON",
-    alternateName: "B-Star Unisex Saloon",
-    url: "https://bstarsalon.com",
-    logo: "https://bstarsalon.com/images/bstar-logo-transparent.png",
-    image: [
-      "https://bstarsalon.com/images/bstar-logo-transparent.png",
-      "https://bstarsalon.com/images/bstar-hero-crop1.jpg",
-      "https://bstarsalon.com/images/bstar-salon-interior.jpg",
-      "https://bstarsalon.com/images/atelier-split-hair.jpg",
-      "https://bstarsalon.com/images/bstar-curly-brunette.jpg",
-    ],
-    telephone: "+91-9902949549",
-    priceRange: "₹₹",
-    foundingDate: "2007",
-    hasMenu: "https://bstarsalon.com/services",
-    currenciesAccepted: "INR",
-    paymentAccepted: "Cash, Credit Card, UPI, Google Pay, PhonePe",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.3",
-      reviewCount: "339",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress:
-        "No. 140, Stylo Plaza Building, Above Krishna Sagar Hotel, Next to Kanti Sweets, Anandapura Bus Stop, TC Palya Main Road, Battarahalli",
-      addressLocality: "Bengaluru",
-      addressRegion: "Karnataka",
-      postalCode: "560036",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 13.0189,
-      longitude: 77.7028,
-    },
-    openingHoursSpecification: [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday",
+        "@type": ["HairSalon", "BeautySalon", "DaySpa"],
+        "@id": "https://bstarsalon.com/#salon",
+        name: "B★Star Unisex Salon",
+        legalName: "B★STAR UNISEX SALON",
+        alternateName: [
+          "B-Star Unisex Saloon",
+          "B Star Unisex Salon TC Palya",
+          "Best Salon in TC Palya - B★Star",
+          "B Star Salon TC Palya",
+          "B-Star Beauty Parlour Battarahalli",
         ],
-        opens: "09:00",
-        closes: "21:00",
-      },
-    ],
-    potentialAction: {
-      "@type": "ReserveAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://book.zuyyu.com/b-star-unisex-saloon",
-        inLanguage: "en-IN",
-        actionPlatform: [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform",
-          "http://schema.org/IOSPlatform",
-          "http://schema.org/AndroidPlatform",
+        description:
+          "Since 2007, B★Star Unisex Salon has served Battarahalli, TC Palya, KR Puram, NRI Layout, and Ramamurthy Nagar in Bengaluru with precision hair artistry, balayage, keratin treatments, clinical O3+ and HydraFacials, nail care, and bridal couture.",
+        url: "https://bstarsalon.com",
+        logo: "https://bstarsalon.com/images/bstar-logo-transparent.png",
+        image: [
+          "https://bstarsalon.com/images/bstar-logo-transparent.png",
+          "https://bstarsalon.com/images/bstar-hero-crop1.jpg",
+          "https://bstarsalon.com/images/bstar-salon-interior.jpg",
+          "https://bstarsalon.com/images/atelier-split-hair.jpg",
+          "https://bstarsalon.com/images/bstar-curly-brunette.jpg",
+        ],
+        telephone: "+91-9902949549",
+        priceRange: "₹₹",
+        foundingDate: "2007",
+        hasMenu: "https://bstarsalon.com/services",
+        currenciesAccepted: "INR",
+        paymentAccepted:
+          "Cash, Credit Card, Debit Card, UPI, Google Pay (Tez), NFC Mobile Payments",
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.3",
+          reviewCount: "339",
+          bestRating: "5",
+          worstRating: "1",
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "No. 140, Stylo Plaza Building, Above Krishna Sagar Hotel, Next to Kanti Sweets, Anandapura Bus Stop, TC Palya Main Road, Battarahalli",
+          addressLocality: "Bengaluru",
+          addressRegion: "Karnataka",
+          postalCode: "560036",
+          addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 13.0189,
+          longitude: 77.7028,
+        },
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "09:00",
+            closes: "21:00",
+          },
+        ],
+        potentialAction: {
+          "@type": "ReserveAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://book.zuyyu.com/b-star-unisex-saloon",
+            inLanguage: "en-IN",
+            actionPlatform: [
+              "http://schema.org/DesktopWebPlatform",
+              "http://schema.org/MobileWebPlatform",
+              "http://schema.org/IOSPlatform",
+              "http://schema.org/AndroidPlatform",
+            ],
+          },
+          result: {
+            "@type": "Reservation",
+            name: "Book Salon Appointment",
+          },
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "B★Star Unisex Salon Signature Services & Price Menu",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Global Color",
+                description:
+                  "Full coverage rich hair coloring using premium zero-ammonia formulations.",
+              },
+              price: "5000",
+              priceCurrency: "INR",
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Highlights Full Head",
+                description:
+                  "Dimensional foil highlights and French balayage for full head volume.",
+              },
+              price: "2288",
+              priceCurrency: "INR",
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Luxury Lotus Facial",
+                description:
+                  "Herbal Lotus botanical radiance facial for deep cellular rejuvenation.",
+              },
+              price: "1356",
+              priceCurrency: "INR",
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Luxury O3 Facial",
+                description:
+                  "Professional O3+ deep skin oxygenating and brightening bridal glow facial.",
+              },
+              price: "1356",
+              priceCurrency: "INR",
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Balayage & Foilayage",
+                description:
+                  "Couture hand-painted French balayage with seamless color gradation and dual-tone foilayage.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Keratin Treatment",
+                description:
+                  "Intensive protein and keratin infusion eliminating 100% frizz for 3 to 5 months.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Hair Rebonding",
+                description:
+                  "High-gloss thermal reconditioning and sleek pin-straight hair rebonding.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Hair Straightening",
+                description:
+                  "Permanent hair straightening and restructuring with botanical bond protection.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "HydraFacial",
+                description:
+                  "Medical-grade 7-step vortex vacuum exfoliation and hyaluronic acid hydration plump.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Acne & Pore Cleansing",
+                description:
+                  "Deep clinical extraction, sebum regulation, and soothing botanical skin therapy.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Bridal Makeup & Saree Draping",
+                description:
+                  "Royal Muhurtham and reception HD bridal makeup with flower setting and master saree draping.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Acrylic Nails & Extensions",
+                description:
+                  "Custom sculpted acrylic nail extensions, French tips, chrome art, and gel overlays.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Manicure & Pedicure",
+                description:
+                  "Therapeutic candle spa manicure and crystal pedicure foot relaxation rituals.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Brazilian & Body Waxing",
+                description:
+                  "Painless Rica wax hair removal, full body waxing, and permanent hair reduction.",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Men's Haircut & Grooming",
+                description:
+                  "Precision fade haircuts, executive beard styling, hot towel shave, and de-tan.",
+              },
+            },
+          ],
+        },
+        hasMap:
+          "https://maps.google.com/?cid=16611593444458525044",
+        areaServed: [
+          { "@type": "AdministrativeArea", name: "TC Palya", postalCode: "560036" },
+          { "@type": "AdministrativeArea", name: "Battarahalli", postalCode: "560036" },
+          { "@type": "AdministrativeArea", name: "Krishnarajapura (KR Puram)", postalCode: "560036" },
+          { "@type": "AdministrativeArea", name: "NRI Layout (560016)", postalCode: "560016" },
+          { "@type": "AdministrativeArea", name: "Ramamurthy Nagar (560016)", postalCode: "560016" },
+          { "@type": "AdministrativeArea", name: "Anandapura", postalCode: "560036" },
+          { "@type": "AdministrativeArea", name: "Bengaluru", postalCode: "560036" },
         ],
       },
-      result: {
-        "@type": "Reservation",
-        name: "Book Salon Appointment",
+      {
+        "@type": "FAQPage",
+        "@id": "https://bstarsalon.com/#faq",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Which is the best salon in TC Palya for haircuts, balayage, and facials?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "B★Star Unisex Salon (rated 4.3★ by 339+ clients) is recognized as the best salon in TC Palya Main Road, Battarahalli. Established in 2007, our master stylists specialize in precision haircuts, French balayage, keratin treatments, hair botox, clinical HydraFacials, and luxury O3+ facials.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What is the price of Global Hair Color, Highlights, and O3+ Facial at B★Star Salon TC Palya?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "At B★Star Unisex Salon, we offer 100% transparent pricing: Global Hair Color is ₹5,000, Full Head Highlights are ₹2,288, Luxury O3+ Bridal Radiance Facial is ₹1,356, and Luxury Lotus Facial is ₹1,356. We accept UPI, Google Pay (Tez), NFC, Credit & Debit Cards, and cash with no hidden charges.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Where exactly is B★Star Unisex Salon located on TC Palya Main Road?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "B★Star Unisex Salon is located at No. 140, Stylo Plaza Building, directly above Krishna Sagar Hotel and next to Kanti Sweets, right opposite Anandapura Bus Stop on TC Palya Main Road, Battarahalli, Bengaluru 560036.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does B★Star Salon offer bridal makeup and home salon services in TC Palya and Ramamurthy Nagar?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes, we provide luxury HD & Airbrush bridal makeup, pre-bridal packages, saree draping, and wedding event preparation, including mobile home salon services across TC Palya, Battarahalli, KR Puram, NRI Layout, and Ramamurthy Nagar.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What are the timings and booking options for B★Star Unisex Salon?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. You can book an appointment online via https://book.zuyyu.com/b-star-unisex-saloon, call +91 99029 49549, or message us on WhatsApp for immediate confirmation.",
+            },
+          },
+        ],
       },
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "B★Star Unisex Salon Signature Services & Price Menu",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Global Color",
-            description:
-              "Full coverage rich hair coloring using premium zero-ammonia formulations.",
-          },
-          price: "5000",
-          priceCurrency: "INR",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Highlights Full Head",
-            description:
-              "Dimensional foil highlights and French balayage for full head volume.",
-          },
-          price: "2288",
-          priceCurrency: "INR",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Luxury Lotus Facial",
-            description:
-              "Herbal Lotus botanical radiance facial for deep cellular rejuvenation.",
-          },
-          price: "1356",
-          priceCurrency: "INR",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Luxury O3 Facial",
-            description:
-              "Professional O3+ deep skin oxygenating and brightening bridal glow facial.",
-          },
-          price: "1356",
-          priceCurrency: "INR",
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Balayage",
-            description:
-              "Couture hand-painted French balayage with seamless color gradation.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Keratin Treatment",
-            description:
-              "Intensive protein and keratin infusion eliminating 100% frizz for 3 to 5 months.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Bridal Makeup",
-            description:
-              "Royal Muhurtham and reception HD bridal makeup with flower setting and saree draping.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "HydraFacial",
-            description:
-              "Medical-grade 7-step vortex vacuum exfoliation and hyaluronic acid hydration plump.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Hair Straightening",
-            description:
-              "Permanent hair straightening and restructuring with botanical bond protection.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Rebonding",
-            description:
-              "High-gloss thermal reconditioning and sleek pin-straight hair rebonding.",
-          },
-        },
-      ],
-    },
-    hasMap:
-      "https://maps.google.com/?q=B-Star+Unisex+Saloon+Stylo+Plaza+Building+TC+Palya+Main+Rd+Battarahalli+Bengaluru",
-    areaServed: [
-      { "@type": "AdministrativeArea", name: "Krishnarajapura (KR Puram)" },
-      { "@type": "AdministrativeArea", name: "Battarahalli" },
-      { "@type": "AdministrativeArea", name: "TC Palya" },
-      { "@type": "AdministrativeArea", name: "NRI Layout (560016)" },
-      { "@type": "AdministrativeArea", name: "Ramamurthy Nagar (560016)" },
-      { "@type": "AdministrativeArea", name: "Anandapura" },
-      { "@type": "AdministrativeArea", name: "Medahalli" },
-      { "@type": "AdministrativeArea", name: "Hoysala Nagar" },
-      { "@type": "AdministrativeArea", name: "Horamavu" },
-      { "@type": "AdministrativeArea", name: "East Bengaluru" },
     ],
   };
 

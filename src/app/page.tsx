@@ -11,35 +11,33 @@ import FAQSection from "@/components/FAQSection";
 import BookingCTA from "@/components/BookingCTA";
 
 export const metadata: Metadata = {
-  title:
-    "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+  title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
   description:
-    "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+    "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
   alternates: {
-    canonical: "https://bstarsalon.com",
+    canonical: "https://bstarsalon.com/",
   },
   openGraph: {
-    title:
-      "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
     description:
-      "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     url: "https://bstarsalon.com",
     type: "website",
+    locale: "en_IN",
     images: [
       {
         url: "https://bstarsalon.com/images/bstar-logo-transparent.png",
         width: 1200,
         height: 630,
-        alt: "B★Star Unisex Salon Bengaluru",
+        alt: "Best Salon in TC Palya - B★Star Unisex Salon Bengaluru",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "B★Star Unisex Salon | Luxury Hair, Balayage, Bridal & HydraFacial in TC Palya, KR Puram, Bengaluru",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
     description:
-      "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     images: ["https://bstarsalon.com/images/bstar-logo-transparent.png"],
   },
 };

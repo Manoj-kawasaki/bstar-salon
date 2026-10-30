@@ -37,9 +37,10 @@ export default function Header() {
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-md">
                 <Image
                   src="/images/bstar-logo-transparent.png"
-                  alt="B★Star Unisex Salon Logo Battarahalli TC Palya Bengaluru"
+                  alt="Best salon in TC Palya - B★Star Unisex Salon Logo Bengaluru"
                   fill
                   priority
+                  fetchPriority="high"
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
                   sizes="(max-width: 640px) 48px, 56px"
                 />

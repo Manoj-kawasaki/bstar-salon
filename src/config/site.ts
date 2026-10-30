@@ -584,34 +584,29 @@ export const siteConfig = {
   ],
   generalFaqs: [
     {
-      question: "How do I book an appointment at B★Star?",
+      question: "Which is the best salon in TC Palya for haircuts, balayage, and facials?",
       answer:
-        "You can book appointments 24/7 directly on our website at bstarsalon.com/book (or click 'Book Appointment'), call us at +91 99029 49549, or drop us a message on WhatsApp for instant confirmation.",
+        "B★Star Unisex Salon (rated 4.3★ by 339+ clients) is recognized as the best salon in TC Palya Main Road, Battarahalli. Established in 2007, our master stylists specialize in precision haircuts, French balayage, keratin treatments, hair botox, clinical HydraFacials, and luxury O3+ facials.",
     },
     {
-      question: "What are the salon hours?",
+      question: "What is the price of Global Hair Color, Highlights, and O3+ Facial at B★Star Salon TC Palya?",
       answer:
-        "B★Star Unisex Salon is open every day from 9:00 AM–9:00 PM, Monday–Sunday.",
+        "At B★Star Unisex Salon, we offer 100% transparent pricing: Global Hair Color is ₹5,000, Full Head Highlights are ₹2,288, Luxury O3+ Bridal Radiance Facial is ₹1,356, and Luxury Lotus Facial is ₹1,356. We accept UPI, Google Pay (Tez), NFC, Credit & Debit Cards, and cash with no hidden charges.",
     },
     {
-      question: "Where is B★Star located?",
+      question: "Where exactly is B★Star Unisex Salon located on TC Palya Main Road?",
       answer:
-        "We are conveniently located at No. 140, Stylo Plaza Building, TC Palya Main Rd (above Krishna Sagar Hotel and next to Kanti Sweets), Anandapura, Battarahalli, Bengaluru, Karnataka 560036.",
+        "B★Star Unisex Salon is located at No. 140, Stylo Plaza Building, directly above Krishna Sagar Hotel and next to Kanti Sweets, right opposite Anandapura Bus Stop on TC Palya Main Road, Battarahalli, Bengaluru 560036.",
     },
     {
-      question: "Do you accept walk-ins?",
+      question: "Does B★Star Salon offer bridal makeup and home salon services in TC Palya and Ramamurthy Nagar?",
       answer:
-        "Yes, walk-in clients are always welcome based on staff availability. However, to guarantee your preferred timing and avoid wait times, booking in advance on bstarsalon.com/book or WhatsApp is recommended.",
+        "Yes, we provide luxury HD & Airbrush bridal makeup, pre-bridal packages, saree draping, and wedding event preparation, including mobile home salon services across TC Palya, Battarahalli, KR Puram, NRI Layout, and Ramamurthy Nagar.",
     },
     {
-      question: "How can I find the prices for specific services?",
+      question: "What are the timings and booking options for B★Star Unisex Salon?",
       answer:
-        "Our complete service menu features transparent prices: Men's Haircuts from ₹200, Women's Designer Haircuts from ₹550, Cleanups from ₹450, HydraFacials at ₹4,000, Keratin Treatments from ₹5,000, and Complete Bridal Packages from ₹6,000. All prices are verified and available on our Services page.",
-    },
-    {
-      question: "What safety and hygiene standards do you follow?",
-      answer:
-        "At B★Star, hygiene is paramount. We use sanitized tools, single-use disposable essentials where applicable, premium international product lines, and maintain pristine styling stations.",
+        "B★Star Unisex Salon is open 7 days a week from 9:00 AM to 9:00 PM. You can book an appointment online via https://book.zuyyu.com/b-star-unisex-saloon, call +91 99029 49549, or message us on WhatsApp for immediate confirmation.",
     },
   ],
   serviceFaqs: [

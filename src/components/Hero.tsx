@@ -45,9 +45,10 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/bstar-hero-crop1.jpg"
-          alt="B★Star Unisex Salon Battarahalli - Best Haircut, Balayage, Keratin, HydraFacial and Bridal Salon in TC Palya Bengaluru"
+          alt="Best salon in TC Palya - B-Star Unisex Salon dual-tone ash silver and copper foilayage hair coloring"
           fill
           priority
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover object-[50%_20%] sm:object-center brightness-[1.08] contrast-[1.02]"
         />
@@ -61,8 +62,8 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 pt-24 sm:pt-32 flex justify-center animate-in fade-in duration-700">
         <div className="inline-flex items-center gap-3 sm:gap-5 px-4 py-1">
           <span className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent via-[#C5A059] to-[#C5A059]" />
-          <span className="font-display font-bold tracking-[0.34em] sm:tracking-[0.44em] uppercase text-[#C5A059] text-[10.5px] sm:text-[13px] drop-shadow-md whitespace-nowrap">
-            B<span className="brand-star text-[#FAF3E3]">★</span>STAR UNISEX SALON · BENGALURU
+          <span className="font-display font-bold tracking-[0.25em] sm:tracking-[0.40em] uppercase text-[#C5A059] text-[10.5px] sm:text-[13px] drop-shadow-md whitespace-nowrap">
+            EST. 2007 • NO. 140, STYLO PLAZA, TC PALYA MAIN ROAD, BENGALURU
           </span>
           <span className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent via-[#C5A059] to-[#C5A059]" />
         </div>
@@ -73,22 +74,19 @@ export default function Hero() {
         {/* Semantic H1 with High-Intent Local Keywords & Editorial Sub-lines */}
         <h1 className="flex flex-col items-center text-center">
           <span className="font-display font-medium text-[10.5px] sm:text-xs uppercase tracking-[0.24em] sm:tracking-[0.30em] text-[#C5A059] mb-2 sm:mb-2.5 drop-shadow-sm">
-            Best Unisex Hair, Skin &amp; Bridal Salon in Battarahalli, TC Palya Main Rd
+            #1 Rated Unisex Hair, Skin &amp; Bridal Salon in TC Palya Main Rd
           </span>
-          <span className="font-serif italic text-base sm:text-xl md:text-2xl text-[#C5A059] mb-2 sm:mb-2.5 tracking-wide drop-shadow-md block">
-            Couture Hair Artistry &amp; High-Performance Aesthetics
-          </span>
-          <span className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[70px] text-[#FAF3E3] font-light leading-[1.08] tracking-tight drop-shadow-2xl max-w-3xl block">
-            The Art of <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Bespoke Luxury</span>
+          <span className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] text-[#FAF3E3] font-light leading-[1.12] tracking-tight drop-shadow-2xl max-w-3xl block">
+            The <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Best Unisex Salon</span> in TC Palya for <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Bespoke Luxury</span> Hair, Skin &amp; Bridal Artistry
           </span>
         </h1>
 
         {/* High-Intent Local SEO Description */}
         <p
           itemProp="description"
-          className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/85 font-light leading-relaxed max-w-xl mx-auto mt-3 sm:mt-3.5 drop-shadow-md"
+          className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/90 font-light leading-relaxed max-w-2xl mx-auto mt-3.5 sm:mt-4 drop-shadow-md"
         >
-          Rated 4.3★ by 339+ clients at Stylo Plaza, TC Palya Main Rd. East Bengaluru&apos;s premier salon for precision haircuts, keratin smoothening, hair botox, balayage, HydraFacials, and royal bridal couture.
+          Since 2007, <strong>B★Star Unisex Salon</strong> (B-Star Unisex Saloon) has been trusted as the <strong>best salon in TC Palya Main Road, Battarahalli, Bengaluru</strong>. Rated <strong>4.3★ across 339+ client reviews</strong>, our master stylists and aestheticians combine dermatologist-tested, ethically sourced formulations with precision craftsmanship—delivering East Bengaluru&apos;s finest balayage, keratin smoothing, clinical HydraFacials, O3+ facials, nail extensions, and bridal couture.
         </p>
 
         {/* High-Intent Internal Service Anchor Links (PageRank & Semantic Relevancy Boost) */}
@@ -131,20 +129,22 @@ export default function Hero() {
 
         {/* High-Cachet CTAs with Crawlable Internal /book Links */}
         <div className="flex flex-col sm:flex-row items-center gap-3.5 sm:gap-4 mt-6 sm:mt-7 w-full sm:w-auto">
-          <Link
-            href="/book"
-            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-[0_12px_30px_rgba(197,160,89,0.25)] hover:shadow-[0_16px_36px_rgba(197,160,89,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.99] trigger-booking-modal cursor-pointer"
+          <a
+            href="https://book.zuyyu.com/b-star-unisex-saloon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.25em] shadow-[0_12px_30px_rgba(197,160,89,0.25)] hover:shadow-[0_16px_36px_rgba(197,160,89,0.4)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.99] cursor-pointer"
           >
-            <span>Book an Appointment</span>
+            <span>Book Appointment Online</span>
             <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#1C110C]" />
-          </Link>
+          </a>
 
           <a
-            href={`tel:${siteConfig.phoneRaw}`}
+            href="tel:+919902949549"
             itemProp="telephone"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 border border-[#F5EDD6]/20 hover:border-[#C5A059] text-[#F5EDD6] hover:text-[#C5A059] font-sans text-xs uppercase tracking-[0.2em] backdrop-blur-sm transition-all duration-300"
           >
-            <span>Call +91 99029 49549</span>
+            <span>Call 099029 49549</span>
           </a>
         </div>
 

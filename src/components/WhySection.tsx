@@ -1,64 +1,112 @@
 import React from "react";
 import Image from "next/image";
-import { siteConfig } from "@/config/site";
+import { Sparkles, ShieldCheck, Tag, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function WhySection() {
-  const pillars = siteConfig.whyChooseUs;
+  const proofPillars = [
+    {
+      icon: Sparkles,
+      number: "01",
+      title: "18+ Years of Master Styling in TC Palya (Since 2007)",
+      description:
+        "Over a decade of trusted hair coloring, foilayage, rebonding, and bridal transformations for men and women on TC Palya Main Road.",
+    },
+    {
+      icon: ShieldCheck,
+      number: "02",
+      title: "Dermatologist-Tested & Ethically Sourced Formulations",
+      description:
+        "Clinical-grade skin care including Luxury O3+ Facials (₹1,356), Luxury Lotus Facials (₹1,356), HydraFacials, pore cleansing, and acne treatments.",
+    },
+    {
+      icon: Tag,
+      number: "03",
+      title: "100% Transparent Luxury Pricing",
+      description:
+        "Upfront menu pricing with no hidden charges—Global Hair Color at ₹5,000, Full Head Highlights at ₹2,288, and easy payment via UPI, Google Pay (Tez), NFC, Credit & Debit Cards.",
+    },
+    {
+      icon: MapPin,
+      number: "04",
+      title: "Prime Landmark Location & Daily 9 AM – 9 PM Hours",
+      description:
+        "Conveniently located at Stylo Plaza Building, above Krishna Sagar Hotel and next to Kanti Sweets at Anandapura Bus Stop, TC Palya Main Road, with free Wi-Fi and instant online booking.",
+    },
+  ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-[#1C110C] border-t border-[#F5EDD6]/10">
+    <section className="py-20 sm:py-28 lg:py-32 bg-[#1C110C] border-t border-[#F5EDD6]/10">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Editorial Heading */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <p className="font-display tracking-[0.25em] text-[11px] sm:text-xs uppercase text-[#C5A059] mb-3 font-medium">
-            The B<span className="brand-star">★</span>Star Standard
+            Proven Trust &amp; Excellence · East Bengaluru
           </p>
-          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5EDD6] leading-[1.1] font-light">
-            Crafted with Care,{" "}
-            <span className="italic font-normal text-[#C5A059]">Delivered with Precision</span>
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5EDD6] leading-[1.12] font-light">
+            Why 339+ Clients Rate B★Star the{" "}
+            <span className="italic font-normal text-[#C5A059]">
+              Best Salon in TC Palya &amp; Battarahalli
+            </span>
           </h2>
         </div>
 
-        {/* Two-column on desktop, stacked on mobile */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Pillars */}
-          <div className="divide-y divide-[#F5EDD6]/10">
-            {pillars.map((pillar, i) => (
+        {/* 4 Cards Grid with Espresso Brown and Metallic Gold Borders */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch mb-16">
+          {proofPillars.map((pillar) => {
+            const IconComponent = pillar.icon;
+            return (
               <div
-                key={i}
-                className="py-5 sm:py-7 first:pt-0"
+                key={pillar.number}
+                className="bg-[#241710] p-7 sm:p-9 border border-[#C5A059]/30 hover:border-[#C5A059] transition-all duration-300 shadow-xl flex flex-col justify-between group"
               >
-                <div className="flex items-baseline gap-3 mb-1.5">
-                  <span className="font-display text-[#C5A059] text-xs font-semibold">
-                    0{i + 1}
-                  </span>
-                  <h3 className="font-serif italic text-xl sm:text-2xl text-[#F5EDD6]">
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-display font-bold text-xs uppercase tracking-[0.2em] text-[#C5A059]">
+                      Pillar {pillar.number}
+                    </span>
+                    <IconComponent className="w-5 h-5 text-[#C5A059] transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                  <h3 className="font-serif italic text-xl sm:text-2xl text-[#FAF3E3] mb-3 leading-snug">
                     {pillar.title}
                   </h3>
+                  <p className="font-sans text-xs sm:text-sm text-[#F5EDD6]/75 leading-relaxed font-light">
+                    {pillar.description}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-[#F5EDD6]/70 leading-relaxed max-w-md pl-6 font-light">
-                  {pillar.description}
-                </p>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
 
-          {/* Authentic Salon Atelier Image */}
-          <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full overflow-hidden bg-[#241710] shadow-2xl border border-[#F5EDD6]/10">
-            <Image
-              src="/images/bstar-salon-interior.jpg"
-              alt="Professional hair coloring and styling stations at B-Star Unisex Salon TC Palya Main Road Bengaluru"
-              fill
-              loading="lazy"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center brightness-[0.92] contrast-[1.05] hover:scale-102 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/70 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-4 left-4 z-10">
-              <span className="inline-block font-display text-[10px] sm:text-[11px] tracking-[0.2em] uppercase text-[#C5A059] bg-[#1C110C]/90 backdrop-blur-md px-3.5 py-1.5 border border-[#C5A059]/30 shadow-lg whitespace-nowrap">
-                Salon Atelier · Battarahalli
+        {/* Authentic Salon Atelier Showcase */}
+        <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full overflow-hidden bg-[#241710] shadow-2xl border border-[#F5EDD6]/10">
+          <Image
+            src="/images/bstar-salon-interior.jpg"
+            alt="Best salon in TC Palya - B-Star Unisex Salon styling stations and modern salon interior at Stylo Plaza"
+            fill
+            loading="lazy"
+            sizes="(max-width: 1024px) 100vw, 1200px"
+            className="object-cover object-center brightness-[0.95] contrast-[1.05]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1C110C]/85 via-[#1C110C]/30 to-transparent pointer-events-none" />
+          <div className="absolute bottom-6 left-6 right-6 z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="inline-block font-display text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#C5A059] bg-[#1C110C]/90 backdrop-blur-md px-3.5 py-1.5 border border-[#C5A059]/30 shadow-lg whitespace-nowrap mb-1">
+                Luxury Salon Atelier · TC Palya Main Road
               </span>
+              <p className="font-serif italic text-base sm:text-xl text-[#FAF3E3] drop-shadow-md">
+                18+ Stations of Couture Hair, Facial &amp; Bridal Artistry
+              </p>
             </div>
+            <a
+              href="https://book.zuyyu.com/b-star-unisex-saloon"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-6 py-3 shadow-lg transition-all duration-300 self-start sm:self-auto"
+            >
+              <span>Book Appointment</span>
+              <ArrowUpRight className="w-4 h-4 text-[#1C110C]" />
+            </a>
           </div>
         </div>
       </div>

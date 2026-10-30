@@ -38,7 +38,7 @@ export default function Footer() {
         {/* Contact & Hours */}
         <div className="flex flex-col gap-2 font-serif text-lg md:text-xl">
           <a
-            href="tel:09902949549"
+            href="tel:+919902949549"
             className="hover:text-[#C5A059] transition-colors font-medium tracking-wide"
           >
             099029 49549

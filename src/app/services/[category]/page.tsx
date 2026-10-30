@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     title,
     description,
     alternates: {
-      canonical: `/services/${category.slug}`,
+      canonical: `${siteConfig.url}/services/${category.slug}`,
     },
     openGraph: {
       title,
@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
           url: category.image.startsWith("http") ? category.image : `${siteConfig.url}${category.image}`,
           width: 1200,
           height: 630,
-          alt: `${category.title} at B★Star Unisex Salon Battarahalli`,
+          alt: `${category.title} services at best salon in TC Palya - B★Star Unisex Salon Bengaluru`,
         },
       ],
     },

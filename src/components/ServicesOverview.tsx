@@ -122,65 +122,65 @@ export default function ServicesOverview() {
 
         </div>
 
-        {/* Core Local Service Clusters with Semantic H3 Headers */}
+        {/* 4 Core SEO Service Clusters with Semantic H2 Silos and Transparent Pricing */}
         <div className="mt-16 pt-12 border-t border-[#F5EDD6]/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+          <div className="bg-[#241710]/90 p-6 border border-[#C5A059]/30 flex flex-col justify-between hover:border-[#C5A059] transition-all">
             <div>
-              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 01</span>
-              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
-                Couture Hair Artistry
-              </h3>
-              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
-                Balayage, Foilayage, Global Color, Keratin Smoothening &amp; Hair Straightening Rebonding near TC Palya.
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2 font-semibold">Silo 01 · Hair</span>
+              <h2 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2 leading-snug">
+                Best Hair Salon in TC Palya — Color, Balayage &amp; Keratin Treatments
+              </h2>
+              <p className="font-sans text-xs text-[#F5EDD6]/75 leading-relaxed font-light mb-3">
+                Global Color (₹5,000), Highlights Full Head (₹2,288), Custom Balayage, Keratin, Rebonding, Hair Straightening &amp; Precision Haircuts.
               </p>
             </div>
-            <Link href="/services/hair" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
-              <span>Explore Hair Artistry</span> →
+            <Link href="/services/hair" className="mt-2 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Hair Artistry Menu</span> →
             </Link>
           </div>
 
-          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+          <div className="bg-[#241710]/90 p-6 border border-[#C5A059]/30 flex flex-col justify-between hover:border-[#C5A059] transition-all">
             <div>
-              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 02</span>
-              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
-                Advanced Skin Aesthetics
-              </h3>
-              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
-                Medical-grade HydraFacial, Luxury O3+ Bridal Facial, Lotus Facial, Acne &amp; Deep Pore Extraction.
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2 font-semibold">Silo 02 · Skin</span>
+              <h2 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2 leading-snug">
+                Advanced Skin Care &amp; Best Facial Salon in TC Palya
+              </h2>
+              <p className="font-sans text-xs text-[#F5EDD6]/75 leading-relaxed font-light mb-3">
+                Luxury O3+ Facial (₹1,356), Luxury Lotus Facial (₹1,356), Clinical HydraFacial, Pore Cleansing, Acne Treatments &amp; Tanning Removal.
               </p>
             </div>
-            <Link href="/services/skin" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
-              <span>Explore Skin Aesthetics</span> →
+            <Link href="/services/skin" className="mt-2 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Skin Aesthetics Menu</span> →
             </Link>
           </div>
 
-          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+          <div className="bg-[#241710]/90 p-6 border border-[#C5A059]/30 flex flex-col justify-between hover:border-[#C5A059] transition-all">
             <div>
-              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 03</span>
-              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
-                Bridal Couture &amp; Event Styling
-              </h3>
-              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
-                Royal HD Bridal Makeup, Muhurtham Styling, Master Saree Draping &amp; Complete Pre-Bridal Pampering.
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2 font-semibold">Silo 03 · Bridal</span>
+              <h2 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2 leading-snug">
+                Bridal Makeup &amp; Event Styling in TC Palya, East Bengaluru
+              </h2>
+              <p className="font-sans text-xs text-[#F5EDD6]/75 leading-relaxed font-light mb-3">
+                Royal HD &amp; Airbrush Bridal Makeup, Pre-Bridal Rituals, Master Saree Draping, Wedding Prep &amp; Mobile Home Salon Service.
               </p>
             </div>
-            <Link href="/services/bridal" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+            <Link href="/services/bridal" className="mt-2 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
               <span>Explore Bridal Packages</span> →
             </Link>
           </div>
 
-          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+          <div className="bg-[#241710]/90 p-6 border border-[#C5A059]/30 flex flex-col justify-between hover:border-[#C5A059] transition-all">
             <div>
-              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 04</span>
-              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
-                Nail Artistry, Grooming &amp; Spa
-              </h3>
-              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
-                Gel Extensions, Crystal Pedicure Spas, Men&apos;s Precision Taper Fades &amp; Executive Beard Sculpting.
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2 font-semibold">Silo 04 · Nails &amp; Spa</span>
+              <h2 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2 leading-snug">
+                Nail Artistry, Waxing &amp; Luxury Spa in TC Palya
+              </h2>
+              <p className="font-sans text-xs text-[#F5EDD6]/75 leading-relaxed font-light mb-3">
+                Acrylic Nails, Spa Manicures &amp; Pedicures, Brazilian Waxing, Full Body Waxing, Permanent Hair Removal &amp; Relaxing Massages.
               </p>
             </div>
-            <Link href="/services/grooming" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
-              <span>Explore Grooming &amp; Spa</span> →
+            <Link href="/services/grooming" className="mt-2 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Nails &amp; Spa Menu</span> →
             </Link>
           </div>
         </div>
