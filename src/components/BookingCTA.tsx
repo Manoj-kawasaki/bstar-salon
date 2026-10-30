@@ -10,9 +10,9 @@ export default function BookingCTA() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/bstar-chair-styling.jpg"
-          alt="B★Star Unisex Salon Master Hair Artistry — Client Transformation in Session"
+          alt="B★Star Unisex Salon Master Hair Artistry — Client Transformation in Session at TC Palya Battarahalli Bengaluru"
           fill
-          priority
+          loading="lazy"
           className="object-cover object-[center_32%] brightness-[0.60] contrast-[1.10] saturate-[1.15]"
           sizes="100vw"
         />

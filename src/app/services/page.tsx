@@ -6,11 +6,36 @@ import BookingCTA from "@/components/BookingCTA";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Salon Services & Price Menu | B★Star Unisex Salon, Battarahalli",
+  title:
+    "Salon Services & Price List | Hair Coloring, Bridal & Skin Care | B★Star Unisex Salon Bengaluru",
   description:
-    "Explore transparent starting prices and luxury treatments for hair, skin, bridal makeup, nail extensions, and men's grooming at B★Star Unisex Salon, Battarahalli.",
+    "Explore transparent pricing for 45+ luxury salon services in East Bengaluru: Global Hair Color (₹5,000), Full Head Highlights (₹2,288), Luxury O3+ & Lotus Facials (₹1,356), Keratin, Rebonding & Bridal Makeup.",
   alternates: {
     canonical: "/services",
+  },
+  openGraph: {
+    title:
+      "Salon Services & Price List | Hair Coloring, Bridal & Skin Care | B★Star Unisex Salon Bengaluru",
+    description:
+      "Explore transparent pricing for 45+ luxury salon services in East Bengaluru: Global Hair Color (₹5,000), Full Head Highlights (₹2,288), Luxury O3+ & Lotus Facials (₹1,356), Keratin, Rebonding & Bridal Makeup.",
+    url: "https://bstarsalon.com/services",
+    type: "website",
+    images: [
+      {
+        url: "https://bstarsalon.com/images/bstar-logo-transparent.png",
+        width: 1200,
+        height: 630,
+        alt: "B★Star Unisex Salon Services & Price List",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Salon Services & Price List | Hair Coloring, Bridal & Skin Care | B★Star Unisex Salon Bengaluru",
+    description:
+      "Explore transparent pricing for 45+ luxury salon services in East Bengaluru: Global Hair Color (₹5,000), Full Head Highlights (₹2,288), Luxury O3+ & Lotus Facials (₹1,356), Keratin, Rebonding & Bridal Makeup.",
+    images: ["https://bstarsalon.com/images/bstar-logo-transparent.png"],
   },
 };
 
@@ -43,8 +68,9 @@ export default function ServicesPage() {
               <div className="w-full lg:w-1/2 relative min-h-[50vh] lg:min-h-full">
                 <Image
                   src={category.image}
-                  alt={`${category.title} services at B★Star Unisex Salon Battarahalli`}
+                  alt={`${category.title} services at B★Star Unisex Salon Battarahalli TC Palya Bengaluru`}
                   fill
+                  loading="lazy"
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />

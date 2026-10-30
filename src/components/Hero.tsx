@@ -13,19 +13,19 @@ export default function Hero() {
     >
       {/* Schema.org Microdata Hidden Meta tags for Instant Search Engine Rich Snippet Signals */}
       <meta itemProp="name" content="B★Star Unisex Salon" />
-      <meta itemProp="alternateName" content="B-Star Unisex Salon Battarahalli" />
+      <meta itemProp="alternateName" content="B-Star Unisex Saloon" />
       <meta itemProp="url" content="https://bstarsalon.com" />
-      <meta itemProp="telephone" content="+919902949549" />
+      <meta itemProp="telephone" content="+91-9902949549" />
       <meta itemProp="priceRange" content="₹₹" />
-      <meta itemProp="image" content="https://bstarsalon.com/images/bstar-hero-crop1.jpg" />
+      <meta itemProp="image" content="https://bstarsalon.com/images/bstar-logo-transparent.png" />
       <div
         itemProp="address"
         itemScope
         itemType="https://schema.org/PostalAddress"
         className="hidden"
       >
-        <span itemProp="streetAddress">No. 140, Stylo Plaza Building, TC Palya Main Rd</span>
-        <span itemProp="addressLocality">Battarahalli</span>
+        <span itemProp="streetAddress">No. 140, Stylo Plaza Building, Above Krishna Sagar Hotel, Next to Kanti Sweets, Anandapura Bus Stop, TC Palya Main Road, Battarahalli</span>
+        <span itemProp="addressLocality">Bengaluru</span>
         <span itemProp="addressRegion">Karnataka</span>
         <span itemProp="postalCode">560036</span>
         <span itemProp="addressCountry">IN</span>

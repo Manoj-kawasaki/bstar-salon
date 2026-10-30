@@ -31,8 +31,9 @@ export default function ServicesOverview() {
           <div className="lg:col-span-4 relative min-h-[480px] lg:h-[640px] w-full overflow-hidden bg-[#241710] shadow-2xl">
             <Image
               src="/images/atelier-split-hair.jpg"
-              alt="B★Star Atelier 01 Bespoke Color & Half-Split Transformation"
+              alt="Ash silver and copper foilayage hair transformation at B-Star Unisex Salon TC Palya Bengaluru"
               fill
+              loading="lazy"
               className="object-cover object-center brightness-100 hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 33vw"
             />
@@ -97,8 +98,9 @@ export default function ServicesOverview() {
           <div className="lg:col-span-4 relative min-h-[480px] lg:h-[640px] w-full overflow-hidden bg-[#241710] shadow-2xl border border-[#F5EDD6]/10">
             <Image
               src="/images/bstar-curly-brunette.jpg"
-              alt="Mirror Silk Lustre Artistry with Curly Brunette Volume at B★Star"
+              alt="Hydrated curly brunette hair styling and texture reformation at B-Star Unisex Salon Bengaluru"
               fill
+              loading="lazy"
               className="object-cover object-center brightness-[1.02] contrast-[1.04] hover:scale-105 transition-transform duration-700"
               sizes="(max-width: 1024px) 100vw, 33vw"
             />
@@ -118,6 +120,69 @@ export default function ServicesOverview() {
             </div>
           </div>
 
+        </div>
+
+        {/* Core Local Service Clusters with Semantic H3 Headers */}
+        <div className="mt-16 pt-12 border-t border-[#F5EDD6]/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+            <div>
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 01</span>
+              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
+                Couture Hair Artistry
+              </h3>
+              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
+                Balayage, Foilayage, Global Color, Keratin Smoothening &amp; Hair Straightening Rebonding near TC Palya.
+              </p>
+            </div>
+            <Link href="/services/hair" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Hair Artistry</span> →
+            </Link>
+          </div>
+
+          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+            <div>
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 02</span>
+              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
+                Advanced Skin Aesthetics
+              </h3>
+              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
+                Medical-grade HydraFacial, Luxury O3+ Bridal Facial, Lotus Facial, Acne &amp; Deep Pore Extraction.
+              </p>
+            </div>
+            <Link href="/services/skin" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Skin Aesthetics</span> →
+            </Link>
+          </div>
+
+          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+            <div>
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 03</span>
+              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
+                Bridal Couture &amp; Event Styling
+              </h3>
+              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
+                Royal HD Bridal Makeup, Muhurtham Styling, Master Saree Draping &amp; Complete Pre-Bridal Pampering.
+              </p>
+            </div>
+            <Link href="/services/bridal" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Bridal Packages</span> →
+            </Link>
+          </div>
+
+          <div className="bg-[#241710]/70 p-6 border border-[#C5A059]/20 flex flex-col justify-between">
+            <div>
+              <span className="text-[#C5A059] font-display text-[10px] tracking-[0.2em] uppercase block mb-2">Cluster 04</span>
+              <h3 className="font-serif italic text-lg sm:text-xl text-[#FAF3E3] mb-2">
+                Nail Artistry, Grooming &amp; Spa
+              </h3>
+              <p className="font-sans text-xs text-[#F5EDD6]/70 leading-relaxed font-light">
+                Gel Extensions, Crystal Pedicure Spas, Men&apos;s Precision Taper Fades &amp; Executive Beard Sculpting.
+              </p>
+            </div>
+            <Link href="/services/grooming" className="mt-4 font-serif italic text-xs text-[#C5A059] hover:underline flex items-center gap-1">
+              <span>Explore Grooming &amp; Spa</span> →
+            </Link>
+          </div>
         </div>
 
       </div>

@@ -13,8 +13,9 @@ export default function Footer() {
             <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-md">
               <Image
                 src="/images/bstar-logo-transparent.png"
-                alt="B★Star Unisex Salon Logo"
+                alt="B★Star Unisex Salon Logo Battarahalli Bengaluru"
                 fill
+                loading="lazy"
                 className="object-contain group-hover:scale-105 transition-transform duration-300"
                 sizes="(max-width: 640px) 48px, 56px"
               />
@@ -29,6 +30,7 @@ export default function Footer() {
             </div>
           </Link>
           <div className="font-sans text-sm tracking-wide leading-relaxed opacity-80">
+            <p className="font-medium text-[#FAF3E3] mb-1">B★Star Unisex Salon</p>
             <p>{siteConfig.location.fullAddress}</p>
           </div>
         </div>
@@ -36,31 +38,34 @@ export default function Footer() {
         {/* Contact & Hours */}
         <div className="flex flex-col gap-2 font-serif text-lg md:text-xl">
           <a
-            href={`tel:${siteConfig.phoneRaw}`}
-            className="hover:text-[#C5A059] transition-colors"
+            href="tel:09902949549"
+            className="hover:text-[#C5A059] transition-colors font-medium tracking-wide"
           >
-            {siteConfig.phone}
+            099029 49549
           </a>
           <a
             href={siteConfig.whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#C5A059] transition-colors italic text-base"
+            className="hover:text-[#C5A059] transition-colors italic text-base text-[#C5A059]"
           >
             WhatsApp Us
           </a>
-          <div className="mt-8 font-sans text-xs uppercase tracking-widest opacity-60">
-            {siteConfig.location.hours}
+          <div className="mt-8 font-sans text-xs uppercase tracking-widest opacity-80 text-[#FAF3E3]">
+            Mon–Sun: 9:00 AM – 9:00 PM
           </div>
         </div>
 
-        {/* Links */}
+        {/* Links & Prominent Booking CTA */}
         <div className="flex flex-col items-start gap-5">
           <a
-            href="#book"
-            className="font-serif italic text-xl hover:text-[#C5A059] transition-colors underline underline-offset-[6px] decoration-1 decoration-[#F5EDD6]/30 hover:decoration-[#C5A059] trigger-booking-modal cursor-pointer"
+            href="https://book.zuyyu.com/b-star-unisex-saloon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#C5A059] hover:bg-[#D4B97A] text-[#1C110C] font-sans font-bold text-xs uppercase tracking-[0.2em] px-6 py-3.5 shadow-lg transition-all duration-300 hover:scale-105 active:scale-98"
           >
-            Book Appointment
+            <span>Book Appointment</span>
+            <span className="text-sm">↗</span>
           </a>
           <div className="flex flex-col gap-3 mt-4">
             {siteConfig.navigation.map((item) => (

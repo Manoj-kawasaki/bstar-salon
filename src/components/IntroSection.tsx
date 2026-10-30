@@ -43,8 +43,9 @@ export default function IntroSection() {
           <div className="relative w-full md:w-[88%] aspect-[16/9] sm:aspect-[21/9] overflow-hidden bg-[#241710]">
             <Image
               src="/images/s2-bg1.jpg"
-              alt="B★Star Luxury Salon Experience"
+              alt="Luxury hair spa and revitalizing botanical facial treatment room at B-Star Unisex Salon Battarahalli Bengaluru"
               fill
+              loading="lazy"
               className="object-cover object-center brightness-[0.85] hover:scale-102 transition-transform duration-700 ease-out"
               sizes="(max-width: 1024px) 100vw, 85vw"
             />

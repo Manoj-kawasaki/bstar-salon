@@ -153,8 +153,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   <div className="relative w-full md:w-80 aspect-[4/3] md:aspect-[3/4] overflow-hidden bg-[#1C110C] shrink-0 shadow-xl group">
                     <Image
                       src={service.image}
-                      alt={`${service.name} at B★Star Unisex Salon`}
+                      alt={`${service.name} at B★Star Unisex Salon TC Palya Battarahalli Bengaluru`}
                       fill
+                      loading="lazy"
                       className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                       sizes="(max-width: 768px) 100vw, 320px"
                     />
@@ -219,8 +220,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <Link key={cat.id} href={`/services/${cat.slug}`} className="group block relative h-[40vh] overflow-hidden">
                   <Image
                     src={cat.image}
-                    alt={`${cat.title} services at B★Star Unisex Salon`}
+                    alt={`${cat.title} services at B★Star Unisex Salon Battarahalli Bengaluru`}
                     fill
+                    loading="lazy"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 brightness-50 group-hover:brightness-75"
                   />
                   <div className="absolute inset-0 flex flex-col justify-end p-8">

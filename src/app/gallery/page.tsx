@@ -124,8 +124,9 @@ export default function GalleryPage() {
               >
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - B★Star Unisex Salon TC Palya Bengaluru`}
                   fill
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 brightness-95 group-hover:brightness-100"
                 />

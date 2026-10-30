@@ -37,7 +37,7 @@ export default function Header() {
               <div className="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 drop-shadow-md">
                 <Image
                   src="/images/bstar-logo-transparent.png"
-                  alt="B★Star Unisex Salon Logo"
+                  alt="B★Star Unisex Salon Logo Battarahalli TC Palya Bengaluru"
                   fill
                   priority
                   className="object-contain group-hover:scale-105 transition-transform duration-300"
@@ -122,8 +122,9 @@ export default function Header() {
               <div className="relative w-12 h-12 shrink-0 drop-shadow-md">
                 <Image
                   src="/images/bstar-logo-transparent.png"
-                  alt="B★Star Unisex Salon Logo"
+                  alt="B★Star Unisex Salon Logo Battarahalli TC Palya Bengaluru"
                   fill
+                  loading="lazy"
                   className="object-contain"
                   sizes="48px"
                 />

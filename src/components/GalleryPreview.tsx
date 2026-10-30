@@ -50,8 +50,9 @@ export default function GalleryPreview() {
             >
               <Image
                 src={images[0].image}
-                alt={images[0].title}
+                alt={`${images[0].title} at B-Star Unisex Salon TC Palya Bengaluru`}
                 fill
+                loading="lazy"
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 42vw"
               />
@@ -79,8 +80,9 @@ export default function GalleryPreview() {
             >
               <Image
                 src={images[1].image}
-                alt={images[1].title}
+                alt={`${images[1].title} at B-Star Unisex Salon TC Palya Bengaluru`}
                 fill
+                loading="lazy"
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 25vw"
               />
@@ -108,8 +110,9 @@ export default function GalleryPreview() {
             >
               <Image
                 src={images[2].image}
-                alt={images[2].title}
+                alt={`${images[2].title} at B-Star Unisex Salon TC Palya Bengaluru`}
                 fill
+                loading="lazy"
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
