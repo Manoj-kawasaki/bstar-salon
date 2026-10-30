@@ -16,46 +16,46 @@ const categorySeoData: Record<
   }
 > = {
   hair: {
-    title: "Haircut, Balayage, Keratin & Hair Botox in Battarahalli | B★Star Salon",
+    title: "Haircut, Balayage, Keratin & Botox in TC Palya, Battarahalli | B★Star Salon",
     description:
-      "Transform your hair at B★Star Battarahalli. Expert designer haircuts, ammonia-free global color, French balayage, keratin smoothening, nanoplastia, and hair botox near TC Palya.",
+      "Transform your hair at B★Star on TC Palya Main Rd, Battarahalli. Expert designer haircuts, ammonia-free global color, French balayage, keratin smoothening, nanoplastia, and hair botox.",
     h1Title: "Haircut, Balayage, Keratin & Hair Botox",
-    h1Eyebrow: "Couture Hair Artistry & Texture Reformation",
+    h1Eyebrow: "Couture Hair Artistry & Texture Reformation in TC Palya, Bengaluru",
   },
   skin: {
-    title: "HydraFacial, De-Tan & Bridal Glow Facials in Battarahalli | B★Star Salon",
+    title: "HydraFacial, De-Tan & Bridal Glow in TC Palya, Battarahalli | B★Star Salon",
     description:
-      "Revitalize your skin at B★Star Battarahalli. Premium HydraFacial, O3+ bridal glow facials, ultrasonic de-tan packs, and pore purification near TC Palya.",
+      "Revitalize your skin at B★Star on TC Palya Main Rd, Battarahalli. Premium HydraFacial, O3+ bridal glow facials, ultrasonic de-tan packs, and pore purification.",
     h1Title: "HydraFacial, De-Tan & Bridal Glow Facials",
-    h1Eyebrow: "Advanced Clinical Skin Therapies & Glow Rituals",
+    h1Eyebrow: "Advanced Clinical Skin Therapies & Glow Rituals in TC Palya, Bengaluru",
   },
   bridal: {
-    title: "Royal Bridal Makeup & Pre-Bridal Packages in Battarahalli | B★Star Salon",
+    title: "Bridal Makeup & Pre-Bridal Packages in TC Palya, Battarahalli | B★Star Salon",
     description:
-      "Exquisite bridal makeup artistry at B★Star Battarahalli. Royal Muhurtham makeup, couture reception styling, jewel placement, and pre-bridal packages near TC Palya.",
+      "Exquisite bridal makeup artistry at B★Star on TC Palya Main Rd, Battarahalli. Royal Muhurtham makeup, couture reception styling, jewel placement, and pre-bridal packages.",
     h1Title: "Royal Bridal Makeup & Pre-Bridal Artistry",
-    h1Eyebrow: "Haute Bridal Couture & Muhurtham Elegance",
+    h1Eyebrow: "Haute Bridal Couture & Muhurtham Elegance in TC Palya, Bengaluru",
   },
   grooming: {
-    title: "Men's Haircut, Taper Fade & Beard Styling in Battarahalli | B★Star Salon",
+    title: "Men's Haircut, Taper Fade & Beard Styling in TC Palya | B★Star Salon",
     description:
-      "Sharp men's grooming at B★Star Battarahalli. Precision scissor haircuts, modern skin fades, taper fades, beard styling, head massage, and men's de-tan.",
+      "Sharp men's grooming at B★Star on TC Palya Main Rd, Battarahalli. Precision scissor haircuts, modern skin fades, taper fades, beard styling, head massage, and men's de-tan.",
     h1Title: "Men's Haircut, Taper Fade & Beard Styling",
-    h1Eyebrow: "Precision Scissor Craft & Executive Grooming",
+    h1Eyebrow: "Precision Scissor Craft & Executive Grooming in TC Palya, Bengaluru",
   },
   nails: {
-    title: "Gel Nail Extensions, Nail Art & Spa Pedicure in Battarahalli | B★Star Salon",
+    title: "Gel Nails, Extensions & Spa Pedicure in TC Palya, Battarahalli | B★Star Salon",
     description:
-      "Luxury nail studio at B★Star Battarahalli. Long-lasting gel nail extensions, bespoke nail art, chrome finishes, candle spa manicures, and pedicures.",
+      "Luxury nail studio at B★Star on TC Palya Main Rd, Battarahalli. Long-lasting gel nail extensions, bespoke nail art, chrome finishes, candle spa manicures, and pedicures.",
     h1Title: "Gel Nail Extensions, Nail Art & Spa Pedicure",
-    h1Eyebrow: "Sculpted Gel Extensions & Therapeutic Nail Care",
+    h1Eyebrow: "Sculpted Gel Extensions & Therapeutic Nail Care in TC Palya, Bengaluru",
   },
   makeup: {
-    title: "HD Party & Occasion Makeup in Battarahalli | B★Star Salon",
+    title: "HD Party & Occasion Makeup in TC Palya, Battarahalli | B★Star Salon",
     description:
-      "Flawless HD occasion and party makeup at B★Star Unisex Salon, Battarahalli. Camera-ready looks, engagement glam, and bespoke hair styling near TC Palya.",
+      "Flawless HD occasion and party makeup at B★Star Unisex Salon, TC Palya Main Rd, Battarahalli. Camera-ready looks, engagement glam, and bespoke hair styling.",
     h1Title: "HD Party & Occasion Glamour Makeup",
-    h1Eyebrow: "High-Definition Red Carpet & Celebration Aesthetics",
+    h1Eyebrow: "High-Definition Red Carpet & Celebration Aesthetics in TC Palya, Bengaluru",
   },
 };
 

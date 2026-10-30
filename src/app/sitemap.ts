@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
+    '/salons/tc-palya',
     '/book',
     '/about',
     '/services',
@@ -19,6 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       route === ''
         ? 1.0
+        : route === '/salons/tc-palya'
+        ? 0.95
         : route === '/book'
         ? 0.95
         : route === '/services'

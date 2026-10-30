@@ -19,6 +19,15 @@ export default function LocationSection() {
             <p className="font-sans text-lg leading-relaxed text-[#F5EDD6]/80 max-w-md">
               {location.fullAddress}
             </p>
+            <div className="mt-3">
+              <Link
+                href="/salons/tc-palya"
+                className="font-sans text-xs uppercase tracking-[0.16em] text-[#C5A059] hover:underline inline-flex items-center gap-1"
+              >
+                <span>View TC Palya Branch Guide &amp; Landmark Distances</span>
+                <span>→</span>
+              </Link>
+            </div>
           </div>
 
           <div className="space-y-6">

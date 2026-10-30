@@ -68,6 +68,13 @@ export default function Footer() {
             <span className="text-sm">↗</span>
           </a>
           <div className="flex flex-col gap-3 mt-4">
+            <Link
+              href="/salons/tc-palya"
+              className="font-sans text-[11px] uppercase tracking-[0.15em] text-[#C5A059] font-medium hover:text-[#FAF3E3] transition-all flex items-center gap-1"
+            >
+              <span>TC Palya Main Road Branch</span>
+              <span>→</span>
+            </Link>
             {siteConfig.navigation.map((item) => (
               <Link
                 key={item.title}
