@@ -6,41 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section
-      itemScope
-      itemType="https://schema.org/HairSalon"
-      className="relative w-full h-[100svh] min-h-[640px] max-h-[1100px] flex flex-col justify-between items-center overflow-hidden bg-[#1C110C]"
-    >
-      {/* Schema.org Microdata Hidden Meta tags for Instant Search Engine Rich Snippet Signals */}
-      <meta itemProp="name" content="B★Star Unisex Salon" />
-      <meta itemProp="alternateName" content="B-Star Unisex Saloon" />
-      <meta itemProp="url" content="https://bstarsalon.com" />
-      <meta itemProp="telephone" content="+91-9902949549" />
-      <meta itemProp="priceRange" content="₹₹" />
-      <meta itemProp="image" content="https://bstarsalon.com/images/bstar-logo-transparent.png" />
-      <div
-        itemProp="address"
-        itemScope
-        itemType="https://schema.org/PostalAddress"
-        className="hidden"
-      >
-        <span itemProp="streetAddress">No. 140, Stylo Plaza Building, Above Krishna Sagar Hotel, Next to Kanti Sweets, Anandapura Bus Stop, TC Palya Main Road, Battarahalli</span>
-        <span itemProp="addressLocality">Bengaluru</span>
-        <span itemProp="addressRegion">Karnataka</span>
-        <span itemProp="postalCode">560036</span>
-        <span itemProp="addressCountry">IN</span>
-      </div>
-      <div
-        itemProp="aggregateRating"
-        itemScope
-        itemType="https://schema.org/AggregateRating"
-        className="hidden"
-      >
-        <span itemProp="ratingValue">4.3</span>
-        <span itemProp="reviewCount">339</span>
-        <span itemProp="bestRating">5</span>
-      </div>
-
+    <section className="relative w-full h-[100svh] min-h-[640px] max-h-[1100px] flex flex-col justify-between items-center overflow-hidden bg-[#1C110C]">
       {/* Background Image: Editorial 3-model hair couture showcase with keyword-rich alt text */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -72,20 +38,17 @@ export default function Hero() {
       {/* Lower Editorial Stage: Sits gracefully below models' eye levels */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 sm:pb-16 flex flex-col items-center text-center mt-auto animate-in fade-in slide-in-from-bottom-6 duration-1000">
         {/* Semantic H1 with High-Intent Local Keywords & Editorial Sub-lines */}
-        <h1 className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center">
           <span className="font-display font-medium text-[10.5px] sm:text-xs uppercase tracking-[0.24em] sm:tracking-[0.30em] text-[#C5A059] mb-2 sm:mb-2.5 drop-shadow-sm">
             #1 Rated Unisex Hair, Skin &amp; Bridal Salon in TC Palya Main Rd
           </span>
-          <span className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] text-[#FAF3E3] font-light leading-[1.12] tracking-tight drop-shadow-2xl max-w-3xl block">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[68px] text-[#FAF3E3] font-light leading-[1.12] tracking-tight drop-shadow-2xl max-w-3xl block">
             The <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Best Unisex Salon</span> in TC Palya for <span className="font-normal italic text-[#C5A059] drop-shadow-lg">Bespoke Luxury</span> Hair, Skin &amp; Bridal Artistry
-          </span>
-        </h1>
+          </h1>
+        </div>
 
         {/* High-Intent Local SEO Description */}
-        <p
-          itemProp="description"
-          className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/90 font-light leading-relaxed max-w-2xl mx-auto mt-3.5 sm:mt-4 drop-shadow-md"
-        >
+        <p className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/90 font-light leading-relaxed max-w-2xl mx-auto mt-3.5 sm:mt-4 drop-shadow-md">
           Since 2007, <strong>B★Star Unisex Salon</strong> (B-Star Unisex Saloon) has been trusted as the <strong>best salon in TC Palya Main Road, Battarahalli, Bengaluru</strong>. Rated <strong>4.3★ across 339+ client reviews</strong>, our master stylists and aestheticians combine dermatologist-tested, ethically sourced formulations with precision craftsmanship—delivering East Bengaluru&apos;s finest balayage, keratin smoothing, clinical HydraFacials, O3+ facials, nail extensions, and bridal couture.
         </p>
 
@@ -141,7 +104,6 @@ export default function Hero() {
 
           <a
             href="tel:+919902949549"
-            itemProp="telephone"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 border border-[#F5EDD6]/20 hover:border-[#C5A059] text-[#F5EDD6] hover:text-[#C5A059] font-sans text-xs uppercase tracking-[0.2em] backdrop-blur-sm transition-all duration-300"
           >
             <span>Call 099029 49549</span>
