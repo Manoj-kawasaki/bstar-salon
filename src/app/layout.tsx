@@ -92,6 +92,12 @@ export const metadata: Metadata = {
       "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     images: [`${siteConfig.url}/images/bstar-logo-transparent.png`],
   },
+  other: {
+    "geo.region": "IN-KA",
+    "geo.placename": "Bengaluru, Battarahalli, TC Palya",
+    "geo.position": "13.0189;77.7028",
+    "ICBM": "13.0189, 77.7028",
+  },
 };
 
 export default function RootLayout({
