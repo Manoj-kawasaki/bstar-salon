@@ -51,11 +51,11 @@ export const metadata: Metadata = {
     ],
   },
   title: {
-    default: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
+    default: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.4★ Rated)",
     template: "%s",
   },
   description:
-    "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
+    "Looking for the best salon in TC Palya Main Road? Rated 4.4★ by 350+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   alternates: {
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
     "max-snippet": -1,
   },
   openGraph: {
-    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.4★ Rated)",
     description:
-      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.4★ by 350+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     url: siteConfig.url,
     siteName: siteConfig.shortName,
     locale: "en_IN",
@@ -87,16 +87,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.3★ Rated)",
+    title: "Best Salon in TC Palya, Bengaluru | B★Star Unisex Salon (4.4★ Rated)",
     description:
-      "Looking for the best salon in TC Palya Main Road? Rated 4.3★ by 339+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
+      "Looking for the best salon in TC Palya Main Road? Rated 4.4★ by 350+ clients since 2007, B★Star Unisex Salon offers luxury Balayage, Global Hair Color (₹5,000), Keratin, HydraFacial, O3+ Facial (₹1,356) & Bridal Makeup at Stylo Plaza, Battarahalli.",
     images: [`${siteConfig.url}/images/bstar-logo-transparent.png`],
   },
   other: {
     "geo.region": "IN-KA",
     "geo.placename": "Bengaluru, Battarahalli, TC Palya",
-    "geo.position": "13.0189;77.7028",
-    "ICBM": "13.0189, 77.7028",
+    "geo.position": "13.0226386;77.6892602",
+    "ICBM": "13.0226386, 77.6892602",
   },
 };
 
@@ -151,15 +151,14 @@ export default function RootLayout({
           "Cash, UPI, Google Pay (Tez), Credit Card, Debit Card, Net Banking, NFC Mobile Payments",
         foundingDate: "2007",
         hasMenu: "https://bstarsalon.com/services",
-        hasMap:
-          "https://www.google.com/maps/search/?api=1&query=B-Star+Unisex+Saloon+TC+Palya+Main+Road+Bengaluru",
+        hasMap: "https://www.google.com/maps?cid=16646599397714059580",
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "4.3",
+          ratingValue: "4.4",
           bestRating: "5",
           worstRating: "1",
-          ratingCount: "339",
-          reviewCount: "339",
+          ratingCount: "350",
+          reviewCount: "350",
         },
         address: {
           "@type": "PostalAddress",
@@ -174,8 +173,8 @@ export default function RootLayout({
         geo: {
           "@type": "GeoCoordinates",
           "@id": "https://bstarsalon.com/#geo",
-          latitude: 13.0189,
-          longitude: 77.7028,
+          latitude: 13.0226386,
+          longitude: 77.6892602,
         },
         openingHoursSpecification: [
           {
@@ -190,7 +189,7 @@ export default function RootLayout({
               "Sunday",
             ],
             opens: "09:00",
-            closes: "21:30",
+            closes: "21:00",
           },
         ],
         areaServed: [
@@ -204,8 +203,8 @@ export default function RootLayout({
           { "@type": "AdministrativeArea", name: "East Bengaluru" },
         ],
         sameAs: [
+          "https://www.google.com/maps?cid=16646599397714059580",
           "https://search.google.com/local/writereview?placeid=ChIJQwX9_hQRrjsRPGH6avSZBOc",
-          "https://maps.google.com/?q=B-Star+Unisex+Saloon+Stylo+Plaza+Building+TC+Palya+Main+Rd+Battarahalli+Bengaluru",
           "https://book.zuyyu.com/b-star-unisex-saloon",
           "https://www.justdial.com/Bangalore/B-Star-Unisex-Saloon-Above-Krishna-Sagar-Hotel-Anandapura-TC-Palya-Main-Road/080PXX80-XX80-180424161517-D3Y7_BZDET",
         ],

@@ -65,12 +65,19 @@ export default function LocationSection() {
                   </span>
                 ))}
               </div>
-              <div className="mt-4 pt-3 border-t border-[#F5EDD6]/10">
+              <div className="mt-4 pt-3 border-t border-[#F5EDD6]/10 flex flex-wrap gap-x-6 gap-y-2">
                 <Link
                   href="/salons/tc-palya"
                   className="font-sans text-xs uppercase tracking-[0.16em] text-[#C5A059] hover:underline inline-flex items-center gap-1.5"
                 >
-                  <span>Explore Full TC Palya Branch Guide &amp; Landmark Distances</span>
+                  <span>Explore TC Palya Branch Guide</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
+                <Link
+                  href="/salons/battarahalli"
+                  className="font-sans text-xs uppercase tracking-[0.16em] text-[#C5A059] hover:underline inline-flex items-center gap-1.5"
+                >
+                  <span>Explore Battarahalli 560036 Guide</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </Link>
               </div>

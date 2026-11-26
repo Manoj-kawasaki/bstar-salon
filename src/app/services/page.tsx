@@ -134,7 +134,7 @@ export default function ServicesPage() {
           </span>
         </h1>
         <p className="font-sans text-[#F5EDD6]/80 max-w-2xl mx-auto text-sm md:text-base leading-relaxed font-light">
-          Experience 100% transparent pricing across 45+ luxury salon services for men and women. Rated <strong>4.3★ by 339+ clients</strong> at Stylo Plaza, TC Palya Main Road, Battarahalli, Bengaluru.
+          Experience 100% transparent pricing across 45+ luxury salon services for men and women. Rated <strong>4.4★ by 350+ clients</strong> at Stylo Plaza, TC Palya Main Road, Battarahalli, Bengaluru.
         </p>
 
         {/* Quick Highlights Bar */}

@@ -8,7 +8,7 @@ export default function TrustSection() {
       <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
         <div className="mb-16">
           <div className="flex items-baseline justify-center gap-2 mb-4">
-            <span className="font-serif text-7xl font-light">4.3</span>
+            <span className="font-serif text-7xl font-light">4.4</span>
             <span className="font-serif text-2xl text-[#1C110C]/70">/ 5</span>
           </div>
           <div className="flex justify-center gap-1 mb-4 text-[#C5A059]">
@@ -23,7 +23,7 @@ export default function TrustSection() {
             ))}
           </div>
           <p className="font-sans text-sm tracking-widest uppercase mb-6 text-[#1C110C]/80 font-medium">
-            339+ Google Reviews
+            350+ Google Reviews
           </p>
           <Link
             href={siteConfig.googleReviewStats.googleReviewUrl}

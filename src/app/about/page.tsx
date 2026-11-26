@@ -45,7 +45,7 @@ export default function AboutPage() {
             <div className="flex items-center gap-4 mt-4 border-t border-[#F5EDD6]/20 pt-8 w-fit">
               <span className="font-serif text-3xl text-[#C5A059]">{siteConfig.googleReviewStats.rating}★</span>
               <span className="text-sm font-display uppercase tracking-widest text-[#F5EDD6]/60">
-                339+ Google Reviews
+                350+ Google Reviews
               </span>
             </div>
           </div>

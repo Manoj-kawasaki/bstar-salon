@@ -51,9 +51,9 @@ export default function BookingCTA() {
 
         {/* Google Rating Pill */}
         <div className="mb-10 inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#1C110C]/75 backdrop-blur-md border border-[#C5A059]/30 text-xs font-sans text-[#F5EDD6]/90 shadow-lg">
-          <span className="text-[#C5A059] font-bold">★ 4.3</span>
+          <span className="text-[#C5A059] font-bold">★ 4.4</span>
           <span className="text-[#C5A059]">•</span>
-          <span>339+ Google Reviews</span>
+          <span>350+ Google Reviews</span>
           <span className="text-[#C5A059]">•</span>
           <span className="text-[#C5A059] font-medium">Battarahalli</span>
         </div>

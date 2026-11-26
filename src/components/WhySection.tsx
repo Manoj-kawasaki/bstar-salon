@@ -44,7 +44,7 @@ export default function WhySection() {
             Proven Trust &amp; Excellence · East Bengaluru
           </p>
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#F5EDD6] leading-[1.12] font-light">
-            Why 339+ Clients Rate B★Star the{" "}
+            Why 350+ Clients Rate B★Star the{" "}
             <span className="italic font-normal text-[#C5A059]">
               Best Salon in TC Palya &amp; Battarahalli
             </span>

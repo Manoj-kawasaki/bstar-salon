@@ -19,16 +19,16 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon",
+  title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon (4.4★)",
   description:
-    "Rated 4.3★ by 339+ clients. Looking for the best salon in TC Palya? Visit B★Star at Stylo Plaza, TC Palya Main Rd for precision haircuts, balayage, keratin smoothening, hydrafacials & bridal rituals. Book online today.",
+    "Rated 4.4★ by 350+ clients. Looking for the best salon in TC Palya? Visit B★Star at Stylo Plaza, TC Palya Main Rd for precision haircuts, balayage, keratin smoothening, hydrafacials & bridal rituals. Book online today.",
   alternates: {
     canonical: "https://bstarsalon.com/salons/tc-palya",
   },
   openGraph: {
-    title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon",
+    title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon (4.4★)",
     description:
-      "Rated 4.3★ by 339+ clients. Visit B★Star Unisex Salon at Stylo Plaza, TC Palya Main Rd for haircuts, balayage, keratin, hydrafacials & bridal styling.",
+      "Rated 4.4★ by 350+ clients. Visit B★Star Unisex Salon at Stylo Plaza, TC Palya Main Rd for haircuts, balayage, keratin, hydrafacials & bridal styling.",
     url: "https://bstarsalon.com/salons/tc-palya",
     type: "website",
     images: [
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon",
+    title: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon (4.4★)",
     description:
-      "Rated 4.3★ by 339+ clients. Stylo Plaza, TC Palya Main Rd, Bengaluru. Master balayage, keratin, hydrafacials, and bridal styling.",
+      "Rated 4.4★ by 350+ clients. Stylo Plaza, TC Palya Main Rd, Bengaluru. Master balayage, keratin, hydrafacials, and bridal styling.",
     images: ["https://bstarsalon.com/images/bstar-hero-crop1.jpg"],
   },
 };
@@ -54,56 +54,23 @@ export default function TCPalyaSalonPage() {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": ["BeautySalon", "HairSalon"],
-        "@id": "https://bstarsalon.com/salons/tc-palya#salon",
-        name: "B★Star Unisex Salon - TC Palya Main Road",
-        legalName: "B★STAR UNISEX SALON",
-        alternateName: [
-          "Best Salon in TC Palya",
-          "B-Star Unisex Saloon TC Palya",
-          "Unisex Salon TC Palya Main Road",
-          "B★Star Salon Battarahalli",
-        ],
-        description:
-          "Rated 4.3★ by 339+ clients. B★Star Unisex Salon is the premier hair, skin, bridal and grooming destination located at Stylo Plaza, TC Palya Main Road, Battarahalli, Bengaluru.",
+        "@type": "WebPage",
+        "@id": "https://bstarsalon.com/salons/tc-palya#webpage",
         url: "https://bstarsalon.com/salons/tc-palya",
-        telephone: "+91-9902949549",
-        priceRange: "₹₹",
-        foundingDate: "2007",
-        image: [
-          "https://bstarsalon.com/images/bstar-hero-crop1.jpg",
-          "https://bstarsalon.com/images/bstar-salon-interior.jpg",
-          "https://bstarsalon.com/images/atelier-split-hair.jpg",
-        ],
-        hasMenu: "https://bstarsalon.com/services",
-        currenciesAccepted: "INR",
-        paymentAccepted: "Cash, Credit Card, UPI, Google Pay, PhonePe",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress:
-            "No. 140, Stylo Plaza Building, Above Krishna Sagar Hotel, Next to Kanti Sweets, Anandapura Bus Stop, TC Palya Main Road, Battarahalli",
-          addressLocality: "Bengaluru",
-          addressRegion: "Karnataka",
-          postalCode: "560036",
-          addressCountry: "IN",
+        name: "Best Unisex Salon in TC Palya Main Road, Bengaluru | B★Star Salon (4.4★)",
+        description:
+          "Rated 4.4★ by 350+ clients. B★Star Unisex Salon is located at Stylo Plaza, TC Palya Main Road, Battarahalli, Bengaluru.",
+        about: {
+          "@id": "https://bstarsalon.com/#salon",
         },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: 13.0189,
-          longitude: 77.7028,
+        isPartOf: {
+          "@id": "https://bstarsalon.com/",
         },
-        hasMap: "https://www.google.com/maps/search/?api=1&query=B-Star+Unisex+Saloon+TC+Palya+Main+Road+Bengaluru",
-        sameAs: [
-          "https://book.zuyyu.com/b-star-unisex-saloon"
-        ],
-        areaServed: [
-          { "@type": "AdministrativeArea", name: "TC Palya", postalCode: "560036" },
-          { "@type": "AdministrativeArea", name: "Battarahalli", postalCode: "560036" },
-          { "@type": "AdministrativeArea", name: "KR Puram", postalCode: "560036" },
-          { "@type": "AdministrativeArea", name: "Anandapura", postalCode: "560036" },
-          { "@type": "AdministrativeArea", name: "Ramamurthy Nagar", postalCode: "560016" },
-          { "@type": "AdministrativeArea", name: "NRI Layout", postalCode: "560016" },
-        ],
+      },
+      {
+        "@type": ["HairSalon", "BeautySalon"],
+        "@id": "https://bstarsalon.com/#salon",
+        hasMap: "https://www.google.com/maps?cid=16646599397714059580",
       },
       {
         "@type": "BreadcrumbList",
@@ -144,7 +111,7 @@ export default function TCPalyaSalonPage() {
             name: "Why is B★Star rated the best salon in TC Palya?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "With a 4.3★ rating backed by over 339 verified Google reviews, B★Star is recognized as the top unisex salon on TC Palya Main Road for precision haircuts, master balayage, formaldehyde-free keratin & hair botox, dermatological HydraFacials, luxury bridal packages, and precision men's grooming.",
+              text: "With a 4.4★ rating backed by over 350 verified Google reviews, B★Star is recognized as the top unisex salon on TC Palya Main Road for precision haircuts, master balayage, formaldehyde-free keratin & hair botox, dermatological HydraFacials, luxury bridal packages, and precision men's grooming.",
             },
           },
           {
@@ -321,9 +288,9 @@ export default function TCPalyaSalonPage() {
                   <Star key={i} className="w-3 h-3 fill-current" />
                 ))}
               </div>
-              <span className="font-semibold">4.3★ Rating</span>
+              <span className="font-semibold">4.4★ Rating</span>
               <span className="text-[#F5EDD6]/60">·</span>
-              <span className="text-[#F5EDD6]/80">339+ Verified Google Reviews</span>
+              <span className="text-[#F5EDD6]/80">350+ Verified Google Reviews</span>
             </div>
 
             {/* Primary H1 */}
@@ -442,13 +409,20 @@ export default function TCPalyaSalonPage() {
                     <span>Get Directions</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </a>
-                  <a
-                    href="tel:09902949549"
-                    className="inline-flex items-center gap-2 border border-[#F5EDD6]/30 hover:border-[#C5A059] font-sans text-xs uppercase tracking-[0.16em] px-5 py-3 text-[#FAF3E3] transition-colors"
-                  >
-                    <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
-                    <span>099029 49549</span>
-                  </a>
+                <a
+                  href={`tel:${siteConfig.phoneRaw}`}
+                  className="inline-flex items-center gap-2 border border-[#F5EDD6]/30 hover:border-[#C5A059] font-sans text-xs uppercase tracking-[0.16em] px-5 py-3 text-[#FAF3E3] transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>099029 49549</span>
+                </a>
+                <Link
+                  href="/salons/battarahalli"
+                  className="inline-flex items-center gap-2 border border-[#F5EDD6]/30 hover:border-[#C5A059] font-sans text-xs uppercase tracking-[0.16em] px-5 py-3 text-[#FAF3E3] transition-colors"
+                >
+                  <span>Battarahalli 560036 Guide</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </Link>
                 </div>
               </div>
 
@@ -641,7 +615,7 @@ export default function TCPalyaSalonPage() {
                   Why is B★Star rated the best salon in TC Palya?
                 </h3>
                 <p className="font-sans text-xs text-[#F5EDD6]/80 leading-relaxed font-light">
-                  With a 4.3★ rating backed by over 339 verified Google reviews, B★Star is recognized for its master colorists, zero-ammonia treatments, formaldeyhde-free keratin &amp; hair botox, dermatological HydraFacials, and transparent pricing.
+                  With a 4.4★ rating backed by over 350 verified Google reviews, B★Star is recognized for its master colorists, zero-ammonia treatments, formaldehyde-free keratin &amp; hair botox, dermatological HydraFacials, and transparent pricing.
                 </p>
               </div>
 

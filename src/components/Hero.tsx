@@ -49,7 +49,7 @@ export default function Hero() {
 
         {/* High-Intent Local SEO Description */}
         <p className="font-sans text-xs sm:text-sm md:text-[15px] text-[#F5EDD6]/90 font-light leading-relaxed max-w-2xl mx-auto mt-3.5 sm:mt-4 drop-shadow-md">
-          Since 2007, <strong>B★Star Unisex Salon</strong> (B-Star Unisex Saloon) has been trusted as the <strong>best salon in TC Palya Main Road, Battarahalli, Bengaluru</strong>. Rated <strong>4.3★ across 339+ client reviews</strong>, our master stylists and aestheticians combine dermatologist-tested, ethically sourced formulations with precision craftsmanship—delivering East Bengaluru&apos;s finest balayage, keratin smoothing, clinical HydraFacials, O3+ facials, nail extensions, and bridal couture.
+          Since 2007, <strong>B★Star Unisex Salon</strong> has been trusted as the <strong>best salon in TC Palya Main Road, Battarahalli, Bengaluru</strong>. Rated <strong>4.4★ across 350+ client reviews</strong>, our master stylists and aestheticians combine dermatologist-tested, ethically sourced formulations with precision craftsmanship—delivering East Bengaluru&apos;s finest balayage, keratin smoothing, clinical HydraFacials, O3+ facials, nail extensions, and bridal couture.
         </p>
 
         {/* High-Intent Internal Service Anchor Links (PageRank & Semantic Relevancy Boost) */}
@@ -116,14 +116,14 @@ export default function Hero() {
             href="/reviews"
             className="text-[#C5A059] font-semibold hover:underline underline-offset-4 transition-colors"
           >
-            ★ 4.3 Google Rating
+            ★ 4.4 Google Rating
           </Link>
           <span>·</span>
           <Link
             href="/reviews"
             className="hover:text-[#FAF3E3] transition-colors underline-offset-4 hover:underline"
           >
-            339+ Google Reviews
+            350+ Google Reviews
           </Link>
           <span className="hidden sm:inline">·</span>
           <Link

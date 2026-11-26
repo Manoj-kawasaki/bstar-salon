@@ -27,7 +27,7 @@ export const siteConfig = {
   shortName: "B★Star Unisex Salon",
   tagline: "Bengaluru’s Premier Luxury Unisex Beauty & Hair Destination",
   description:
-    "Rated 4.3★ by 339+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
+    "Rated 4.4★ by 350+ clients. Experience bespoke hair coloring, balayage, keratin treatments, O3+ & HydraFacials, and bridal couture at B★Star Unisex Salon on TC Palya Main Rd, Battarahalli, Bengaluru. Book online today.",
   url: "https://bstarsalon.com",
   bookingUrl: "/book",
   phone: "099029 49549",
@@ -36,10 +36,10 @@ export const siteConfig = {
   whatsappUrl:
     "https://wa.me/919902949549?text=Hello%20B-Star%20Unisex%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment.",
   googleReviewStats: {
-    rating: 4.3,
-    reviewCount: 339,
+    rating: 4.4,
+    reviewCount: 350,
     ratingMax: 5.0,
-    googleReviewUrl: "https://www.google.com/search?q=B-Star+Unisex+Saloon+Battarahalli+Bengaluru+reviews",
+    googleReviewUrl: "https://www.google.com/maps?cid=16646599397714059580",
     googleWriteReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJQwX9_hQRrjsRPGH6avSZBOc",
     reviewAssistantUrl: "/review",
   },
@@ -57,7 +57,7 @@ export const siteConfig = {
     hours: "Mon–Sun: 9:00 AM – 9:00 PM",
     days: "Monday–Sunday",
     mapsUrl:
-      "https://maps.google.com/?q=B-Star+Unisex+Saloon+Stylo+Plaza+Building+TC+Palya+Main+Rd+Battarahalli+Bengaluru",
+      "https://www.google.com/maps?cid=16646599397714059580",
   },
   membership: {
     title: "Privilege Membership & Prepaid Cards",
@@ -585,12 +585,12 @@ export const siteConfig = {
     {
       question: "Which is the best unisex salon near me in TC Palya Main Road and Anandapura?",
       answer:
-        "B★Star Unisex Salon (B-Star Unisex Saloon) at Stylo Plaza Building, next to Kanti Sweets and Above Krishna Sagar Hotel at Anandapura Bus Stop, is rated the best salon in TC Palya Main Road (4.3★ by 339+ clients) for haircuts, balayage, keratin, O3+ facials, and bridal makeup.",
+        "B★Star Unisex Salon at Stylo Plaza Building, next to Kanti Sweets and Above Krishna Sagar Hotel at Anandapura Bus Stop, is rated the best salon in TC Palya Main Road (4.4★ by 350+ clients) for haircuts, balayage, keratin, O3+ facials, and bridal makeup.",
     },
     {
       question: "Which is the best salon in TC Palya for haircuts, balayage, and facials?",
       answer:
-        "B★Star Unisex Salon (rated 4.3★ by 339+ clients) is recognized as the best salon in TC Palya Main Road, Battarahalli. Established in 2007, our master stylists specialize in precision haircuts, French balayage, keratin treatments, hair botox, clinical HydraFacials, and luxury O3+ facials.",
+        "B★Star Unisex Salon (rated 4.4★ by 350+ clients) is recognized as the best salon in TC Palya Main Road, Battarahalli. Established in 2007, our master stylists specialize in precision haircuts, French balayage, keratin treatments, hair botox, clinical HydraFacials, and luxury O3+ facials.",
     },
     {
       question: "What is the price of Global Hair Color, Highlights, and O3+ Facial at B★Star Salon TC Palya?",
@@ -655,9 +655,9 @@ export const siteConfig = {
       icon: "Coffee",
     },
     {
-      title: "4.3★ Google-Rated Excellence",
+      title: "4.4★ Google-Rated Excellence",
       description:
-        "Rated 4.3★ on Google, with 339+ customer reviews praising our attentive styling, relaxing ambiance, and flawless results.",
+        "Rated 4.4★ on Google, with 350+ customer reviews praising our attentive styling, relaxing ambiance, and flawless results.",
       icon: "Star",
     },
   ],

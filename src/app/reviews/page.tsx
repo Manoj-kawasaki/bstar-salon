@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Customer Reviews & Google Ratings | B★Star Unisex Salon Bengaluru",
-  description: "Read verified customer reviews for B★Star Unisex Salon in Battarahalli, Bengaluru. Rated 4.3★ by 339+ happy customers on Google.",
+  description: "Read verified customer reviews for B★Star Unisex Salon in Battarahalli, Bengaluru. Rated 4.4★ by 350+ happy customers on Google.",
   alternates: {
     canonical: "/reviews",
   },
@@ -40,7 +40,7 @@ export default function ReviewsPage() {
               ))}
             </div>
             <p className="font-display uppercase tracking-[0.2em] text-sm mt-4 text-[#1C110C]/60">
-              Based on 339+ Google Reviews
+              Based on 350+ Google Reviews
             </p>
             
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
